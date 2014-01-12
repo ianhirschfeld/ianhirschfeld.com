@@ -1,0 +1,272 @@
+@charset "utf-8";
+@import "compass";
+@import "normalize";
+@import "fontello_custom";
+
+/* ===== VARIABLES ===== */
+$themePrimaryColor: #3e4759; // Dark blue-gray
+$themeSecondaryColor: #7a93cc; // Light blue-gray
+$textColor: #45474c; // Dark Gray
+$textLightColor: #878787; // Gray
+
+#themePrimaryColor  {
+  display: none;
+  color: $themePrimaryColor;
+}
+
+#themeSecondaryColor {
+  display: none;
+  color: $themeSecondaryColor;
+}
+
+/* ===== MIXINS ===== */
+@mixin ospdin {
+  font-family: 'osp-dindin', Verdana, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ===== FONTS ===== */
+@font-face {
+    font-family: 'osp-dindin';
+    src: url('fonts/osp-din-webfont.eot');
+    src: url('fonts/osp-din-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/osp-din-webfont.woff') format('woff'),
+         url('fonts/osp-din-webfont.ttf') format('truetype'),
+         url('fonts/osp-din-webfont.svg#osp-dindin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== OVERRIDES ===== */
+html {
+  color: $textColor;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 15px;
+}
+
+a {
+  position: relative;
+  color: $themeSecondaryColor;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    &:after {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      border-bottom: 1px solid $themeSecondaryColor;
+      content: '';
+    }
+  }
+
+  &.no-underline {
+    &:hover,
+    &:focus {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  @include ospdin;
+  margin: 0;
+  color: $themePrimaryColor;
+  font-size: 6rem;
+}
+
+h1 {
+  a {
+    color: $themePrimaryColor;
+
+    &:hover,
+    &:focus {
+      color: $themePrimaryColor;
+    }
+  }
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: $textLightColor;
+  font-size: 2rem;
+}
+
+h3 {
+  color: $textLightColor;
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+/* ===== HELPERS ===== */
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.btn {
+  height: 50px;
+  @include ospdin;
+  @include border-radius(6px);
+  @include transition(background-color 0.15s);
+  padding: 0 25px;
+  display: inline-block;
+  background: $themeSecondaryColor;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 52px;
+
+  &:hover,
+  &:focus {
+    background: $themePrimaryColor;
+    color: #fff;
+    text-decoration: none;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+/* ===== LAYOUT ===== */
+#topbar {
+  height: 3px;
+  background: $themePrimaryColor;
+}
+
+#bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#page-container {
+  @include box-sizing(border-box);
+  max-width: 724px;
+  margin: 0 auto;
+  padding: 40px 12px;
+  position: relative;
+  z-index: 2;
+}
+
+#page-content {}
+
+.page-section {
+  margin-top: 60px;
+}
+
+/* ===== HEADER ===== */
+#page-header {
+  margin-top: 40px;
+
+  svg {
+    margin-right: 20px;
+    float: left;
+  }
+}
+
+/* ----- Social Icons ----- */
+#social-list {
+  height: 50px;
+  float: right;
+
+  li {
+    width: 45px;
+    height: 50px;
+    margin-right: 10px;
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    width: 45px;
+    height: 50px;
+    display: inline-block;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+.social-icon-hex {
+  position: relative;
+
+  svg,
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .icon {
+    width: 45px;
+    z-index: 2;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .icon-github-circled {
+    font-size: 28px;
+  }
+
+  .icon-twitter {
+    line-height: 52px;
+  }
+}
+
+/* ----- Nav ----- */
+#page-nav {
+  @include ospdin;
+  font-size: 1.5rem;
+
+  a {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* ===== SECTIONS ===== */
+#work {
+  ul {
+    li {
+      display: inline-block;
+    }
+
+    h3 {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
