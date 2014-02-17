@@ -1,5 +1,5 @@
 $(document).ready ->
-  new Noise($('#bg-noise')[0]).draw(0.10, 150)
+  # new Noise($('#bg-noise')[0]).draw(0.10, 150)
 
   # Setup photo
   $photo = $('#photo')
