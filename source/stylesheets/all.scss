@@ -28,6 +28,29 @@ $background: #eef1f6; // Off-white with blue
   line-height: 1;
 }
 
+@mixin respond-to($size) {
+  @if $size == 'tablet' {
+    @media only screen and (max-width: 1024px) {
+      @content
+    }
+  }
+  @else if $size == 'tablet-small' {
+    @media only screen and (max-width: 768px) {
+      @content
+    }
+  }
+  @else if $size == 'phone' {
+    @media only screen and (max-width: 568px) {
+      @content
+    }
+  }
+  @else if $size == 'phone-small' {
+    @media only screen and (max-width: 320px) {
+      @content
+    }
+  }
+}
+
 /* ===== FONTS ===== */
 @font-face {
     font-family: 'osp-dindin';
@@ -83,6 +106,12 @@ h1 {
   vertical-align: middle;
   color: $themePrimaryColor;
   font-size: 4rem;
+
+  @include respond-to(phone) {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
@@ -141,6 +170,11 @@ p {
   margin: 0 30px;
   display: inline-block;
   vertical-align: middle;
+
+  @include respond-to(phone) {
+    margin-left: 0;
+    margin-right: 10px;
+  }
 }
 
 /* ===== LAYOUT ===== */
@@ -261,6 +295,10 @@ p {
     padding: 0 20px;
     color: #fff;
     font-size: 0.85rem;
+
+    @include respond-to(tablet-small) {
+      font-size: 0.65rem;
+    }
   }
 
   a {

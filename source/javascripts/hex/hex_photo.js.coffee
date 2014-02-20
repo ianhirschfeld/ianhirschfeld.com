@@ -1,5 +1,4 @@
 class @HexPhoto
-  RADIUS: 125
   ROTATION: 30
   ROUNDNESS: 30
 
@@ -9,11 +8,20 @@ class @HexPhoto
     @
 
   draw: ->
-    @hex = @snap.hex(@RADIUS, @ROTATION, @ROUNDNESS).attr
+    @radius = H.getHexSize()
+    @snap.clear()
+    @hex = @snap.hex(@radius, @ROTATION, @ROUNDNESS).attr
       fill: '#fff'
       stroke: '#fff'
 
-    @image = @snap.image(@options.image, -120, -50, 400, 400).attr
+    attrs = if H.winWidth > 768
+      [-120, -50, 400, 400]
+    else if H.winWidth > 568 and H.winWidth <= 768
+      [-120, -50, 350, 350]
+    else
+      [-120, -50, 350, 350]
+
+    @image = @snap.image(@options.image, attrs...).attr
       mask: @hex
     @setSize()
     @

@@ -12,6 +12,7 @@ class @HexIcon
     @
 
   draw: ->
+    @snap.clear()
     @hex = @snap.hex(@RADIUS, @ROTATION, @ROUNDNESS).attr
       fill: @themeSecondaryColor
       stroke: @themeSecondaryColor
