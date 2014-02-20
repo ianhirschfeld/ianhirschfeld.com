@@ -1,5 +1,5 @@
 class @HexPhoto
-  RADIUS: 80
+  RADIUS: 125
   ROTATION: 30
   ROUNDNESS: 30
 
@@ -13,8 +13,7 @@ class @HexPhoto
       fill: '#fff'
       stroke: '#fff'
 
-    offset = 0#-200 + Snap.Hexagon.width(@hexSecondary) / 2
-    @image = @snap.image(@options.image, offset, offset).attr
+    @image = @snap.image(@options.image, -120, -50, 400, 400).attr
       mask: @hex
     @setSize()
     @

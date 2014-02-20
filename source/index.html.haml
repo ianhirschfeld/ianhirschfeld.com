@@ -1,15 +1,22 @@
-%section#about.page-section
-  %h2 About Me
-  / %p I’m a software engineer with a passion for the creative arts and technology. I love working on ideas and building products that interesect these disciplines.
-  / %a.btn{href: '#'} Let’s get started
+%a#photo{href: '/', title: 'Go back to home'}
+  %svg#hex-photo{data: {image: 'images/ianhirschfeld.jpg'}}
 
-%section#work.page-section
-  %h2 My Recent Work
+%section#work
   %ul.unstyled
     %li
-      %svg#hex-hackdesign{data: {primary: 'images/hackdesign_primary.png', secondary: 'images/hackdesign_secondary.jpg'}}
-      %h3
-        %a{href: '/hackdesign', title: 'Read more about Hack Design'} Hack Design
+      %a#mightybell{href: 'https://mightybell.com', title: 'Visit Mightybell', target: '_blank'}
+        %svg#hex-mightybell{data: {primary: 'images/mightybell_primary.png', secondary: 'images/mightybell_secondary.jpg'}}
+    %li
+      %a#hackdesign{href: 'http://hackdesign.org', title: 'Visit Hack Design', target: '_blank'}
+        %svg#hex-hackdesign{data: {primary: 'images/hackdesign_primary.png', secondary: 'images/hackdesign_secondary.jpg'}}
+    %li
+      %a#retinamacapps{href: 'http://retinamacapps.com', title: 'Visit Retina Mac Apps', target: '_blank'}
+        %svg#hex-retinamacapps{data: {primary: 'images/retinamacapps_primary.jpg', secondary: 'images/retinamacapps_secondary.jpg'}}
+    %li
+      %a#studioluz{href: 'http://studioluz.net', title: 'Visit Studio Luz', target: '_blank'}
+        %svg#hex-studioluz{data: {primary: 'images/studioluz_primary.png', secondary: 'images/studioluz_secondary.jpg'}}
 
-%section#contact.page-section
-  %h2 Contact Me
+/ %section#about.page-section
+/   %h2 About Me
+/   / %p I’m a software engineer with a passion for the creative arts and technology. I love working on ideas and building products that interesect these disciplines.
+/   / %a.btn{href: '#'} Let’s get started

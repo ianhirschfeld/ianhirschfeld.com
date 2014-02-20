@@ -1,6 +1,6 @@
 class @HexPortfolio
-  RADIUS_SECONDARY: 135
-  RADIUS_PRIMARY: 115
+  RADIUS_SECONDARY: 125
+  RADIUS_PRIMARY: 105
   ROTATION: 30
   ROUNDNESS: 30
   OPACITY_SECONDARY: 0.3
@@ -20,7 +20,6 @@ class @HexPortfolio
     @setSize()
     @setupGroup()
     @setupHover()
-    @setupClick()
     @
 
   drawHexSecondary: (imageSrc) ->
@@ -29,8 +28,9 @@ class @HexPortfolio
       stroke: '#fff'
       opacity: @OPACITY_SECONDARY
 
-    offset = -200 + Snap.Hexagon.width(@hexSecondary) / 2
-    @imageSecondary = @snap.image(imageSrc, offset, offset).attr
+    offsetX = -200 + Snap.Hexagon.width(@hexSecondary) / 2
+    offsetY = -200 + Snap.Hexagon.height(@hexSecondary) / 2
+    @imageSecondary = @snap.image(imageSrc, offsetX, offsetY, 400, 400).attr
       mask: @hexSecondary
 
   drawHexPrimary: (imageSrc) ->
@@ -41,8 +41,9 @@ class @HexPortfolio
         fill: '#fff'
         stroke: '#fff'
 
-    offset = -180 + Snap.Hexagon.width(@hexPrimary) / 2
-    @imagePrimary = @snap.image(imageSrc, offset, offset).attr
+    offsetX = -180 + Snap.Hexagon.width(@hexPrimary) / 2
+    offsetY = -180 + Snap.Hexagon.height(@hexPrimary) / 2
+    @imagePrimary = @snap.image(imageSrc, offsetX, offsetY, 400, 400).attr
       mask: @hexPrimary
 
   drawHexOverlay: ->
@@ -52,7 +53,7 @@ class @HexPortfolio
   drawText: ->
     centerX = Snap.Hexagon.width(@hexSecondary) / 2
     centerY = Snap.Hexagon.height(@hexSecondary) / 2
-    @text = @snap.text(centerX, centerY, 'Read more').attr
+    @text = @snap.text(centerX, centerY, @options.title).attr
       fill: '#fff'
       'font-size': '2em'
       'font-family': 'osp-dindin'
@@ -88,6 +89,3 @@ class @HexPortfolio
       @hexOverlay.animate opacity: 0, @FADE_SPEED
       @hexPrimary.animate opacity: 1, @FADE_SPEED
       @hexSecondary.animate opacity: @OPACITY_SECONDARY, @FADE_SPEED
-
-  setupClick: ->
-    @group.click => window.location = @options.path

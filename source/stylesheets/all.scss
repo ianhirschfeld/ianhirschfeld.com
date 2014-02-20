@@ -46,28 +46,25 @@ html {
   font-size: 15px;
 }
 
+body{
+  background: #eef1f6;
+}
+
 a {
   position: relative;
   color: $themeSecondaryColor;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    &:after {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      border-bottom: 1px solid $themeSecondaryColor;
-      content: '';
-    }
-  }
-
-  &.no-underline {
+  &.underline {
     &:hover,
     &:focus {
       &:after {
-        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        border-bottom: 1px solid $themeSecondaryColor;
+        content: '';
       }
     }
   }
@@ -78,11 +75,14 @@ h2,
 h3 {
   @include ospdin;
   margin: 0;
-  color: $themePrimaryColor;
-  font-size: 6rem;
 }
 
 h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: $themePrimaryColor;
+  font-size: 4rem;
+
   a {
     color: $themePrimaryColor;
 
@@ -121,10 +121,10 @@ p {
 }
 
 .btn {
-  height: 50px;
   @include ospdin;
   @include border-radius(6px);
   @include transition(background-color 0.15s);
+  height: 50px;
   padding: 0 25px;
   display: inline-block;
   background: $themeSecondaryColor;
@@ -144,26 +144,24 @@ p {
   }
 }
 
+.btn-contact {
+  @extend .btn;
+  margin: 0 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ===== LAYOUT ===== */
 #topbar {
   height: 3px;
   background: $themePrimaryColor;
 }
 
-#bg-noise {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
 #page-container {
   @include box-sizing(border-box);
-  max-width: 724px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 12px;
-  position: relative;
-  z-index: 2;
 }
 
 #page-content {}
@@ -174,18 +172,18 @@ p {
 
 /* ===== HEADER ===== */
 #page-header {
-  margin-top: 40px;
+  text-align: right;
+}
 
-  svg {
-    margin-right: 20px;
-    float: left;
-  }
+#photo {
+  display: inline-block;
 }
 
 /* ----- Social Icons ----- */
 #social-list {
   height: 50px;
-  float: right;
+  display: inline-block;
+  vertical-align: middle;
 
   li {
     width: 45px;
@@ -257,16 +255,9 @@ p {
   }
 }
 
-/* ===== SECTIONS ===== */
+/* ===== BODY ===== */
 #work {
-  ul {
-    li {
-      display: inline-block;
-    }
-
-    h3 {
-      margin-top: 20px;
-      text-align: center;
-    }
+  li {
+    display: inline-block;
   }
 }

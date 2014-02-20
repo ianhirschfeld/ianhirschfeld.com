@@ -27,40 +27,40 @@
     #themePrimaryColor
     #themeSecondaryColor
     #topbar
-    %canvas#bg-noise
     #page-container
-      %a.btn{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20Build%20Something%20Awesome!"} Contact
-      %ul#social-list.unstyled
-        %li>
-          %a.no-underline{href: 'https://github.com/ianhirschfeld', target: '_blank', title: 'Go to my GitHub profile'}
-            .social-icon-hex
-              %svg#hex-icon-github
-              %span.icon-github-circled.icon
-            %span.title GitHub
-        %li>
-          %a.no-underline{href: 'https://twitter.com/ianhirschfeld', target: '_blank', title: 'Go to my Twitter profile'}
-            .social-icon-hex
-              %svg#hex-icon-twitter
-              %span.icon-twitter.icon
-            %span.title Twitter
-        %li>
-          %a.no-underline{href: 'http://www.linkedin.com/in/ianhirschfeld', target: '_blank', title: 'Go to my LinkedIn profile'}
-            .social-icon-hex
-              %svg#hex-icon-linkedin
-              %span.icon-linkedin.icon
-            %span.title LinkedIn
-      .clear
       %header#page-header
-        %a.no-underline{href: '/', title: 'Go back to home'}
-          %svg#photo{data: {image: 'images/ianhirschfeld.jpg'}}
         %h1
-          %a.no-underline{href: '/', title: 'Go back to home'} Ian N. Hirschfeld
-        %nav#page-nav
-          %a{href: '/#about', title: 'Learn more about me'} About
-          %a{href: '/#work', title: 'Check out my recent work'} Work
-          %a{href: '/#contact', title: 'Get in contact with me'} Contact
-          %a{href: '#', title: 'Read some of my writing'} Writing
-      %article#page-content= yield
+          %a{href: '/', title: 'Go back to home'} Ian N. Hirschfeld
+        %a.btn-contact{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Contact
+        %ul#social-list.unstyled
+          %li>
+            %a{href: 'https://github.com/ianhirschfeld', target: '_blank', title: 'Go to my GitHub profile'}
+              .social-icon-hex
+                %svg#hex-icon-github
+                %span.icon-github-circled.icon
+              %span.title GitHub
+          %li>
+            %a{href: 'https://twitter.com/ianhirschfeld', target: '_blank', title: 'Go to my Twitter profile'}
+              .social-icon-hex
+                %svg#hex-icon-twitter
+                %span.icon-twitter.icon
+              %span.title Twitter
+          %li>
+            %a{href: 'http://www.linkedin.com/in/ianhirschfeld', target: '_blank', title: 'Go to my LinkedIn profile'}
+              .social-icon-hex
+                %svg#hex-icon-linkedin
+                %span.icon-linkedin.icon
+              %span.title LinkedIn
+
+      / %nav#page-nav
+      /   %a{href: '/#about', title: 'Learn more about me'} About
+      /   %a{href: '/#work', title: 'Check out my recent work'} Work
+      /   %a{href: '/#contact', title: 'Get in contact with me'} Contact
+      /   %a{href: '#', title: 'Read some of my writing'} Writing
+
+
+      %article#page-content
+        = yield
 
     / %script{type: 'text/javascript', src: 'http://code.jquery.com/jquery-latest.min.js'}
     = javascript_include_tag 'all'
