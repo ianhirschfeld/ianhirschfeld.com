@@ -8,7 +8,6 @@ $themePrimaryColor: #3e4759; // Dark blue-gray
 $themeSecondaryColor: #7a93cc; // Light blue-gray
 $textColor: #45474c; // Dark Gray
 $textLightColor: #878787; // Gray
-$textAboutColor: #fff;
 $background: #eef1f6; // Off-white with blue
 
 #themePrimaryColor  {
@@ -152,9 +151,9 @@ p {
 
 #page-container {
   @include box-sizing(border-box);
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 40px 12px;
+  padding: 30px 12px;
 }
 
 #page-content {}
@@ -165,7 +164,7 @@ p {
 
 /* ===== HEADER ===== */
 #page-header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #photo {
@@ -260,12 +259,12 @@ p {
   p {
     margin: 0;
     padding: 0 20px;
-    color: $textAboutColor;
+    color: #fff;
     font-size: 0.85rem;
   }
 
   a {
-    color: $textAboutColor;
+    color: #fff;
     text-decoration: underline;
   }
 }

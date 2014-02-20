@@ -44,20 +44,22 @@ $(document).ready ->
     text: $studioluz.parent().attr('title')
   studioluz.draw()
 
-  # Position hexes
-  positionBottomRight about, photo
-  positionRightOf mightybell, photo
-  positionRightOf hackdesign, mightybell
-  positionBottomRight retinamacapps, mightybell
-  positionBottomRight studioluz, hackdesign
+  setTimeout =>
+    # Position hexes
+    positionBottomRight about, photo
+    positionRightOf mightybell, photo
+    positionRightOf hackdesign, mightybell
+    positionBottomRight retinamacapps, mightybell
+    positionBottomRight studioluz, hackdesign
 
-  # Position about
-  $('#about-intro-container').css
-    width: Snap.Hexagon.width(about.hex)
-    height: Snap.Hexagon.height(about.hex)
-    position: 'absolute'
-    top: 0
-    left: 0
+    # Position about
+    $('#about-intro-container').css
+      width: Snap.Hexagon.width(about.hex)
+      height: Snap.Hexagon.height(about.hex)
+      position: 'absolute'
+      top: 0
+      left: 0
+  , 100
 
 positionRightOf = (hex, originHex) ->
   $hex = $("##{hex.snap.node.id}")
