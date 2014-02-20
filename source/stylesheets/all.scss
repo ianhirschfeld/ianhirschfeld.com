@@ -8,6 +8,8 @@ $themePrimaryColor: #3e4759; // Dark blue-gray
 $themeSecondaryColor: #7a93cc; // Light blue-gray
 $textColor: #45474c; // Dark Gray
 $textLightColor: #878787; // Gray
+$textAboutColor: #fff;
+$background: #eef1f6; // Off-white with blue
 
 #themePrimaryColor  {
   display: none;
@@ -47,7 +49,7 @@ html {
 }
 
 body{
-  background: #eef1f6;
+  background: $background;
 }
 
 a {
@@ -82,15 +84,6 @@ h1 {
   vertical-align: middle;
   color: $themePrimaryColor;
   font-size: 4rem;
-
-  a {
-    color: $themePrimaryColor;
-
-    &:hover,
-    &:focus {
-      color: $themePrimaryColor;
-    }
-  }
 }
 
 h2 {
@@ -172,7 +165,7 @@ p {
 
 /* ===== HEADER ===== */
 #page-header {
-  text-align: right;
+  margin-bottom: 20px;
 }
 
 #photo {
@@ -256,8 +249,33 @@ p {
 }
 
 /* ===== BODY ===== */
+#about-intro-container {
+  display: table;
+}
+
+#about-intro {
+  display: table-cell;
+  vertical-align: middle;
+
+  p {
+    margin: 0;
+    padding: 0 20px;
+    color: $textAboutColor;
+    font-size: 0.85rem;
+  }
+
+  a {
+    color: $textAboutColor;
+    text-decoration: underline;
+  }
+}
+
 #work {
   li {
     display: inline-block;
+
+    a {
+      cursor: default;
+    }
   }
 }

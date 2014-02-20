@@ -17,8 +17,8 @@ class @HexPortfolio
     @drawHexPrimary(@options.imagePrimary)
     @drawHexOverlay()
     @drawText()
+    @drawHexHover()
     @setSize()
-    @setupGroup()
     @setupHover()
     @
 
@@ -50,10 +50,17 @@ class @HexPortfolio
     @hexOverlay = @snap.hex(@RADIUS_SECONDARY, @ROTATION, @ROUNDNESS).attr
       opacity: 0
 
+  drawHexHover: ->
+    @hexHover = @snap.hex(@RADIUS_SECONDARY, @ROTATION, @ROUNDNESS).attr
+      fill: '#fff'
+      stroke: '#fff'
+      opacity: 0
+      cursor: 'pointer'
+
   drawText: ->
     centerX = Snap.Hexagon.width(@hexSecondary) / 2
     centerY = Snap.Hexagon.height(@hexSecondary) / 2
-    @text = @snap.text(centerX, centerY, @options.title).attr
+    @text = @snap.text(centerX, centerY, @options.text).attr
       fill: '#fff'
       'font-size': '2em'
       'font-family': 'osp-dindin'
@@ -71,15 +78,8 @@ class @HexPortfolio
       width: Snap.Hexagon.width @hexSecondary
       height: Snap.Hexagon.height @hexSecondary
 
-  setupGroup: ->
-    @group = @snap.g().attr cursor: 'pointer'
-    @group.add @imageSecondary
-    @group.add @imagePrimary
-    @group.add @hexOverlay
-    @group.add @text
-
   setupHover: ->
-    @group.hover =>
+    @hexHover.hover =>
       @hexSecondary.animate opacity: 1, @FADE_SPEED
       @hexPrimary.animate opacity: 0, @FADE_SPEED
       @hexOverlay.animate opacity: @OPACITY_OVERLAY, @FADE_SPEED
