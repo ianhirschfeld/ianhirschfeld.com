@@ -33,9 +33,8 @@ class @HexPortfolio
     sizeWH = size * 2
     offsetX = -size + Snap.Hexagon.width(@hexSecondary) / 2
     offsetY = -size + Snap.Hexagon.height(@hexSecondary) / 2
-    attrs = [offsetX, offsetY, sizeWH, sizeWH]
 
-    @imageSecondary = @snap.image(imageSrc, attrs...).attr
+    @imageSecondary = @snap.image(imageSrc, offsetX, offsetY, sizeWH, sizeWH).attr
       mask: @hexSecondary
 
   drawHexPrimary: (imageSrc) ->
@@ -50,9 +49,8 @@ class @HexPortfolio
     sizeWH = size * 2
     offsetX = -size + Snap.Hexagon.width(@hexSecondary) / 2
     offsetY = -size + Snap.Hexagon.height(@hexSecondary) / 2
-    attrs = [offsetX, offsetY, sizeWH, sizeWH]
 
-    @imagePrimary = @snap.image(imageSrc, attrs...).attr
+    @imagePrimary = @snap.image(imageSrc, offsetX, offsetY, sizeWH, sizeWH).attr
       mask: @hexPrimary
 
   drawHexOverlay: ->
@@ -75,11 +73,10 @@ class @HexPortfolio
       'text-transform': 'uppercase'
       'line-height': 1
       opacity: 0
-    setTimeout =>
+    $.doTimeout 300, =>
       @text.attr
         x: parseInt(@text.attr('x')) - parseInt(@text.attr('width').substring(0, @text.attr('width').length - 2)) / 2
         y: parseInt(@text.attr('y')) + parseInt(@text.attr('height')) / 2 - 6
-    , 250
 
   setSize: ->
     @snap.attr

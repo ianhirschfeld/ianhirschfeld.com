@@ -329,6 +329,14 @@ p {
       font-size: 1rem;
     }
   }
+
+  #hexes {
+    svg {
+      text {
+        font-size: 2rem;
+      }
+    }
+  }
 }
 
 @include respond-to(tablet) {
@@ -338,6 +346,14 @@ p {
 
   .btn-contact {
     margin-top: 4px;
+  }
+
+  #hexes {
+    svg {
+      text {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 

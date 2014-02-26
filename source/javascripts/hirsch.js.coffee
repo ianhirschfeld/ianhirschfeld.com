@@ -62,7 +62,7 @@ class window.Hirsch
       hex.draw()
 
   @position: ->
-    setTimeout =>
+    $.doTimeout 100, =>
       # Position hexes
       if @winWidth > 768
         @positionBottomRight @about, @photo
@@ -91,7 +91,6 @@ class window.Hirsch
         top: 0
         left: 0
       $('#about-intro p').show()
-    , 100
 
   @positionRightOf: (hex, originHex) ->
     $hex = $("##{hex.snap.node.id}")
