@@ -29,7 +29,12 @@ $background: #eef1f6; // Off-white with blue
 }
 
 @mixin respond-to($size) {
-  @if $size == 'tablet' {
+  @if $size == 'desktop' {
+    @media only screen and (max-width: 1200px) {
+      @content
+    }
+  }
+  @else if $size == 'tablet' {
     @media only screen and (max-width: 1024px) {
       @content
     }
@@ -48,6 +53,12 @@ $background: #eef1f6; // Off-white with blue
     @media only screen and (max-width: 320px) {
       @content
     }
+  }
+}
+
+@mixin respond-to-custom($width) {
+  @media only screen and (max-width: $width) {
+    @content
   }
 }
 
@@ -269,13 +280,13 @@ p {
 /* ===== BODY ===== */
 #hexes {
   li {
-    width: 30%;
+    width: 28%;
     max-width: 400px;
     display: inline-block;
 
-    // a {
-    //   cursor: default;
-    // }
+    a {
+      cursor: default;
+    }
   }
 
   svg {
@@ -312,6 +323,14 @@ p {
 }
 
 /* ===== RESPONSIVE ===== */
+@include respond-to(desktop) {
+  #about-intro {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
 @include respond-to(tablet) {
   h1 {
     font-size: 4.4rem;
@@ -319,6 +338,14 @@ p {
 
   .btn-contact {
     margin-top: 4px;
+  }
+}
+
+@include respond-to-custom(900px) {
+  #about-intro {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -341,9 +368,23 @@ p {
     margin: 0;
   }
 
+  #hexes {
+    li {
+      width: 40%;
+    }
+  }
+
   #about-intro {
     p {
-      font-size: 0.65rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include respond-to-custom(660px) {
+  #about-intro {
+    p {
+      font-size: 0.7rem;
     }
   }
 }
@@ -355,5 +396,33 @@ p {
 
   #page-container {
     padding: 20px 10px;
+  }
+
+  #hexes {
+    li {
+      width: 60%;
+    }
+  }
+
+  #about-intro {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include respond-to-custom(410px) {
+  #about-intro {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@include respond-to(phone-small) {
+  #hexes {
+    li {
+      width: 65%;
+    }
   }
 }

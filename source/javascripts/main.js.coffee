@@ -7,6 +7,5 @@ $(document).ready ->
 
 $(window).resize $.debounce 100, ->
   H.setWinWidth()
-  H.setup()
   H.draw()
   H.position()

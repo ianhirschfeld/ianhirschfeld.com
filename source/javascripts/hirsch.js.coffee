@@ -1,16 +1,14 @@
 class window.Hirsch
   @winWidth: null
 
+  @isTouchDevice: ->
+    'ontouchstart' of window or 'onmsgesturechange' of window
+
   @getHexSize: ->
     $('#hexes li:eq(0)').width() / 2
 
   @getHexRoundness: ->
-    if @winWidth > 768
-      30
-    else if @winWidth > 568 and @winWidth <= 768
-      20
-    else
-      20
+    30
 
   @setWinWidth: ->
     @winWidth = $(window).width()
@@ -66,18 +64,18 @@ class window.Hirsch
   @position: ->
     setTimeout =>
       # Position hexes
-      if @winWidth > 568
+      if @winWidth > 768
         @positionBottomRight @about, @photo
         @positionRightOf @mightybell, @photo
         @positionRightOf @hackdesign, @mightybell
         @positionBottomRight @retinamacapps, @mightybell
         @positionBottomRight @studioluz, @hackdesign
-      else if @winWidth > 320 and @winWidth <= 568
-        @positionRightOf @about, @photo
-        @positionBottomLeft @mightybell, @about
-        @positionRightOf @hackdesign, @mightybell
-        @positionBottomLeft @retinamacapps, @mightybell
-        @positionRightOf @studioluz, @retinamacapps
+      else if @winWidth > 568 and @winWidth <= 768
+        @positionBottomRight @about, @photo
+        @positionRightOf @mightybell, @photo
+        @positionRightOf @hackdesign, @about
+        @positionBottomLeft @retinamacapps, @about
+        @positionBottomRight @studioluz, @about
       else
         @positionBottomRight @about, @photo
         @positionBottomLeft @mightybell, @about

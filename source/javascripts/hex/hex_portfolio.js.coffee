@@ -87,6 +87,7 @@ class @HexPortfolio
       height: Snap.Hexagon.height @hexSecondary
 
   setupHover: ->
+    return if H.isTouchDevice()
     @hexHover.hover =>
       @hexSecondary.animate opacity: 1, @FADE_SPEED
       @hexPrimary.animate opacity: 0, @FADE_SPEED

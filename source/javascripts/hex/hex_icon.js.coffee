@@ -26,6 +26,7 @@ class @HexIcon
       height: Snap.Hexagon.height @hex
 
   setupHover: ->
+    return if H.isTouchDevice()
     $(@parent).hover =>
       @hex.animate
         fill: @themePrimaryColor
