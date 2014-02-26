@@ -2,20 +2,15 @@ class window.Hirsch
   @winWidth: null
 
   @getHexSize: ->
-    if @winWidth > 768
-      125
-    else if @winWidth > 568 and @winWidth <= 768
-      105
-    else
-      105
+    $('#hexes li:eq(0)').width() / 2
 
-  @getTextSize: ->
+  @getHexRoundness: ->
     if @winWidth > 768
-      '2em'
+      30
     else if @winWidth > 568 and @winWidth <= 768
-      '1.5em'
+      20
     else
-      '1.5em'
+      20
 
   @setWinWidth: ->
     @winWidth = $(window).width()
@@ -97,42 +92,43 @@ class window.Hirsch
         position: 'absolute'
         top: 0
         left: 0
+      $('#about-intro p').show()
     , 100
 
   @positionRightOf: (hex, originHex) ->
     $hex = $("##{hex.snap.node.id}")
-    $originParent = $("##{originHex.snap.node.id}").parent()
+    $originParent = $("##{originHex.snap.node.id}").closest('li')
     originParentPosition = $originParent.position()
 
     innerHex = if originHex.hex then originHex.hex else originHex.hexSecondary
 
-    $hex.parent().css
+    $hex.closest('li').css
       position: 'absolute'
       top: originParentPosition.top
       left: originParentPosition.left + Snap.Hexagon.width(innerHex) + 30
 
   @positionBottomRight: (hex, originHex) ->
     $hex = $("##{hex.snap.node.id}")
-    $originParent = $("##{originHex.snap.node.id}").parent()
+    $originParent = $("##{originHex.snap.node.id}").closest('li')
     originParentPosition = $originParent.position()
 
     innerHex = if originHex.hex then originHex.hex else originHex.hexSecondary
     radius = H.getHexSize()
 
-    $hex.parent().css
+    $hex.closest('li').css
       position: 'absolute'
       top: originParentPosition.top + (Snap.Hexagon.height(innerHex) / 2) + (radius / 2) + 30
       left: originParentPosition.left + (Snap.Hexagon.width(innerHex) / 2) + 15
 
   @positionBottomLeft: (hex, originHex) ->
     $hex = $("##{hex.snap.node.id}")
-    $originParent = $("##{originHex.snap.node.id}").parent()
+    $originParent = $("##{originHex.snap.node.id}").closest('li')
     originParentPosition = $originParent.position()
 
     innerHex = if originHex.hex then originHex.hex else originHex.hexSecondary
     radius = H.getHexSize()
 
-    $hex.parent().css
+    $hex.closest('li').css
       position: 'absolute'
       top: originParentPosition.top + (Snap.Hexagon.height(innerHex) / 2) + (radius / 2) + 30
       left: originParentPosition.left - (Snap.Hexagon.width(innerHex) / 2) - 15

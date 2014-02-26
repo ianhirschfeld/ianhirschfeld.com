@@ -22,7 +22,7 @@ $background: #eef1f6; // Off-white with blue
 
 /* ===== MIXINS ===== */
 @mixin ospdin {
-  font-family: 'osp-dindin', Verdana, Arial, sans-serif;
+  font-family: 'osp-dindin', Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1;
@@ -66,7 +66,7 @@ $background: #eef1f6; // Off-white with blue
 /* ===== OVERRIDES ===== */
 html {
   color: $textColor;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
 }
 
@@ -105,13 +105,7 @@ h1 {
   display: inline-block;
   vertical-align: middle;
   color: $themePrimaryColor;
-  font-size: 4rem;
-
-  @include respond-to(phone) {
-    margin-bottom: 20px;
-    display: block;
-    font-size: 3.5rem;
-  }
+  font-size: 5rem;
 }
 
 h2 {
@@ -141,17 +135,20 @@ p {
   clear: both;
 }
 
-.btn {
+.btn-contact {
   @include ospdin;
   @include border-radius(6px);
   @include transition(background-color 0.15s);
-  height: 50px;
+  height: 55px;
+  margin-top: 8px;
   padding: 0 25px;
   display: inline-block;
+  float: right;
   background: $themeSecondaryColor;
   color: #fff;
-  font-size: 1.3rem;
-  line-height: 52px;
+  font-size: 2rem;
+  line-height: 57px;
+  vertical-align: middle;
 
   &:hover,
   &:focus {
@@ -165,18 +162,6 @@ p {
   }
 }
 
-.btn-contact {
-  @extend .btn;
-  margin: 0 30px;
-  display: inline-block;
-  vertical-align: middle;
-
-  @include respond-to(phone) {
-    margin-left: 0;
-    margin-right: 10px;
-  }
-}
-
 /* ===== LAYOUT ===== */
 #topbar {
   height: 3px;
@@ -185,9 +170,8 @@ p {
 
 #page-container {
   @include box-sizing(border-box);
-  max-width: 900px;
   margin: 0 auto;
-  padding: 30px 12px;
+  padding: 30px;
 }
 
 #page-content {}
@@ -207,6 +191,7 @@ p {
 
 /* ----- Social Icons ----- */
 #social-list {
+  margin: -5px 0 0 20px;
   height: 50px;
   display: inline-block;
   vertical-align: middle;
@@ -282,6 +267,28 @@ p {
 }
 
 /* ===== BODY ===== */
+#hexes {
+  li {
+    width: 30%;
+    max-width: 400px;
+    display: inline-block;
+
+    // a {
+    //   cursor: default;
+    // }
+  }
+
+  svg {
+    text {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+#about {
+  display: inline-block;
+}
+
 #about-intro-container {
   display: table;
 }
@@ -293,12 +300,9 @@ p {
   p {
     margin: 0;
     padding: 0 20px;
+    display: none;
     color: #fff;
-    font-size: 0.85rem;
-
-    @include respond-to(tablet-small) {
-      font-size: 0.65rem;
-    }
+    font-size: 1.2rem;
   }
 
   a {
@@ -307,12 +311,49 @@ p {
   }
 }
 
-#work {
-  li {
-    display: inline-block;
+/* ===== RESPONSIVE ===== */
+@include respond-to(tablet) {
+  h1 {
+    font-size: 4.4rem;
+  }
 
-    a {
-      cursor: default;
+  .btn-contact {
+    margin-top: 4px;
+  }
+}
+
+@include respond-to(tablet-small) {
+  h1 {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .btn-contact {
+    height: 50px;
+    float: none;
+    margin-top: 0;
+    margin-left: 6px;
+    font-size: 1.5rem;
+    line-height: 52px;
+  }
+
+  #social-list {
+    margin: 0;
+  }
+
+  #about-intro {
+    p {
+      font-size: 0.65rem;
     }
+  }
+}
+
+@include respond-to(phone) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  #page-container {
+    padding: 20px 10px;
   }
 }

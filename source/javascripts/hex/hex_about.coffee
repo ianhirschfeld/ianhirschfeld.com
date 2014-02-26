@@ -1,6 +1,5 @@
 class @HexAbout
   ROTATION: 30
-  ROUNDNESS: 30
 
   constructor: (el, opts = {}) ->
     @options = opts
@@ -9,6 +8,7 @@ class @HexAbout
 
   draw: ->
     @radius = H.getHexSize()
+    @roundness = H.getHexRoundness()
     @snap.clear()
     @drawHex()
     @setSize()
@@ -16,7 +16,7 @@ class @HexAbout
 
   drawHex: ->
     color = $('#themePrimaryColor').css('color')
-    @hex = @snap.hex(@radius, @ROTATION, @ROUNDNESS).attr
+    @hex = @snap.hex(@radius, @ROTATION, @roundness).attr
       fill: color
       stroke: color
 

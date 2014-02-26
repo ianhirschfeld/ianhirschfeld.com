@@ -30,7 +30,6 @@
     #page-container
       %header#page-header
         %h1 Ian N. Hirschfeld
-        %a.btn-contact{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Contact Me
         %ul#social-list.unstyled
           %li>
             %a{href: 'https://github.com/ianhirschfeld', target: '_blank', title: 'Go to my GitHub profile'}
@@ -50,6 +49,8 @@
                 %svg#hex-icon-linkedin
                 %span.icon-linkedin.icon
               %span.title LinkedIn
+        %a.btn-contact{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Contact Me
+        .clear
 
       %article#page-content
         = yield

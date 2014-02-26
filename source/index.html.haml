@@ -1,16 +1,16 @@
-%a#photo{href: '/', title: 'Go back to home'}
-  %svg#hex-photo{data: {image: 'images/ianhirschfeld.jpg'}}
-
-#about
-  #about-intro-container
-    #about-intro
-      %p
-        I’m a full stack software engineer with a passion for the creative arts and technology. I love working with teams to bring their ideas and products to life.
-        %a{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Let's work together!
-  %svg#hex-about
-
-%section#work
+%section#hexes
   %ul.unstyled
+    %li
+      %a#photo{href: '/', title: 'Go back to home'}
+        %svg#hex-photo{data: {image: 'images/ianhirschfeld.jpg'}}
+    %li
+      #about
+        #about-intro-container
+          #about-intro
+            %p
+              I’m a full stack software engineer with a passion for the creative arts and technology. I love working with teams to bring their ideas and products to life.
+              %a{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Let's work together!
+        %svg#hex-about
     %li
       %a#mightybell{href: 'https://mightybell.com', title: 'Visit Mightybell', target: '_blank'}
         %svg#hex-mightybell{data: {primary: 'images/mightybell_primary.png', secondary: 'images/mightybell_secondary.jpg'}}

@@ -1,6 +1,5 @@
 class @HexPortfolio
   ROTATION: 30
-  ROUNDNESS: 30
   OPACITY_SECONDARY: 0.3
   OPACITY_OVERLAY: 0.5
   FADE_SPEED: 150
@@ -13,6 +12,7 @@ class @HexPortfolio
   draw: ->
     @radius_secondary = H.getHexSize()
     @radius_primary = H.getHexSize() - 20
+    @roundness = H.getHexRoundness()
     @snap.clear()
     @drawHexSecondary(@options.imageSecondary)
     @drawHexPrimary(@options.imagePrimary)
@@ -24,35 +24,43 @@ class @HexPortfolio
     @
 
   drawHexSecondary: (imageSrc) ->
-    @hexSecondary = @snap.hex(@radius_secondary, @ROTATION, @ROUNDNESS).attr
+    @hexSecondary = @snap.hex(@radius_secondary, @ROTATION, @roundness).attr
       fill: '#fff'
       stroke: '#fff'
       opacity: @OPACITY_SECONDARY
 
-    offsetX = -200 + Snap.Hexagon.width(@hexSecondary) / 2
-    offsetY = -200 + Snap.Hexagon.height(@hexSecondary) / 2
-    @imageSecondary = @snap.image(imageSrc, offsetX, offsetY, 400, 400).attr
+    size = H.getHexSize()
+    sizeWH = size * 2
+    offsetX = -size + Snap.Hexagon.width(@hexSecondary) / 2
+    offsetY = -size + Snap.Hexagon.height(@hexSecondary) / 2
+    attrs = [offsetX, offsetY, sizeWH, sizeWH]
+
+    @imageSecondary = @snap.image(imageSrc, attrs...).attr
       mask: @hexSecondary
 
   drawHexPrimary: (imageSrc) ->
     offset = @radius_secondary - @radius_primary
-    @hexPrimary = @snap.hex(@radius_primary, @ROTATION, @ROUNDNESS)
+    @hexPrimary = @snap.hex(@radius_primary, @ROTATION, @roundness)
       .transform(new Snap.Matrix().translate(offset, offset))
       .attr
         fill: '#fff'
         stroke: '#fff'
 
-    offsetX = -180 + Snap.Hexagon.width(@hexPrimary) / 2
-    offsetY = -180 + Snap.Hexagon.height(@hexPrimary) / 2
-    @imagePrimary = @snap.image(imageSrc, offsetX, offsetY, 400, 400).attr
+    size = H.getHexSize()
+    sizeWH = size * 2
+    offsetX = -size + Snap.Hexagon.width(@hexSecondary) / 2
+    offsetY = -size + Snap.Hexagon.height(@hexSecondary) / 2
+    attrs = [offsetX, offsetY, sizeWH, sizeWH]
+
+    @imagePrimary = @snap.image(imageSrc, attrs...).attr
       mask: @hexPrimary
 
   drawHexOverlay: ->
-    @hexOverlay = @snap.hex(@radius_secondary, @ROTATION, @ROUNDNESS).attr
+    @hexOverlay = @snap.hex(@radius_secondary, @ROTATION, @roundness).attr
       opacity: 0
 
   drawHexHover: ->
-    @hexHover = @snap.hex(@radius_secondary, @ROTATION, @ROUNDNESS).attr
+    @hexHover = @snap.hex(@radius_secondary, @ROTATION, @roundness).attr
       fill: '#fff'
       stroke: '#fff'
       opacity: 0
@@ -63,7 +71,6 @@ class @HexPortfolio
     centerY = Snap.Hexagon.height(@hexSecondary) / 2
     @text = @snap.text(centerX, centerY, @options.text).attr
       fill: '#fff'
-      'font-size': H.getTextSize()
       'font-family': 'osp-dindin'
       'text-transform': 'uppercase'
       'line-height': 1
