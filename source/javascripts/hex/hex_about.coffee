@@ -22,5 +22,5 @@ class @HexAbout
 
   setSize: ->
     @snap.attr
-      width: Snap.Hexagon.width @hex
-      height: Snap.Hexagon.height @hex
+      width: "#{Snap.Hexagon.width(@hex)}px"
+      height: "#{Snap.Hexagon.height(@hex)}px"

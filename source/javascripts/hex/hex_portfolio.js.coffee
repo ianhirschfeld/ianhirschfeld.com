@@ -80,8 +80,8 @@ class @HexPortfolio
 
   setSize: ->
     @snap.attr
-      width: Snap.Hexagon.width @hexSecondary
-      height: Snap.Hexagon.height @hexSecondary
+      width: "#{Snap.Hexagon.width(@hexSecondary)}px"
+      height: "#{Snap.Hexagon.height(@hexSecondary)}px"
 
   setupHover: ->
     return if H.isTouchDevice()
