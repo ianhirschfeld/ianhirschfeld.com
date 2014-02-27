@@ -442,4 +442,15 @@ p {
       width: 65%;
     }
   }
+
+  @-moz-document url-prefix() {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .btn-contact {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
 }
