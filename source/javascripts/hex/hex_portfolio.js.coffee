@@ -74,9 +74,13 @@ class @HexPortfolio
       'line-height': 1
       opacity: 0
     $.doTimeout 300, =>
-      @text.attr
-        x: parseInt(@text.attr('x')) - parseInt(@text.attr('width').substring(0, @text.attr('width').length - 2)) / 2
-        y: parseInt(@text.attr('y')) + parseInt(@text.attr('height')) / 2 - 6
+      if navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+        @text.attr
+          x: '10px'
+      else
+        @text.attr
+          x: parseInt(@text.attr('x')) - @text.node.clientWidth / 2
+          y: parseInt(@text.attr('y')) + @text.node.clientHeight / 2
 
   setSize: ->
     @snap.attr
