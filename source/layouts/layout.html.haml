@@ -3,58 +3,33 @@
   %head
     %meta{charset: 'utf-8'}
     %meta{content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible'}
-    %meta{name: 'description', content: 'Portfolio of Ian N. Hirschfeld.'}
+    %meta{name: 'description', content: 'Portfolio of Ian Hirschfeld.'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
 
     %meta{property: 'og:url', content: 'http://www.ianhirschfeld.com'}
     %meta{property: 'og:type', content: 'website'}
-    %meta{property: 'og:title', content: 'Ian N. Hirschfeld'}
-    %meta{property: 'og:description', content: 'Portfolio of Ian N. Hirschfeld'}
+    %meta{property: 'og:title', content: 'Ian Hirschfeld'}
+    %meta{property: 'og:description', content: 'Portfolio of Ian Hirschfeld'}
     %meta{property: 'og:image', content: 'http://www.ianhirschfeld.com/images/ianhirschfeld.jpg'}
 
-    %link{rel: 'apple-touch-icon', href: '/images/apple-touch-icon.png'}
-    %link{rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'}
-    %link{rel: 'icon', href: '/favicon.ico', type: 'image/x-icon'}
+    %link{rel: 'apple-touch-icon', href: 'http://www.ianhirschfeld.com/apple-touch-icon.png'}
+    %link{rel: 'shortcut icon', href: 'http://www.ianhirschfeld.com/favicon.png', type: 'image/x-icon'}
+    %link{rel: 'icon', href: 'http://www.ianhirschfeld.com/favicon.png', type: 'image/x-icon'}
 
-    %title #{"#{data.page.title} | " if data.page.title} Ian N. Hirschfeld
+    %title Ian N. Hirschfeld
 
     = stylesheet_link_tag 'all'
 
   %body{class: page_classes}
-    #themePrimaryColor
-    #themeSecondaryColor
-    #topbar
     #page-container
-      %header#page-header
-        %h1 Ian N. Hirschfeld
-        %ul#social-list.unstyled
-          %li>
-            %a{href: 'https://github.com/ianhirschfeld', target: '_blank', title: 'Go to my GitHub profile'}
-              .social-icon-hex
-                %svg#hex-icon-github
-                %span.icon-github-circled.icon
-              %span.title GitHub
-          %li>
-            %a{href: 'https://twitter.com/ianhirschfeld', target: '_blank', title: 'Go to my Twitter profile'}
-              .social-icon-hex
-                %svg#hex-icon-twitter
-                %span.icon-twitter.icon
-              %span.title Twitter
-          %li>
-            %a{href: 'http://www.linkedin.com/in/ianhirschfeld', target: '_blank', title: 'Go to my LinkedIn profile'}
-              .social-icon-hex
-                %svg#hex-icon-linkedin
-                %span.icon-linkedin.icon
-              %span.title LinkedIn
-        %a.btn-contact{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!", title: 'Get in contact with me'} Contact Me
-        .clear
+      = yield
 
-      %article#page-content
-        = yield
-
-    = javascript_include_tag 'all'
-
+    %script{src: '//use.typekit.net/dhn8nfe.js', type: 'text/javascript'}
     :javascript
+      // Typekit
+      try{Typekit.load();}catch(e){}
+
+      // Google Analyitcs
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-11359166-4']);
       _gaq.push(['_trackPageview']);

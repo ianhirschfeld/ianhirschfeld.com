@@ -65,13 +65,13 @@ configure :build do
   activate :minify_javascript
 
   # Add hashes to files for caching
-  activate :asset_hash
+  activate :asset_hash, ignore: 'favicon.png|open_graph.jpg|apple-touch-icon.png'
 
   # Enable cache buster
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher

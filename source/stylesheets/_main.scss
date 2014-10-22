@@ -1,0 +1,130 @@
+* {
+  @include box-sizing(border-box);
+  outline: none;
+}
+
+/*=============================================================================
+  TAGS
+=============================================================================*/
+html {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  background: #fff;
+}
+
+a {
+  @include opacity(1);
+  @include transition(opacity .2s);
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    @include opacity(.65);
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2 {
+  margin: 0 0 58px 13px;
+  font-size: 1.29rem;
+  letter-spacing: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+h2 {
+  margin: 0 0 18px 13px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+#page-container {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding: 72px 25px 0;
+}
+
+ul {
+  margin: 70px 0 50px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    margin-right: 16px;
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.social-icon {
+  display: inline-block;
+  color: $text-color;
+  font-size: 35px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.headshot {
+  @include border-radius(95px);
+  width: 95px;
+  height: 95px;
+  margin-right: 36px;
+  float: left;
+  background: image-url('headshot.jpg') no-repeat 0 0;
+  background-size: 95px 95px;
+}
+
+.bio {
+  @include alt-clearfix;
+}
+
+.blog {
+  margin-top: 58px;
+  text-align: center;
+}
+
+.btn-blog {
+  @include border-radius(10px);
+  padding: 16px 40px;
+  display: inline-block;
+  border: 1px solid $text-color;
+  font-size: 1.29rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 13px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 13px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@include respond-to('phone-small') {
+  .headshot {
+    margin: 0 auto 20px;
+    float: none;
+  }
+}

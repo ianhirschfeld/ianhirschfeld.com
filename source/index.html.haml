@@ -1,25 +1,37 @@
-%section#hexes
-  %ul.unstyled
-    %li
-      %a#photo{href: '/', title: 'Go back to home'}
-        %svg#hex-photo{data: {image: 'images/ianhirschfeld.jpg'}}
-    %li
-      #about
-        #about-intro-container
-          #about-intro
-            %p
-              I’m a full stack software engineer with a passion for the creative arts and technology. I love working with teams to bring their ideas and products to life.
-              %a{href: "mailto:contact@ianhirschfeld.com?subject=Let's%20build%20something%20awesome!"} Let's work together!
-        %svg#hex-about
-    %li
-      %a#mightybell{href: 'https://mightybell.com', title: 'Visit Mightybell', target: '_blank'}
-        %svg#hex-mightybell{data: {primary: 'images/mightybell_primary.png', secondary: 'images/mightybell_secondary.jpg'}}
-    %li
-      %a#hackdesign{href: 'http://hackdesign.org', title: 'Visit Hack Design', target: '_blank'}
-        %svg#hex-hackdesign{data: {primary: 'images/hackdesign_primary.png', secondary: 'images/hackdesign_secondary.jpg'}}
-    %li
-      %a#retinamacapps{href: 'http://retinamacapps.com', title: 'Visit Retina Mac Apps', target: '_blank'}
-        %svg#hex-retinamacapps{data: {primary: 'images/retinamacapps_primary.jpg', secondary: 'images/retinamacapps_secondary.jpg'}}
-    %li
-      %a#studioluz{href: 'http://studioluz.net', title: 'Visit Studio Luz', target: '_blank'}
-        %svg#hex-studioluz{data: {primary: 'images/studioluz_primary.png', secondary: 'images/studioluz_secondary.jpg'}}
+%h1 Ian Hirschfeld
+
+.bio
+  .headshot
+  %p
+    %strong Heyo!
+    %br>
+    I'm a developer, animator, and entrepreneur living in San Francisco, CA. I believe everyone should experience at least one piece of art that changes them for the better. A few of mine are:
+    = succeed ',' do
+      %a{href: 'http://www.amazon.com/The-Neverending-Story-Michael-Ende/dp/0140386335/ref=sr_1_1?ie=UTF8&qid=1413967557&sr=8-1&keywords=the+neverending+story', target: '_blank'} The Neverending Story
+    = succeed ',' do
+      %a{href: 'http://www.amazon.com/Toy-Story-1-3-Box-Blu-ray/dp/B0042FZOFU/ref=sr_1_3?ie=UTF8&qid=1413967592&sr=8-3&keywords=toy+story', target: '_blank'} Toy Story
+    and
+    = succeed '.' do
+      %a{href: 'http://www.amazon.com/gp/search/ref=a9_asi_1?rh=i%3Avideogames%2Cn%3A468642%2Ck%3Amass+effect+trilogy&keywords=mass+effect+trilogy&ie=UTF8&qid=1413967687', target: '_blank'} Mass Effect
+    %br>
+    %br>
+    I'm currently working as the technical director at
+    = succeed '.' do
+      %a{href: 'http://www.thesoapcollective.com', target: '_blank'}
+        %strong> The Soap Collective
+    Our latest project is a group storytelling game called
+    = succeed '.' do
+      %a{href: 'http://www.roleapp.com', target: '_blank'}
+        %strong> Role
+
+-#.blog
+-#  %h2 Read More On
+-#  %a.btn-blog{href: '#'} My Blog
+
+%ul
+  %li>
+    %a.icon-twitter-circled.social-icon{href: 'https://twitter.com/ianhirschfeld', target: '_blank'}>
+  %li>
+    %a.icon-facebook-circled.social-icon{href: 'https://facebook.com/ian.hirschfeld', target: '_blank'}>
+  %li>
+    %a.icon-github-circled.social-icon{href: 'https://github.com/ianhirschfeld', target: '_blank'}>
