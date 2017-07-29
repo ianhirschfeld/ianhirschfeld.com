@@ -13,14 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ian Hirschfeld - Virtual Reality Consultant
-email: contact@ianhirschfeld.com
-description: Ian Hirschfeld is a virtual reality consultant and developer with over 10 years working in interactive media.
+title: Ian Hirschfeld - Virtual Reality Consultant and Developer
+description: Ian Hirschfeld is a virtual reality consultant and developer with over 10 years of experience working in interactive media.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 typekit_id: zjz5nsn
-twitter_username: ianhirschfeld
+
+email: contact@ianhirschfeld.com
 github_username:  ianhirschfeld
+instagram_username:  ianhirschfeld
+linkedin_username:  ianhirschfeld
+medium_username:  ianhirschfeld
+twitter_username: ianhirschfeld
+facebook_username: ian.hirschfeld
 
 # Build settings
 markdown: kramdown

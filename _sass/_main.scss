@@ -1,8 +1,9 @@
 $max-page-width: 1024px;
+$responsive-max-page-width: $max-page-width - 1;
 $grid-size: 20px;
 $grid-size-half: $grid-size / 2;
 $grid-size-double: $grid-size * 2;
-$headshot-size: 250px;
+$headshot-size: 150px;
 
 $font-family-rift: 'rift-soft', Helvetica, sans-serif;
 $font-family-helvetica: Helvetica, sans-serif;
@@ -11,6 +12,8 @@ $background-color: #fffafa;
 $brand-color: #4a6b94;
 $black: #101010;
 $white: $background-color;
+
+$transition-speed: 0.15s;
 
 * {
   box-sizing: border-box;
@@ -154,22 +157,25 @@ a {
   padding: $grid-size-double;
 }
 
-.page-header {}
+.page-header {
+  text-align: center;
+}
 
 .page-body {}
 
 .page-section {
-  margin-top: $grid-size-double * 2;
+  margin-top: $grid-size * 5;
 }
 
 .page-title {
   margin-bottom: $grid-size;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .section-title {
   font-size: 2.667rem;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .section-button {
@@ -181,9 +187,21 @@ a {
 
 .section-list-item {
   width: 33.333%;
-  padding-right: $grid-size-double;
   display: inline-block;
   vertical-align: top;
+
+  &:nth-child(1) {
+    padding-right: $grid-size;
+  }
+
+  &:nth-child(2) {
+    padding-left: $grid-size-half;
+    padding-right: $grid-size-half;
+  }
+
+  &:nth-child(3) {
+    padding-left: $grid-size;
+  }
 
   .section-title {
     font-size: 2rem;
@@ -193,7 +211,7 @@ a {
 .headshot {
   width: $headshot-size;
   height: $headshot-size;
-  margin-right: $grid-size;
+  margin: 0 auto $grid-size;
   background: url('../images/ianhirschfeld_headshot.jpg') no-repeat center center;
   background-size: $headshot-size $headshot-size;
   border-radius: $headshot-size / 2;
@@ -207,7 +225,7 @@ a {
   background: $white;
   color: $brand-color;
   font-size: 2.667rem;
-  transition: background 0.15s, color 0.15s;
+  transition: background $transition-speed, color $transition-speed;
 
   &:hover,
   &:focus {
@@ -225,11 +243,67 @@ a {
   background-size: contain;
 }
 
+.writing-list {}
+
+.writing-list-item {
+  margin-bottom: $grid-size;
+  padding-bottom: $grid-size;
+  border-bottom: 1px solid $black;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.writing-list-title {
+  margin-bottom: $grid-size-half;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.writing-list-excerpt {
+  font-size: 0.8rem;
+}
+
+.writing-list-readmore {
+  margin-top: $grid-size-half;
+  display: block;
+  font-size: 0.8rem;
+}
+
+.contact-list {}
+
+.contact-list-item {
+  margin-bottom: $grid-size-half;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-list-icon,
+.contact-list-text {
+  vertical-align: middle;
+}
+
+.contact-list-icon {
+  margin-right: $grid-size-half;
+  font-size: 1.5rem;
+}
+
+.contact-list-text {
+  font-size: 1rem;
+}
+
 // ==================================================
 // PROJECT ELEMENTS
 // ==================================================
 .projects-list,
-.other-projects-list {
+.other-projects-list,
+.writing-list,
+.contact-list {
   margin-top: $grid-size-double;
 }
 
@@ -253,13 +327,6 @@ a {
     }
   }
 
-  &:nth-child(3),
-  &:nth-child(6) {
-    .projects-list-link {
-      left: $grid-size-half;
-    }
-  }
-
   &:nth-child(2),
   &:nth-child(5) {
     .projects-list-link {
@@ -268,45 +335,10 @@ a {
     }
   }
 
-  &.atlas {
+  &:nth-child(3),
+  &:nth-child(6) {
     .projects-list-link {
-      background: url('../images/projects/atlas/atlas_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.beyondtokyo {
-    .projects-list-link {
-      background: url('../images/projects/beyondtokyo/beyondtokyo_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.capitalone {
-    .projects-list-link {
-      background: url('../images/projects/capitalone/capitalone_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.charlesschwab {
-    .projects-list-link {
-      background: url('../images/projects/charlesschwab/charlesschwab_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.nbu {
-    .projects-list-link {
-      background: url('../images/projects/nbu/nbu_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.unity {
-    .projects-list-link {
-      background: url('../images/projects/unity/unity_thumb.jpg') no-repeat center center;
-      background-size: cover;
+      left: $grid-size-half;
     }
   }
 }
@@ -322,45 +354,43 @@ a {
   &:last-child {
     margin-bottom: 0;
   }
+}
 
-  &.envoy {
-    .projects-list-link {
-      background: url('../images/projects/envoy/envoy_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.hackdesign {
-    .projects-list-link {
-      background: url('../images/projects/hackdesign/hackdesign_thumb.png') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.phoodie {
-    .projects-list-link {
-      background: url('../images/projects/phoodie/phoodie_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
-
-  &.role {
-    .projects-list-link {
-      background: url('../images/projects/role/role_thumb.jpg') no-repeat center center;
-      background-size: cover;
-    }
-  }
+.projects-list-link,
+.projects-list-thumb {
+  display: block;
+  position: absolute;
+  border-radius: 20px;
 }
 
 .projects-list-link {
-  display: block;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: 20px;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    .projects-list-thumb {
+      width: 120%;
+      height: 120%;
+    }
+  }
+}
+
+.projects-list-thumb {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  transition: all $transition-speed;
 }
 
 .projects-list-title {
@@ -374,9 +404,141 @@ a {
   color: $white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
 
-  div {
-    margin-top: 2px;
-    font-size: 0.8rem;
+// ==================================================
+// RESPONSIVE
+// ==================================================
+@media only screen and (max-width: $responsive-max-page-width) {
+  .contact-list-icon {
+    font-size: 1rem;
+  }
+
+  .contact-list-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 809px) {
+  .section-list-item {
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .projects-list-item {
+    width: 50%;
+    padding-bottom: 25%;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: $grid-size-half;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(5) {
+      .projects-list-link {
+        left: 0;
+        right: $grid-size-half / 2;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      .projects-list-link {
+        left: $grid-size-half / 2;
+        right: 0;
+      }
+    }
+  }
+
+  .section-list-item {
+    width: 50%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: $grid-size-double;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      padding-left: 0;
+      padding-right: $grid-size;
+    }
+
+    &:nth-child(2) {
+      padding-left: $grid-size;
+      padding-right: 0;
+    }
+
+    &:last-child {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .page-content {
+    padding: $grid-size-double $grid-size-half;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .hire-button {
+    padding-left: $grid-size-double;
+    padding-right: $grid-size-double;
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .page-section {
+    margin-top: $grid-size * 3;
+  }
+
+  .projects-list-item {
+    width: 100%;
+    padding-bottom: 50%;
+    margin-bottom: $grid-size-half !important;
+
+    .projects-list-link {
+      left: 0 !important;
+      right: 0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .section-list-item {
+    width: 100%;
+    margin-bottom: $grid-size-double !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+      text-align: left;
+    }
+  }
+
+  .contact-list-icon {
+    font-size: 1.3rem;
+  }
+
+  .contact-list-text {
+    font-size: 1rem;
   }
 }
