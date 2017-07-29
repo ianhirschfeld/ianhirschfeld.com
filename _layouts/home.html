@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.url }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.png" | prepend: site.url }}">
     <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-    <link rel="stylesheet" href="{{ "/css/app.css" | prepend: site.baseurl }}">
+    {% css app %}
   </head>
   <body>
     <div class="page-content is-max-width">{{ content }}</div>

@@ -19,7 +19,7 @@ layout: home
       {% for project in site.data.projects.projects %}
         <li class="projects-list-item {{ project.class_name }}">
           <a class="projects-list-link" href="{{ project.url }}" target="_blank">
-            <div class="projects-list-thumb" style="background-image: url('/images/projects/{{ project.thumb_image }}')"></div>
+            <div class="projects-list-thumb" style="background-image: url('{{ project.thumb_image | prepend: 'projects/' | asset_path }}')"></div>
             <div class="projects-list-title font-rift-400">{{ project.thumb_title }}</div>
           </a>
         </li>
@@ -38,7 +38,7 @@ layout: home
           {% for project in site.data.projects.others %}
             <li class="other-projects-list-item {{ project.class_name }}">
               <a class="projects-list-link" href="{{ project.url }}" target="_blank">
-                <div class="projects-list-thumb" style="background-image: url('/images/projects/{{ project.thumb_image }}')"></div>
+                <div class="projects-list-thumb" style="background-image: url('{{ project.thumb_image | prepend: 'projects/' | asset_path }}')"></div>
                 <div class="projects-list-title font-rift-400">{{ project.thumb_title }}</div>
               </a>
             </li>

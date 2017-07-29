@@ -31,7 +31,9 @@ facebook_username: ian.hirschfeld
 # Build settings
 markdown: kramdown
 permalink: pretty
-theme: minima
+
+gems:
+  - jekyll-assets
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -44,3 +46,20 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+assets:
+  digest: true
+  assets:
+      - "*.png"
+      - "*.jpg"
+      - "*.eot"
+      - "*.svg"
+      - "*.ttf"
+      - "*.woff"
+      - "*.woff2"
+      - "app.css"
+  sources:
+    - _assets/css
+    - _assets/images
+    - _assets/fonts
+    - _assets/js
