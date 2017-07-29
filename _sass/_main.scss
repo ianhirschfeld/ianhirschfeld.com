@@ -28,6 +28,8 @@ html {
 }
 
 body {
+  min-width: 100vw;
+  min-height: 100vh;
   background: $background-color;
   position: relative;
 
@@ -161,7 +163,21 @@ a {
   text-align: center;
 }
 
-.page-body {}
+.page-body {
+  &.is-404 {
+    padding-top: $grid-size-double;
+    text-align: center;
+
+    h3 {
+      font-size: 4rem;
+    }
+
+    p {
+      padding: $grid-size 0 ($grid-size * 1.5);
+      font-size: 2rem;
+    }
+  }
+}
 
 .page-section {
   margin-top: $grid-size * 5;
@@ -170,6 +186,10 @@ a {
 .page-title {
   margin-bottom: $grid-size;
   font-size: 3.5rem;
+
+  .is-404 & {
+    font-size: 2rem;
+  }
 }
 
 .section-title {
@@ -215,6 +235,13 @@ a {
   background: url('../images/ianhirschfeld_headshot.jpg') no-repeat center center;
   background-size: $headshot-size $headshot-size;
   border-radius: $headshot-size / 2;
+
+  .is-404 & {
+    width: $headshot-size / 2;
+    height: $headshot-size / 2;
+    background-size: ($headshot-size / 2) ($headshot-size / 2);
+    border-radius: $headshot-size / 4;
+  }
 }
 
 .hire-button {
