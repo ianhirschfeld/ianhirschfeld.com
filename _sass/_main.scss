@@ -1,17 +1,21 @@
 $max-page-width: 1024px;
 $responsive-max-page-width: $max-page-width - 1;
-$grid-size: 20px;
+$grid-size: 18px;
 $grid-size-half: $grid-size / 2;
 $grid-size-double: $grid-size * 2;
-$headshot-size: 150px;
+$headshot-size: 180px;
 
 $font-family-rift: 'rift-soft', Helvetica, sans-serif;
 $font-family-helvetica: Helvetica, sans-serif;
 
-$background-color: #fffafa;
-$brand-color: #4a6b94;
-$black: #101010;
-$white: $background-color;
+$black: #151515;
+$white: #fff;
+$pink: #e47c54;
+$blue: #4a6b94;
+$teal: #6dc4bf;
+$yellow: #fde532;
+$background-color: $white;
+$brand-color: $teal;
 
 $transition-speed: 0.15s;
 
@@ -31,6 +35,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   background: $background-color;
+  color: $black;
   position: relative;
 
   &::before {
@@ -184,16 +189,21 @@ a {
 }
 
 .page-title {
-  margin-bottom: $grid-size;
-  font-size: 3.5rem;
+  margin-bottom: $grid-size * 1.5;
+  font-size: 3rem;
 
   .is-404 & {
     font-size: 2rem;
   }
 }
 
+.name {
+  display: block;
+  margin-bottom: $grid-size;
+}
+
 .section-title {
-  font-size: 2.667rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -222,10 +232,6 @@ a {
   &:nth-child(3) {
     padding-left: $grid-size;
   }
-
-  .section-title {
-    font-size: 2rem;
-  }
 }
 
 .headshot {
@@ -251,7 +257,7 @@ a {
   border-radius: 6px;
   background: $white;
   color: $brand-color;
-  font-size: 2.667rem;
+  font-size: 2rem;
   transition: background $transition-speed, color $transition-speed;
 
   &:hover,
@@ -447,10 +453,8 @@ a {
 }
 
 @media only screen and (max-width: 809px) {
-  .section-list-item {
-    .section-title {
-      font-size: 1.8rem;
-    }
+  .section-title {
+    font-size: 1.8rem;
   }
 }
 
