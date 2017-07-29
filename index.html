@@ -18,7 +18,7 @@ layout: home
     <ul class="projects-list list-reset">
       {% for project in site.data.projects.projects %}
         <li class="projects-list-item {{ project.class_name }}">
-          <a class="projects-list-link" href="#">
+          <a class="projects-list-link" href="{{ project.url }}" target="_blank">
             <div class="projects-list-thumb" style="background-image: url('/images/projects/{{ project.thumb_image }}')"></div>
             <div class="projects-list-title font-rift-400">{{ project.thumb_title }}</div>
           </a>
@@ -37,7 +37,7 @@ layout: home
         <ul class="other-projects-list list-reset">
           {% for project in site.data.projects.others %}
             <li class="other-projects-list-item {{ project.class_name }}">
-              <a class="projects-list-link" href="#">
+              <a class="projects-list-link" href="{{ project.url }}" target="_blank">
                 <div class="projects-list-thumb" style="background-image: url('/images/projects/{{ project.thumb_image }}')"></div>
                 <div class="projects-list-title font-rift-400">{{ project.thumb_title }}</div>
               </a>

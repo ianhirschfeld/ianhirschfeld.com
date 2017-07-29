@@ -4,31 +4,37 @@
       "class_name": "beyondtokyo",
       "thumb_image": "/beyondtokyo/beyondtokyo_thumb.jpg",
       "thumb_title": "Beyond Tokyo - Travel Experience",
+      "url": "http://www.thesoapcollective.com/work/beyond_tokyo",
     },
     {
       "class_name": "atlas",
       "thumb_image": "/atlas/atlas_thumb.jpg",
       "thumb_title": "Atlas: Prologue - Sci-fi Adventure",
+      "url": "http://www.thesoapcollective.com/work/atlas",
     },
     {
       "class_name": "unity",
       "thumb_image": "/unity/unity_thumb.jpg",
       "thumb_title": "Finding Unity - Gear VR App",
+      "url": "http://www.thesoapcollective.com/work/unity",
     },
     {
       "class_name": "nbu",
       "thumb_image": "/nbu/nbu_thumb.jpg",
       "thumb_title": "Never Bout Us - 360 Music Video",
+      "url": "http://www.thesoapcollective.com/work/never_bout_us",
     },
     {
       "class_name": "capitalone",
       "thumb_image": "/capitalone/capitalone_thumb.jpg",
       "thumb_title": "Capital One - 360 Customer Story",
+      "url": "http://www.thesoapcollective.com/work/capital_one",
     },
     {
       "class_name": "charlesschwab",
       "thumb_image": "/charlesschwab/charlesschwab_thumb.jpg",
       "thumb_title": "Charles Schwab & GPJ - VR Installation",
+      "url": "http://www.thesoapcollective.com/work/gpj",
     },
   ],
   "others": [
@@ -36,36 +42,37 @@
       "class_name": "vrll",
       "thumb_image": "/vrll/vrll_thumb.jpg",
       "thumb_title": "VR Love Letters - 360 Video Series",
+      "url": "http://www.vrloveletters.com",
     },
     {
       "class_name": "role",
       "thumb_image": "/role/role_thumb.jpg",
       "thumb_title": "Role - Storytelling Party Game",
+      "url": "http://www.roleapp.com",
     },
     {
       "class_name": "hackdesign",
       "thumb_image": "/hackdesign/hackdesign_thumb.png",
       "thumb_title": "Hack Design - Design Education",
+      "url": "http://www.hackdesign.org",
     },
     {
       "class_name": "envoy",
       "thumb_image": "/envoy/envoy_thumb.jpg",
       "thumb_title": "Envoy - Visitor Registration App",
-    },
-    {
-      "class_name": "phoodie",
-      "thumb_image": "/phoodie/phoodie_thumb.jpg",
-      "thumb_title": "Phoodie - Social Network",
+      "url": "http://www.envoy.com",
     },
     {
       "class_name": "profile",
       "thumb_image": "/profile/profile_thumb.jpg",
       "thumb_title": "Profile - Company Lookbook",
+      "url": "https://itunes.apple.com/us/app/profile-soap-collective-interactive/id1076481308",
     },
     {
       "class_name": "weirdcatalog",
       "thumb_image": "/weirdcatalog/weirdcatalog_thumb.jpg",
       "thumb_title": "Weird Catalog - Get Inspired",
+      "url": "http://www.weirdcatalog.com"
     },
   ],
 }
