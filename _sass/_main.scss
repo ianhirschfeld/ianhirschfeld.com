@@ -45,7 +45,7 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
-    background: url(asset_path('background_pattern.png')) repeat 0 0;
+    background: url('../images/background_pattern.png') repeat 0 0;
     background-size: 46.5px 53.5px;
     content: '';
     opacity: 0.05;
@@ -238,7 +238,7 @@ a {
   width: $headshot-size;
   height: $headshot-size;
   margin: 0 auto $grid-size;
-  background: url(asset_path('ianhirschfeld_headshot.jpg')) no-repeat center center;
+  background: url('../images/ianhirschfeld_headshot.jpg') no-repeat center center;
   background-size: $headshot-size $headshot-size;
   border-radius: $headshot-size / 2;
 
@@ -272,7 +272,7 @@ a {
   width: 100%;
   margin: $grid-size-double auto 0;
   padding-bottom: 51.957671957672%;
-  background: url(asset_path('brands.png')) no-repeat center center;
+  background: url('../images/brands.png') no-repeat center center;
   background-size: contain;
 }
 
