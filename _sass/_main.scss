@@ -203,6 +203,7 @@ a {
 }
 
 .section-title {
+  margin-bottom: $grid-size-double;
   font-size: 2rem;
   letter-spacing: 2px;
   text-align: center;
@@ -270,7 +271,7 @@ a {
 
 .brands {
   width: 100%;
-  margin: $grid-size-double auto 0;
+  margin: 0 auto;
   padding-bottom: 51.957671957672%;
   background: url('../images/brands.png') no-repeat center center;
   background-size: contain;
@@ -333,13 +334,6 @@ a {
 // ==================================================
 // PROJECT ELEMENTS
 // ==================================================
-.projects-list,
-.other-projects-list,
-.writing-list,
-.contact-list {
-  margin-top: $grid-size-double;
-}
-
 .projects-list-item {
   width: 33.333%;
   padding-bottom: 18%;
