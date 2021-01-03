@@ -107,9 +107,12 @@ const ProjectsPage = () => {
   return (
     <PageLayout isFullWidth>
       <SEO title="Projects" />
-      <div className={styles.projectsHeading}>
-        <h1 className="section-heading">Work &amp; Projects</h1>
-      </div>
+      <section className="section">
+        <div className={styles.projectsHeading}>
+          <h1 className="section-heading">Work &amp; Projects</h1>
+          <div className="section-subheading">A sampling of some of my public work and personal projects</div>
+        </div>
+      </section>
 
       <section className="section">
         <ProjectList items={projects} />
