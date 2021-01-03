@@ -18,13 +18,14 @@
 
 .image-container {
   width: 100%;
-  height: calc(var(--projectlist-item-width) * 9 / 16 - 1);
+  height: 225px;
   display: block;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .image {
+  height: 100%;
   transition: transform 0.2s;
 }
 
