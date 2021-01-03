@@ -1,15 +1,13 @@
 .list {
-  --projectlist-width: 840px;
   --projectlist-item-width: 400px;
 
-  width: var(--projectlist-width);
   margin: 0;
-  margin-left: calc((var(--content-width) - var(--projectlist-width)) / 2);
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, var(--projectlist-item-width));
   row-gap: var(--grid-size-double);
   column-gap: var(--grid-size);
+  justify-content: center;
   list-style: none;
 }
 

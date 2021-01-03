@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import { SOCIAL_LINKS } from '../constants'
 
-import styles from './page.module.css'
+import styles from './pages.module.css'
 
 import { PageLayout } from '../components/layouts'
 import SEO from '../components/seo'
