@@ -25,7 +25,15 @@ class MainLayout extends Component {
         </Helmet>
         <ExpandedHeader onScrollClick={this.onScrollClick} />
         <article ref={this.contentRef} className={styles.content}>
-          <Nav className={styles.nav} />
+          <div className={styles.navContainer}>
+            <div className={styles.navCorner}>
+              <div></div>
+            </div>
+            <Nav className={styles.nav} />
+            <div className={styles.navCorner}>
+              <div></div>
+            </div>
+          </div>
           {this.props.children}
         </article>
         <Footer />
