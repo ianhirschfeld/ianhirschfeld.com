@@ -1,0 +1,163 @@
+@keyframes custom-swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.custom-swing {
+  transform-origin: bottom center;
+  animation-name: custom-swing;
+}
+
+.container {
+  --expandedheader-blobs-index: 1;
+  --expandedheader-headshot-index: calc(var(--expandedheader-blobs-index) + 1);
+  --expandedheader-tan-index: 1;
+  --expandedheader-blue-index: calc(var(--expandedheader-tan-index) + 1);
+  --expandedheader-red-index: calc(var(--expandedheader-blue-index) + 1);
+
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: var(--color-dark-off-white);
+  border-bottom: 1px solid var(--color-tan);
+}
+
+.banner {
+  position: relative;
+}
+
+.blobs {
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: var(--expandedheader-blobs-index);
+}
+
+.blob {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.tan-blob {
+  top: -40px;
+  z-index: var(--expandedheader-tan-index);
+}
+
+.blue-blob {
+  bottom: -10px;
+  left: -40px;
+  z-index: var(--expandedheader-blue-index);
+}
+
+.red-blob {
+  bottom: -20px;
+  right: -30px;
+  z-index: var(--expandedheader-red-index);
+}
+
+.headshot-container {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: var(--expandedheader-headshot-index);
+  transform: translate(-50%, -50%);
+}
+
+.headshot {
+  width: 100%;
+  height: 100%;
+  background: url('../../images/IanHirschfeld_Headshot.jpg') 0 0 no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.content {
+  padding: 0 var(--grid-size-double);
+  text-align: center;
+}
+
+.heading {
+  --animate-delay: 0.5s;
+  margin-bottom: var(--grid-size-half);
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.subheading {
+  --animate-delay: 0.5s;
+  margin-bottom: var(--grid-size-double);
+  color: var(--color-red);
+  font-size: 4rem;
+  line-height: 1;
+  opacity: var(--opacity);
+}
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-item {
+  margin-right: calc(var(--grid-size) * 1.5);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.arrow-button-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: var(--grid-size);
+}
+
+.arrow-button-content {
+  width: 40px;
+  height: 100%;
+}
+
+.arrow-button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.arrow-button svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--color-grey);
+}

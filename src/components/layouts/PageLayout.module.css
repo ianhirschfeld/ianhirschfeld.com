@@ -1,0 +1,8 @@
+.container {
+}
+
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-size);
+}

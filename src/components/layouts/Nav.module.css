@@ -1,0 +1,8 @@
+.container {
+  font-size: 3rem;
+  font-family: var(--font-rift);
+}
+
+.container a {
+  display: inline-block;
+}

@@ -1,0 +1,28 @@
+.container {
+}
+
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-size);
+}
+
+.nav {
+  position: relative;
+  top: -1px;
+  background: var(--color-dark-off-white);
+  border: 1px solid var(--color-tan);
+  border-top: 1px solid var(--color-dark-off-white);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+.nav a {
+  margin: 0 var(--grid-size);
+  padding: var(--grid-size-half) 0;
+}
+
+.nav a:first-child {
+  display: none;
+}
