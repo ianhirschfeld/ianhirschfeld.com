@@ -25,7 +25,9 @@ const AboutPage = () => {
   return (
     <PageLayout>
       <SEO title="About" />
-      <h1 className="section-heading">About Me</h1>
+      <section className="section">
+        <h1 className="section-heading">About Me</h1>
+      </section>
 
       <section className="section">
         <h2 className="section-heading">Background</h2>
