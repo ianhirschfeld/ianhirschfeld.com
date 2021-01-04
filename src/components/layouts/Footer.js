@@ -13,7 +13,7 @@ class Footer extends Component {
         {Object.values(SOCIAL_LINKS).map(link => {
           return (
             <li key={link.id} className={styles.socialItem}>
-              <SocialLink link={link} size={24} />
+              <SocialLink link={link} className={styles.socialLink} />
             </li>
           )
         })}

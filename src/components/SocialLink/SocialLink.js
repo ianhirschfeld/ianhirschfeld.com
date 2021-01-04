@@ -53,7 +53,7 @@ class SocialLink extends Component {
     const { blob } = this.state
     const {
       link: { id, url },
-      size,
+      className,
     } = this.props
     const isGithub = id === SOCIAL_LINKS.github.id
 
@@ -64,8 +64,7 @@ class SocialLink extends Component {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.container}
-        style={{ width: size, height: size }}
+        className={`${styles.container} ${className || ''}`}
       >
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className={styles.blob}>
           <path fill="var(--color-blue)" d={blob} transform="translate(100 100)" />
@@ -74,10 +73,6 @@ class SocialLink extends Component {
       </a>
     )
   }
-}
-
-SocialLink.defaultProps = {
-  size: 40,
 }
 
 export default SocialLink

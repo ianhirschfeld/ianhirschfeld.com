@@ -116,6 +116,22 @@ nav a:focus::before,
   transform: scaleX(1);
 }
 
+.red {
+  color: var(--color-red);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.tan {
+  color: var(--color-tan);
+}
+
+.grey {
+  color: var(--color-grey);
+}
+
 .section {
   margin: var(--grid-size-double) 0;
 }
@@ -143,22 +159,8 @@ nav a:focus::before,
   overflow: hidden;
 }
 
-/* ==============================
-COLORS
-============================== */
-
-.red {
-  color: var(--color-red);
-}
-
-.blue {
-  color: var(--color-blue);
-}
-
-.tan {
-  color: var(--color-tan);
-}
-
-.grey {
-  color: var(--color-grey);
+@media only screen and (max-width: 699px) {
+  .banner {
+    border-radius: 0;
+  }
 }

@@ -6,3 +6,10 @@
   max-width: var(--content-width);
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 699px) {
+  .brands {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

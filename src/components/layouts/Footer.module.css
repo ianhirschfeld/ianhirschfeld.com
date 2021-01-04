@@ -17,3 +17,8 @@
   display: inline-block;
   vertical-align: top;
 }
+
+.social-link {
+  width: 24px;
+  height: 24px;
+}
