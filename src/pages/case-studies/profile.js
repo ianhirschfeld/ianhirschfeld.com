@@ -61,6 +61,7 @@ const ProfileCaseStudy = () => {
       <SEO title="Profile Case Study" />
       <section className="section content-width">
         <h1 className="section-heading1">Profile</h1>
+        <div className="section-subheading">Digital Look Book packaged in an iOS app.</div>
         <div className="banner">
           <Img fluid={data.bannerImage.childImageSharp.fluid} alt="Profile Banner" />
         </div>

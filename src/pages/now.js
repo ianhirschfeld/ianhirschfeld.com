@@ -20,11 +20,12 @@ const NowPage = () => {
       <section className="section">
         <h1 className="section-heading1">What I'm Doing Right Now</h1>
         <div className="section-subheading">Last Updated: December 31st, 2020</div>
-
         <div className="banner">
           <Img fluid={data.bannerImage.childImageSharp.fluid} alt="Role Banner" />
         </div>
+      </section>
 
+      <section className="section">
         <h2 className="section-heading2">Role, Inc. and the Future of Online Play</h2>
         <p>
           Towards the beginning of 2020,{' '}
