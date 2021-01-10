@@ -2,9 +2,23 @@
   margin: var(--grid-size-double) calc(var(--grid-size-double) * -1);
 }
 
-.projects-heading {
-  max-width: var(--content-width);
-  margin: 0 auto;
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-grid > * {
+  width: 300px;
+  margin: var(--grid-size-half);
+}
+
+.case-study-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  row-gap: var(--grid-size-double);
+  column-gap: var(--grid-size);
+  justify-content: center;
 }
 
 @media only screen and (max-width: 699px) {

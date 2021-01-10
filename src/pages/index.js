@@ -11,7 +11,7 @@ const IndexPage = () => (
     <SEO title="Ian Hirschfeld - Co-Founder of Role, Inc." titleTemplate={`%s`} />
 
     <section className="section">
-      <h2 className="section-heading">What I'm Doing Right Now</h2>
+      <h2 className="section-heading1">What I'm Doing Right Now</h2>
       <p>
         In 2020, Logan Dwight and I co-found Role, Inc. where I operate as our Lead Developer.{' '}
         <Link to="/now">Learn more about what we are buliding</Link>.
@@ -19,7 +19,7 @@ const IndexPage = () => (
     </section>
 
     <section className="section">
-      <h2 className="section-heading">About Me Professionally</h2>
+      <h2 className="section-heading1">About Me Professionally</h2>
       <p>
         I'm a Fullstack Software Engineer with a degree in Computer Science and Digital Art. I have over a decade of
         experience building applications of all shapes and sizes. I've created social networks, multimedia applications,
@@ -30,7 +30,7 @@ const IndexPage = () => (
     </section>
 
     <section className="section">
-      <h2 className="section-heading">Something A Little More Personal</h2>
+      <h2 className="section-heading1">Something A Little More Personal</h2>
       <p>
         My favorite book is <em>The Neverending Story</em> and my favorite movie, <em>The Matrix</em>. My most
         frequently played games are <em>Apex Legends</em> and <em>Rocket League</em>. I'm a believer in the future of VR

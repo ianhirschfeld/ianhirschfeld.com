@@ -8,7 +8,7 @@ const NotFoundPage = () => (
   <PageLayout>
     <SEO title="404: Not found" />
     <section className="section">
-      <h1 className="section-heading">404: Not Found</h1>
+      <h1 className="section-heading1">404: Not Found</h1>
       <p>
         Woah, woah, woah! There is nothing here, maybe there once was, but unfortunately not anymore. I recommend you
         head back to the <Link to="/">home page</Link> and go from there.

@@ -5,12 +5,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` })
+    const slug = createFilePath({ node, getNode })
 
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: `/posts${slug}`,
     })
   }
 }
@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/posts${node.fields.slug}`,
+      path: node.fields.slug,
       component: path.resolve(`./src/templates/post.js`),
       context: {
         // Data passed to context is available

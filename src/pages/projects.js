@@ -1,8 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import styles from './pages.module.css'
-
 import { PageLayout } from '../components/layouts'
 import ProjectList from '../components/ProjectList'
 import SEO from '../components/seo'
@@ -11,31 +9,34 @@ const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       atlasImage: file(relativePath: { eq: "projects/Atlas.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       balancesImage: file(relativePath: { eq: "projects/Balances.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       beyondtokyoImage: file(relativePath: { eq: "projects/BeyondTokyo.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       cedImage: file(relativePath: { eq: "projects/CED.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       goodFridaysImage: file(relativePath: { eq: "projects/GoodFridays.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       hackdesignImage: file(relativePath: { eq: "projects/HackDesign.png" }) {
-        ...pngImage
+        ...projectPngImage
       }
       neverBoutUsImage: file(relativePath: { eq: "projects/NeverBoutUs.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
+      }
+      profileImage: file(relativePath: { eq: "projects/Profile.jpg" }) {
+        ...projectJpgImage
       }
       retinaMacAppsImage: file(relativePath: { eq: "projects/RetinaMacApps.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
       roleClassicImage: file(relativePath: { eq: "projects/RoleClassic.jpg" }) {
-        ...jpgImage
+        ...projectJpgImage
       }
     }
   `)
@@ -84,6 +85,12 @@ const ProjectsPage = () => {
       url: 'https://web.archive.org/web/20170709185626/https://balances.io/',
     },
     {
+      title: 'Profile',
+      description: 'Digital Look Book packaged in an iOS app.',
+      image: data.profileImage.childImageSharp.fluid,
+      path: '/case-studies/profile',
+    },
+    {
       title: 'CED Innovators',
       description: 'Interactive data visualization. Created with D3.js.',
       image: data.cedImage.childImageSharp.fluid,
@@ -107,11 +114,9 @@ const ProjectsPage = () => {
   return (
     <PageLayout isFullWidth>
       <SEO title="Projects" />
-      <section className="section">
-        <div className={styles.projectsHeading}>
-          <h1 className="section-heading">Work &amp; Projects</h1>
-          <div className="section-subheading">A sampling of some of my public work and personal projects</div>
-        </div>
+      <section className="section content-width">
+        <h1 className="section-heading1">Work &amp; Projects</h1>
+        <div className="section-subheading">A sampling of some of my public work and personal projects</div>
       </section>
 
       <section className="section">

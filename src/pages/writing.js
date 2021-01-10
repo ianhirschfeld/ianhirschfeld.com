@@ -32,14 +32,14 @@ const WritingPage = () => {
     <PageLayout>
       <SEO title="Writing" />
       <section className="section">
-        <h1 className="section-heading">Writing</h1>
+        <h1 className="section-heading1">Writing</h1>
       </section>
 
       {data.writing.posts.map(post => {
         return (
           <section className="section">
-            <Link to={`/posts${post.fields.slug}`}>
-              <h2 className="section-heading">{post.frontmatter.title}</h2>
+            <Link to={post.fields.slug}>
+              <h2 className="section-heading1">{post.frontmatter.title}</h2>
             </Link>
             <div className="section-subheading">{post.frontmatter.dateFormatted}</div>
             <p>{post.excerpt}</p>
