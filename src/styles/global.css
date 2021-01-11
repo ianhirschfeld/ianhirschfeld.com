@@ -173,6 +173,37 @@ nav a:focus::before,
   overflow: hidden;
 }
 
+.post-title {
+  margin-bottom: 0;
+  color: var(--color-dark-grey);
+}
+
+.post-title::before {
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--color-red);
+  border-radius: 1px;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+
+.post-title:hover::before,
+.post-title:focus::before {
+  transform: scaleX(1);
+}
+
+.post-meta {
+  margin-bottom: var(--grid-size);
+  font-size: 1.6rem;
+  color: var(--color-grey);
+}
+
 .post-content {
 }
 

@@ -62,6 +62,9 @@
   padding: var(--grid-size-half) 0;
 }
 
-.nav a:first-child {
-  display: none;
+@media only screen and (max-width: 699px) {
+  .nav a {
+    margin-left: var(--grid-size-half);
+    margin-right: var(--grid-size-half);
+  }
 }
