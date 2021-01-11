@@ -8,12 +8,8 @@ import SEO from '../components/seo'
 const NowPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      roleBannerImage: file(relativePath: { eq: "RoleBanner.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 640, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+      bannerImage: file(relativePath: { eq: "RoleBanner.jpg" }) {
+        ...bannerImage
       }
     }
   `)
@@ -22,13 +18,15 @@ const NowPage = () => {
     <PageLayout>
       <SEO title="Now" />
       <section className="section">
-        <h1 className="section-heading">What I'm Doing Right Now</h1>
+        <h1 className="section-heading1">What I'm Doing Right Now</h1>
         <div className="section-subheading">Last Updated: December 31st, 2020</div>
         <div className="banner">
-          <Img fluid={data.roleBannerImage.childImageSharp.fluid} alt="Role Banner" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="Role Banner" />
         </div>
-        <h2 className="section-heading">Role, Inc. and the future of Online Play</h2>
+      </section>
 
+      <section className="section">
+        <h2 className="section-heading2">Role, Inc. and the Future of Online Play</h2>
         <p>
           Towards the beginning of 2020,{' '}
           <a href="https://twitter.com/logandwight" target="_blank" rel="noopener noreferrer">
@@ -43,7 +41,6 @@ const NowPage = () => {
           in mind, we looked for a starting point where we could offer the most immediate value. We found that a shared
           passion of ours was ripe for a new kind of platform, the industry of tabletop roleplaying games!
         </p>
-
         <p>
           Throughout 2020 we began building and testing our ideas. In June, we launched and completed a successful{' '}
           <a
@@ -58,7 +55,6 @@ const NowPage = () => {
           shared adventures online to the tune of over 300,000 play minutes. We are continuing to refine the platform
           and have a fully public launch slated for Spring 2021.
         </p>
-
         <p>
           We truly believe TTRPGs are a gateway to a much larger audience, and a new kind of human connection online. It
           turns out we aren't the only ones with this belief! In September, a16z's Jonathan Lai and Andrew Chen

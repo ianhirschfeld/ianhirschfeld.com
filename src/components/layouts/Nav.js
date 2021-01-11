@@ -8,10 +8,10 @@ class Nav extends Component {
     const { className } = this.props
     return (
       <nav className={`${styles.container} ${className || ''}`}>
-        <Link to="/">Home</Link>
         <Link to="/now">Now</Link>
         <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
+        <Link to="/writing">Writing</Link>
       </nav>
     )
   }

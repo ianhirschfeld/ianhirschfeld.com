@@ -26,11 +26,11 @@ const AboutPage = () => {
     <PageLayout>
       <SEO title="About" />
       <section className="section">
-        <h1 className="section-heading">About Me</h1>
+        <h1 className="section-heading1">About Me</h1>
       </section>
 
       <section className="section">
-        <h2 className="section-heading">Background</h2>
+        <h2 className="section-heading2">Background</h2>
         <p>
           I’m a Fullstack Software Engineer with a degree in Computer Science and Digital Art. These days my primary
           languages and frameworks consists of: React, Redux, Ruby on Rails, and Postgres. I’ve also done my fair share
@@ -40,7 +40,7 @@ const AboutPage = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-heading">Companies I've Worked At</h2>
+        <h2 className="section-heading2">Companies I've Worked At</h2>
         <p>I've had the pleasure of working at some great companies over the years:</p>
 
         <ul className="section-list">
@@ -85,7 +85,7 @@ const AboutPage = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-heading">Brands I've Worked With</h2>
+        <h2 className="section-heading2">Brands I've Worked With</h2>
         <p>
           Both personally, and through my former agency{' '}
           <a href="https://www.thesoapcollective.com" target="_blank" rel="noopener noreferrer">

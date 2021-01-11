@@ -132,12 +132,26 @@ nav a:focus::before,
   color: var(--color-grey);
 }
 
-.section {
-  margin: var(--grid-size-double) 0;
+.content-width {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section-heading {
+.section {
+  margin-top: var(--grid-size-double);
+  margin-bottom: var(--grid-size-double);
+}
+
+.section-heading1 {
   margin: var(--grid-size) 0;
+}
+
+.section-heading2 {
+  margin: var(--grid-size) 0;
+  font-family: var(--font-freight);
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .section-subheading {
@@ -157,6 +171,48 @@ nav a:focus::before,
   margin: var(--grid-size) calc(var(--grid-size) * -1) var(--grid-size-double);
   border-radius: 20px;
   overflow: hidden;
+}
+
+.post-title {
+  margin-bottom: 0;
+  color: var(--color-dark-grey);
+}
+
+.post-title::before {
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--color-red);
+  border-radius: 1px;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+
+.post-title:hover::before,
+.post-title:focus::before {
+  transform: scaleX(1);
+}
+
+.post-meta {
+  margin-bottom: var(--grid-size);
+  font-size: 1.6rem;
+  color: var(--color-grey);
+}
+
+.post-content {
+}
+
+.post-content ul,
+.post-content ol {
+  margin: var(--grid-size) 0;
+  padding: 0 var(--grid-size-double);
+  font-size: 1.8rem;
+  line-height: var(--line-height);
 }
 
 @media only screen and (max-width: 699px) {

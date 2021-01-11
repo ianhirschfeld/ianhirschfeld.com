@@ -13,6 +13,30 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1280,
+              backgroundColor: 'transparent',
+              linkImagesToOriginal: false,
+              wrapperStyle:
+                'margin: var(--grid-size) calc(var(--grid-size) * -1) var(--grid-size-double);border-radius: 20px;overflow: hidden;',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -28,8 +52,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-svg`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
 import { CORNER, BLUE_BLOBS, RED_BLOBS, TAN_BLOBS, SOCIAL_LINKS } from '../../constants'
 
@@ -38,9 +39,9 @@ class PageHeader extends Component {
           </div>
         </div>
 
-        <div className={styles.headshotContainer}>
-          <div className={styles.headshot}>Ian Hirschfeld's Headshot</div>
-        </div>
+        <Link to="/" className={styles.headshotContainer}>
+          <span className={styles.headshot}>Ian Hirschfeld's Headshot</span>
+        </Link>
 
         <div className={styles.content}>
           <Nav className={styles.nav} />
