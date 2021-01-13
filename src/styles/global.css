@@ -237,8 +237,18 @@ nav a:focus::before,
   line-height: var(--line-height);
 }
 
+.post-content .gatsby-resp-image-wrapper {
+  margin: var(--grid-size) calc(var(--grid-size) * -1) var(--grid-size-double) !important;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 699px) {
   .banner {
+    border-radius: 0;
+  }
+
+  .post-content .gatsby-resp-image-wrapper {
     border-radius: 0;
   }
 }

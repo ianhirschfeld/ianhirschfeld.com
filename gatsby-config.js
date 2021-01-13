@@ -30,8 +30,6 @@ module.exports = {
               maxWidth: 1280,
               backgroundColor: 'transparent',
               linkImagesToOriginal: false,
-              wrapperStyle:
-                'margin: var(--grid-size) calc(var(--grid-size) * -1) var(--grid-size-double);border-radius: 20px;overflow: hidden;',
             },
           },
         ],
