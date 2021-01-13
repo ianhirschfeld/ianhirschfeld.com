@@ -14,3 +14,27 @@ Since I have many social media accounts, I tend to use the same profile photo ac
 With colors figured out I set my sights on fonts. I was scoping out some other side projects of mine and couldn’t stop referring to cinepocalypse.com. I found the fonts on that site some time ago and really enjoy them. They read cleanly, are sans-serif, and have some roundedness. For headings I’m using Rift Soft, which offer a bold, all caps look with no hard edges. For body copy I’ve got Freight Sans Pro. Together, they give great readability and have heavy contrast between headings and body copy. They may end up being the fonts I use for all my side-projects.
 
 Lastly, I wanted one design element that I created or used in a way that felt unique to me and my site. Thinking back on how to make my site feel a little more organic, I went looking for shape inspiration. I came across [Blob Maker](https://www.blobmaker.app/) which instantly became something I wanted to use. After some experimenting with shapes I generated, I was enjoying how red, blue, and tan blobs sat on top of each other. I realized that one final piece they were missing was some motion. Adding just a little bit of movement and morphing animations to the blobs gave me a really nice effect that I feel gives the site some life without being too distracting.
+
+## A Stroll Through Past Sites
+
+This is the sixth iteration of my website, below are my previous four. Unfortunately, the first version of my portfolio site has been lost. However, I do have a business card that I based off the design of the site! Enjoy :)
+
+### V5 (2017-2020)
+
+![Version 5](../images/posts/NewYearNewSite_v5.jpg)
+
+### V4 (2014-2017)
+
+![Version 4](../images/posts/NewYearNewSite_v4.jpg)
+
+### V3 (2014-2014)
+
+![Version 3](../images/posts/NewYearNewSite_v3.jpg)
+
+### V2 (2010-2014)
+
+![Version 2](../images/posts/NewYearNewSite_v2.jpg)
+
+### V1 (2008-2010)
+
+![Version 1](../images/posts/NewYearNewSite_v1.jpg)
