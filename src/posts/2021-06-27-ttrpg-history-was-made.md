@@ -1,6 +1,7 @@
 ---
 title: TTRPG history was made with Team Liquid hosting a D&D one-shot for PrideFest
 date: 2021-06-27
+featuredImage: ../images/posts/TTRPGHistoryWasMade.jpg
 ---
 
 ![Color Palette Exploration](../images/posts/TTRPGHistoryWasMade.jpg)

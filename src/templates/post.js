@@ -6,15 +6,31 @@ import SEO from '../components/seo'
 
 export default function Post({ data }) {
   const { excerpt, html, timeToRead, frontmatter } = data.post
+  const { title, date, featuredImage } = frontmatter
+  const meta = []
+
+  if (featuredImage) {
+    const image = `${window.location.origin}${featuredImage.childImageSharp.fluid.src}`
+    meta.push(
+      {
+        property: `og:image`,
+        content: image,
+      },
+      {
+        property: `og:image`,
+        content: image,
+      }
+    )
+  }
 
   return (
     <PageLayout>
-      <SEO title="Writing" description={excerpt} />
+      <SEO title={title} description={excerpt} meta={meta} />
 
       <section className="section">
-        <h1 className="section-heading1 post-title">{frontmatter.title}</h1>
+        <h1 className="section-heading1 post-title">{title}</h1>
         <div className="post-meta">
-          {frontmatter.date} &middot; {timeToRead} min read
+          {date} &middot; {timeToRead} min read
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} className="post-content" />
       </section>
@@ -31,6 +47,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM Do, YYYY")
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1280, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
