@@ -51,5 +51,12 @@ module.exports = {
     },
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-11359166-4',
+        head: true,
+      },
+    },
   ],
 }
