@@ -32,16 +32,16 @@ class SocialLink extends Component {
       link: { id },
     } = this.props
     switch (id) {
-      case SOCIAL_LINKS.github.id:
+      case 'github':
         return <GithubIcon />
 
-      case SOCIAL_LINKS.linkedin.id:
+      case 'linkedin':
         return <LinkedinIcon />
 
-      case SOCIAL_LINKS.medium.id:
+      case 'medium':
         return <MediumIcon />
 
-      case SOCIAL_LINKS.twitter.id:
+      case 'twitter':
         return <TwitterIcon />
 
       default:

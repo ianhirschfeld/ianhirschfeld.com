@@ -18,6 +18,10 @@
   vertical-align: top;
 }
 
+.social-item:last-child {
+  margin-right: 0;
+}
+
 .social-link {
   width: 24px;
   height: 24px;

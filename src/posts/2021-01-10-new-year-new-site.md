@@ -1,6 +1,6 @@
 ---
 title: New Year, New Site!
-date: 2020-01-10
+date: 2021-01-10
 ---
 
 Well 2020 was a wild year! Not just because of the pandemic and the political crisis the U.S. is in, but also because of the personal and life changes I went through. Since I’ve staked my career in software and the tech industry, I very much link my personal website with my identity. So every now and then when I reflect on my life and acknowledge the areas I’ve grown and changed, I inevitably take a look at my personal site to gut check whether it still represents _me_. As I was hanging out at home during my holiday break, I felt it was time to make an update. As of the beginning of this new year, I have launched latest iteration of ianhirschfeld.com that you see here.

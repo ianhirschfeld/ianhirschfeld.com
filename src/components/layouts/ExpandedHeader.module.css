@@ -128,6 +128,10 @@
   vertical-align: top;
 }
 
+.social-item:last-child {
+  margin-right: 0;
+}
+
 .arrow-button-container {
   width: 100%;
   height: 40px;
