@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import { PageLayout } from '../components/layouts'
 import SEO from '../components/seo'
 
 export default function Post({ data }) {
+  const [origin, setOrigin] = useState(null)
+  useEffect(() => setOrigin(window.location.origin), [])
+
   const { excerpt, html, timeToRead, frontmatter } = data.post
   const { title, date, featuredImage } = frontmatter
   const meta = []
 
-  if (featuredImage) {
-    const image = `${window.location.origin}${featuredImage.childImageSharp.fluid.src}`
+  if (origin && featuredImage) {
+    const image = `${origin}${featuredImage.childImageSharp.fluid.src}`
     meta.push(
       {
         property: `og:image`,
