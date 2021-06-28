@@ -20,7 +20,7 @@ export default function Post({ data }) {
         content: image,
       },
       {
-        property: `og:image`,
+        property: `twitter:image`,
         content: image,
       }
     )
