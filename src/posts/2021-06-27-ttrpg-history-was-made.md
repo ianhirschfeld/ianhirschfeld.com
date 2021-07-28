@@ -4,7 +4,7 @@ date: 2021-06-27
 featuredImage: ../images/posts/TTRPGHistoryWasMade.jpg
 ---
 
-![Color Palette Exploration](../images/posts/TTRPGHistoryWasMade.jpg)
+![DND Steampunk Twitch Screenshot](../images/posts/TTRPGHistoryWasMade.jpg)
 
 Something really cool happened on Friday: Team Liquid, one of the premier esports organizations, hosted a massive PrideFest stream that was a Dungeons & Dragons one-shot. That’s right, the org with teams for every major esports game and dozens of championships, empowered Game Master [Gabe Hicks](https://twitter.com/GabeJamesGames) to take over their stream for a roleplaying session. This is amazing in multiple ways and I believe a historic moment for tabletop roleplaying games!
 
