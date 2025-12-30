@@ -1,5 +1,17 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-brand-red: #d90011;
+  --color-brand-blue: #7ac7ff;
+  --color-brand-tan: #e6c29c;
+
+  --font-freight: 'freight-sans-pro', Helvetica, Arial, sans-serif;
+  --font-rift: 'rift-soft', Helvetica, Arial, sans-serif;
+
+  --border-width-5: 5px;
+  --radius-2_5xl: 20px;
+}
+
 body {
   background-color: #f9fafb;
   background-image: radial-gradient(#d1d5db 1px, transparent 1px);
