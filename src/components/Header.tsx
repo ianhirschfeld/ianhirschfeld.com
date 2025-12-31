@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 
 import headshot from '../assets/Ian_Hirschfeld_Headshot.jpg';
-import GitHubIcon from '../assets/icons/GithubIcon.svg?react';
-import LinkedInIcon from '../assets/icons/LinkedinIcon.svg?react';
-import { BLUE_BLOBS, CORNER, RED_BLOBS, TAN_BLOBS } from '../constants';
+import { BLUE_BLOBS, CORNER, RED_BLOBS, SOCIAL_LINKS, TAN_BLOBS } from '../constants';
 import Blob from './Blob';
+import SocialLink from './SocialLink';
 
 function Header() {
   return (
@@ -35,6 +34,7 @@ function Header() {
             </p>
           </div>
         </div>
+
         {/* Bottom Row */}
         <div className="mt-1 flex items-stretch gap-1">
           <div className="bg-brand-red flex flex-1 rounded-md rounded-bl-xl">
@@ -59,21 +59,17 @@ function Header() {
                 </Hexagon>
               </Hexagon>
             </div>
-            <div className="border-brand-red text-brand-red relative size-20 -scale-x-100 overflow-hidden border border-r-0 bg-black p-1">
+            <div className="border-brand-red text-brand-red relative h-20 w-30 -scale-x-100 overflow-hidden border border-r-0 bg-black p-1">
               <WavyCircle className="absolute -top-1/4 -left-3/4 size-80">
                 <WavyCircle className="size-75.5">
                   <WavyCircle className="size-71.5">
-                    <WavyCircle className="size-67.5">
-                      <WavyCircle className="size-63">
-                        <WavyCircle className="size-59">
-                          <WavyCircle className="size-55.5">
-                            <WavyCircle className="size-51.5">
-                              <WavyCircle className="size-48">
-                                <WavyCircle className="size-45">
-                                  <WavyCircle className="size-39">
-                                    <WavyCircle className="size-35" />
-                                  </WavyCircle>
-                                </WavyCircle>
+                    <WavyCircle className="size-68">
+                      <WavyCircle className="size-64">
+                        <WavyCircle className="size-60.5">
+                          <WavyCircle className="size-57">
+                            <WavyCircle className="size-54">
+                              <WavyCircle className="size-51">
+                                <WavyCircle className="size-48" />
                               </WavyCircle>
                             </WavyCircle>
                           </WavyCircle>
@@ -85,17 +81,19 @@ function Header() {
               </WavyCircle>
             </div>
             <div className="border-brand-red relative mt-auto h-10 flex-1 overflow-hidden rounded-br-md border-r py-1">
-              <div className="absolute bottom-[13px] left-0 h-0.5 w-full bg-black" />
-              <div className="absolute bottom-[24px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[36px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[29px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[22px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[16px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[10px] left-0 h-0.5 w-full bg-black" />
+              <div className="absolute bottom-[4px] left-0 h-0.5 w-full bg-black" />
             </div>
           </div>
-          <div className="flex w-40 items-center justify-center gap-2 rounded-md rounded-br-xl bg-white py-5">
-            <div className="bg-brand-blue size-10 rounded-full">
-              <GitHubIcon className="size-full" />
-            </div>
-            <div className="bg-brand-blue size-10 rounded-full">
-              <LinkedInIcon className="size-full" />
-            </div>
+
+          {/* Socials */}
+          <div className="flex w-40 items-center justify-evenly rounded-md rounded-br-xl bg-white py-5">
+            <SocialLink link={SOCIAL_LINKS.linkedin} />
+            <SocialLink link={SOCIAL_LINKS.github} />
           </div>
         </div>
       </div>
