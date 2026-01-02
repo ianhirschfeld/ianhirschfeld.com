@@ -7,9 +7,9 @@ import SocialLink from './SocialLink';
 
 function Header() {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="relative flex flex-col items-center">
       {/* Blobs */}
-      <div className="relative mx-auto size-[360px] max-sm:size-[300px]">
+      <div className="absolute top-1/2 z-0 size-150 -translate-y-1/2">
         <div className="absolute inset-0 -top-10 z-1">
           <Blob blobs={TAN_BLOBS} corner={CORNER.topRight} color="var(--color-brand-tan)" />
         </div>
@@ -21,24 +21,51 @@ function Header() {
         </div>
       </div>
 
-      <div className="w-full max-w-2xl rounded-2xl border-5 border-black bg-black shadow-2xl">
+      <div className="relative z-10 w-full max-w-2xl rounded-2xl border-5 border-black bg-black">
         {/* Top Row */}
-        <div className="flex items-stretch gap-1">
-          <div className="size-40 overflow-hidden rounded-md rounded-tl-xl border-2 border-white">
-            <img src={headshot} alt="Ian Hirschfeld" className="size-full object-cover" />
+        <div className={clsx('flex flex-col-reverse items-stretch gap-1', 'sm:flex-row')}>
+          <div
+            className={clsx(
+              'mx-auto size-75 overflow-hidden rounded-md border border-white bg-white',
+              'sm:mx-0 sm:size-40 sm:rounded-md sm:rounded-tl-xl'
+            )}
+          >
+            <img
+              src={headshot}
+              alt="Ian Hirschfeld"
+              className={clsx(
+                'size-full rounded-md object-cover',
+                'sm:rounded-md sm:rounded-tl-xl'
+              )}
+            />
           </div>
-          <div className="font-rift flex flex-1 flex-col justify-center rounded-md rounded-tr-xl bg-white px-6 py-4">
-            <h1 className="text-5xl font-bold text-black">Ian Hirschfeld</h1>
-            <p className="font-rift text-2xl font-bold text-gray-500">
+          <div
+            className={clsx(
+              'font-rift flex flex-1 flex-col justify-center rounded-md rounded-t-xl bg-white p-4 text-center',
+              'sm:rounded-md sm:rounded-tr-xl sm:px-6 sm:text-left'
+            )}
+          >
+            <h1 className={clsx('text-5xl font-bold', 'sm:text-6xl')}>Ian Hirschfeld</h1>
+            <p className={clsx('text-2xl font-semibold text-slate-500', 'sm:text-3xl')}>
               Code &middot; Movies &middot; TTRPGs
             </p>
           </div>
         </div>
 
         {/* Bottom Row */}
-        <div className="mt-1 flex items-stretch gap-1">
-          <div className="bg-brand-red flex flex-1 rounded-md rounded-bl-xl">
-            <div className="border-brand-red text-brand-red relative size-20 overflow-hidden rounded-tl-md rounded-bl-xl border bg-black p-1">
+        <div className={clsx('mt-1 flex flex-col items-stretch gap-1', 'sm:flex-row')}>
+          <div
+            className={clsx(
+              'bg-brand-red flex flex-1 rounded-md',
+              'sm:rounded-md sm:rounded-bl-xl'
+            )}
+          >
+            <div
+              className={clsx(
+                'border-brand-red text-brand-red relative size-20 overflow-hidden rounded-l-md border bg-black p-1',
+                'sm:rounded-tl-md sm:rounded-bl-xl'
+              )}
+            >
               <Hexagon className="absolute -top-1/8 -left-1/4 size-48">
                 <Hexagon className="size-44">
                   <Hexagon className="size-40">
@@ -91,7 +118,12 @@ function Header() {
           </div>
 
           {/* Socials */}
-          <div className="flex w-40 items-center justify-evenly rounded-md rounded-br-xl bg-white py-5">
+          <div
+            className={clsx(
+              'flex w-full items-center justify-center gap-7 rounded-t-md rounded-b-xl bg-white py-5',
+              'sm:w-40 sm:justify-evenly sm:gap-0 sm:rounded-md sm:rounded-br-xl'
+            )}
+          >
             <SocialLink link={SOCIAL_LINKS.linkedin} />
             <SocialLink link={SOCIAL_LINKS.github} />
           </div>

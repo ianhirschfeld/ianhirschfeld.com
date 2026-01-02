@@ -5,15 +5,19 @@
   --color-brand-blue: #7ac7ff;
   --color-brand-tan: #e6c29c;
   --color-off-white: #efece2;
+  --color-off-black: #202020;
 
   --font-freight: 'freight-sans-pro', Helvetica, Arial, sans-serif;
   --font-rift: 'rift-soft', Helvetica, Arial, sans-serif;
 
   --border-width-5: 5px;
+
   --radius-2_5xl: 20px;
+  --radius-inherit: inherit;
 }
 
 body {
+  color: var(--color-off-black);
   background-color: var(--color-off-white);
   background-image: radial-gradient(#d1d5db 1px, transparent 1px);
   background-size: 20px 20px;
