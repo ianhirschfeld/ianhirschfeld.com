@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 
+import Blob from '../../src/components/Blob';
+import SocialLink from '../../src/components/SocialLink';
+import { BLUE_BLOBS, CORNER, RED_BLOBS, SOCIAL_LINKS, TAN_BLOBS } from '../../src/constants';
 import headshot from '../assets/Ian_Hirschfeld_Headshot.jpg';
-import { BLUE_BLOBS, CORNER, RED_BLOBS, SOCIAL_LINKS, TAN_BLOBS } from '../constants';
-import Blob from './Blob';
-import SocialLink from './SocialLink';
 
 function Header() {
   return (
