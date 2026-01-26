@@ -23,7 +23,7 @@ function WritingPage() {
         const readingTime = calculateReadingTime(post.content);
         return (
           <section key={post.slug} className="section">
-            <Link to={`/writing/${post.slug}`} className="post-title">
+            <Link to={`/posts/${post.slug}`} className="post-title">
               <h2>{post.frontmatter.title}</h2>
             </Link>
             <div className="post-meta">

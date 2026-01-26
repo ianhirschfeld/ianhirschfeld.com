@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import AboutPage from './pages/AboutPage';
 import HomePage from './pages/HomePage';
@@ -15,7 +15,8 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/writing" element={<WritingPage />} />
-      <Route path="/writing/:slug" element={<PostPage />} />
+      <Route path="/posts" element={<Navigate to="/writing" replace />} />
+      <Route path="/posts/:slug" element={<PostPage />} />
       <Route path="/now" element={<NowPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
