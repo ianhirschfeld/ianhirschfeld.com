@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
-import GitHubIcon from '../assets/icons/GithubIcon.svg?react';
-import LinkedInIcon from '../assets/icons/LinkedinIcon.svg?react';
-import { SOCIAL_LINKS, type SocialLink as SocialLinkType } from '../constants';
+import GitHubIcon from '~/assets/icons/GithubIcon.svg?react';
+import LinkedInIcon from '~/assets/icons/LinkedinIcon.svg?react';
+import { SOCIAL_LINKS, type SocialLink as SocialLinkType } from '~/constants';
 
 interface SocialLinkProps {
   link: SocialLinkType;

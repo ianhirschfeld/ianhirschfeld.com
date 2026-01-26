@@ -1,5 +1,5 @@
-import { SOCIAL_LINKS } from '../../constants';
-import SocialLink from '../SocialLink';
+import SocialLink from '~/components/SocialLink';
+import { SOCIAL_LINKS } from '~/constants';
 
 function Footer() {
   return (

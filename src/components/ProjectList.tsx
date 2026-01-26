@@ -30,7 +30,7 @@ function ProjectItem({ item }: ProjectItemProps) {
       {path ? (
         <Link
           to={path}
-          className="group relative block w-full overflow-hidden rounded-2_5xl pt-[56.25%] max-md:rounded-none"
+          className="group rounded-2_5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
         >
           {linkContent}
         </Link>
@@ -39,7 +39,7 @@ function ProjectItem({ item }: ProjectItemProps) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative block w-full overflow-hidden rounded-2_5xl pt-[56.25%] max-md:rounded-none"
+          className="group rounded-2_5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
         >
           {linkContent}
         </a>
@@ -66,7 +66,7 @@ interface ProjectListProps {
 
 function ProjectList({ items }: ProjectListProps) {
   return (
-    <ul className="m-0 grid list-none justify-center gap-x-5 gap-y-10 p-0 max-md:-mx-5 [grid-template-columns:repeat(auto-fill,400px)] max-lg:[grid-template-columns:repeat(auto-fill,320px)] max-md:[grid-template-columns:100%]">
+    <ul className="m-0 grid list-none [grid-template-columns:repeat(auto-fill,400px)] justify-center gap-x-5 gap-y-10 p-0 max-lg:[grid-template-columns:repeat(auto-fill,320px)] max-md:-mx-5 max-md:[grid-template-columns:100%]">
       {items.map((item, i) => (
         <ProjectItem key={i} item={item} />
       ))}

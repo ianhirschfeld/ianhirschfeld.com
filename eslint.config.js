@@ -24,7 +24,9 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
-      'simple-import-sort/imports': 'error',
+      'simple-import-sort/imports': ['error', {
+          groups: [['\\.css'], ['^'], ['~/'], ['^\\.']],
+        }],
       'simple-import-sort/exports': 'error',
     },
   },

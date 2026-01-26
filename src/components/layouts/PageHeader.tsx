@@ -1,24 +1,40 @@
 import { Link } from 'react-router-dom';
 
-import headshotImage from '../../assets/Ian_Hirschfeld_headshot.jpg';
-import { BLUE_BLOBS, CORNER, RED_BLOBS, SOCIAL_LINKS, TAN_BLOBS } from '../../constants';
-import Blob from '../Blob';
-import SocialLink from '../SocialLink';
+import headshotImage from '~/assets/Ian_Hirschfeld_headshot.jpg';
+import Blob from '~/components/Blob';
+import SocialLink from '~/components/SocialLink';
+import { BLUE_BLOBS, CORNER, RED_BLOBS, SOCIAL_LINKS, TAN_BLOBS } from '~/constants';
+
 import Nav from './Nav';
 
 function PageHeader() {
   return (
-    <header className="relative h-20 border-b border-brand-tan bg-dark-off-white">
+    <header className="border-brand-tan bg-dark-off-white relative h-20 border-b">
       {/* Blobs */}
       <div className="pointer-events-none absolute -top-5 -left-2.5 z-1 size-[140px]">
         <div className="absolute -top-5 -right-2.5 z-1 size-full">
-          <Blob blobs={TAN_BLOBS} corner={CORNER.topRight} color="var(--color-brand-tan)" deltaMax={5} />
+          <Blob
+            blobs={TAN_BLOBS}
+            corner={CORNER.topRight}
+            color="var(--color-brand-tan)"
+            deltaMax={5}
+          />
         </div>
-        <div className="absolute -left-5 bottom-0 z-2 size-full">
-          <Blob blobs={BLUE_BLOBS} corner={CORNER.bottomLeft} color="var(--color-brand-blue)" deltaMax={5} />
+        <div className="absolute bottom-0 -left-5 z-2 size-full">
+          <Blob
+            blobs={BLUE_BLOBS}
+            corner={CORNER.bottomLeft}
+            color="var(--color-brand-blue)"
+            deltaMax={5}
+          />
         </div>
         <div className="absolute -right-1.5 -bottom-1.5 z-3 size-full">
-          <Blob blobs={RED_BLOBS} corner={CORNER.bottomRight} color="var(--color-brand-red)" deltaMax={5} />
+          <Blob
+            blobs={RED_BLOBS}
+            corner={CORNER.bottomRight}
+            color="var(--color-brand-red)"
+            deltaMax={5}
+          />
         </div>
       </div>
 

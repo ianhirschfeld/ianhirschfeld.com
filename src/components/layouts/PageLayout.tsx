@@ -12,7 +12,9 @@ function PageLayout({ children, isFullWidth = false }: PageLayoutProps) {
   return (
     <div>
       <PageHeader />
-      <article className={clsx('mx-auto px-5', !isFullWidth && 'max-w-[680px]')}>{children}</article>
+      <article className={clsx('mx-auto px-5', !isFullWidth && 'max-w-[680px]')}>
+        {children}
+      </article>
       <Footer />
     </div>
   );

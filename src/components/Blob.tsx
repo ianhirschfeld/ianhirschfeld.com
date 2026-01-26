@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useCallback, useEffect, useRef } from 'react';
 
-import { CORNER, type Corner } from '../constants';
+import { CORNER, type Corner } from '~/constants';
 
 const SPEED = 10000;
 

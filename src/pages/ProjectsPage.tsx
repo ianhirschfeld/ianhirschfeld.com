@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 
-import atlasImage from '../assets/projects/Atlas.jpg';
-import balancesImage from '../assets/projects/Balances.jpg';
-import beyondTokyoImage from '../assets/projects/BeyondTokyo.jpg';
-import cedImage from '../assets/projects/CED.jpg';
-import goodFridaysImage from '../assets/projects/GoodFridays.jpg';
-import hackDesignImage from '../assets/projects/HackDesign.png';
-import neverBoutUsImage from '../assets/projects/NeverBoutUs.jpg';
-import profileImage from '../assets/projects/Profile.jpg';
-import retinaMacAppsImage from '../assets/projects/RetinaMacApps.jpg';
-import roleClassicImage from '../assets/projects/RoleClassic.jpg';
-import PageLayout from '../components/layouts/PageLayout';
-import ProjectList, { type Project } from '../components/ProjectList';
+import atlasImage from '~/assets/projects/Atlas.jpg';
+import balancesImage from '~/assets/projects/Balances.jpg';
+import beyondTokyoImage from '~/assets/projects/BeyondTokyo.jpg';
+import cedImage from '~/assets/projects/CED.jpg';
+import goodFridaysImage from '~/assets/projects/GoodFridays.jpg';
+import hackDesignImage from '~/assets/projects/HackDesign.png';
+import neverBoutUsImage from '~/assets/projects/NeverBoutUs.jpg';
+import profileImage from '~/assets/projects/Profile.jpg';
+import retinaMacAppsImage from '~/assets/projects/RetinaMacApps.jpg';
+import roleClassicImage from '~/assets/projects/RoleClassic.jpg';
+import PageLayout from '~/components/layouts/PageLayout';
+import ProjectList, { type Project } from '~/components/ProjectList';
 
 const projects: Project[] = [
   {
@@ -93,7 +93,9 @@ function ProjectsPage() {
     <PageLayout isFullWidth>
       <section className="section mx-auto max-w-[680px]">
         <h1 className="section-heading1">Work &amp; Projects</h1>
-        <div className="section-subheading">A sampling of some of my public work and personal projects</div>
+        <div className="section-subheading">
+          A sampling of some of my public work and personal projects
+        </div>
       </section>
 
       <section className="section">

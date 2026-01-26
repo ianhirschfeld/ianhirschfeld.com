@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 
-import PageLayout from '../components/layouts/PageLayout';
-import { calculateReadingTime, formatDate, getAllPosts } from '../lib/posts';
+import PageLayout from '~/components/layouts/PageLayout';
+import { calculateReadingTime, formatDate, getAllPosts } from '~/lib/posts';
 
 function WritingPage() {
   const posts = getAllPosts();

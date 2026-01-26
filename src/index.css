@@ -62,7 +62,7 @@
   h4,
   h5,
   h6 {
-    @apply m-0 p-0 font-rift leading-[1.2];
+    @apply font-rift m-0 p-0 leading-[1.2];
   }
 
   h1 {
@@ -85,13 +85,13 @@
   }
 
   a {
-    @apply relative inline-block text-brand-red no-underline;
+    @apply text-brand-red relative inline-block no-underline;
   }
 }
 
 @layer components {
   .link-animated::before {
-    @apply absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 bg-brand-red transition-transform duration-200 content-[''];
+    @apply bg-brand-red absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
   }
 
   .link-animated:hover::before,
@@ -108,11 +108,11 @@
   }
 
   .section-heading2 {
-    @apply my-5 font-freight text-[3rem] font-semibold;
+    @apply font-freight my-5 text-[3rem] font-semibold;
   }
 
   .section-subheading {
-    @apply -mt-5 mb-5 text-[1.6rem] text-grey;
+    @apply text-grey -mt-5 mb-5 text-[1.6rem];
   }
 
   .section-list {
@@ -120,11 +120,11 @@
   }
 
   .banner {
-    @apply -mx-5 my-5 mb-10 overflow-hidden rounded-2_5xl max-md:rounded-none;
+    @apply rounded-2_5xl -mx-5 my-5 mb-10 overflow-hidden max-md:rounded-none;
   }
 
   .post-title {
-    @apply relative mb-0 text-off-black;
+    @apply text-off-black relative mb-0;
   }
 
   .post-title h2 {
@@ -132,7 +132,7 @@
   }
 
   .post-title::before {
-    @apply absolute bottom-0 left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm bg-brand-red transition-transform duration-200 content-[''];
+    @apply bg-brand-red absolute bottom-0 left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
   }
 
   .post-title:hover::before,
@@ -141,7 +141,7 @@
   }
 
   .post-meta {
-    @apply mb-5 text-[1.6rem] text-grey;
+    @apply text-grey mb-5 text-[1.6rem];
   }
 
   .post-content h1 {
@@ -149,11 +149,11 @@
   }
 
   .post-content h2 {
-    @apply my-5 font-freight text-[3rem] font-semibold;
+    @apply font-freight my-5 text-[3rem] font-semibold;
   }
 
   .post-content h3 {
-    @apply my-5 font-freight text-[2.8rem] font-normal;
+    @apply font-freight my-5 text-[2.8rem] font-normal;
   }
 
   .post-content ul,
@@ -162,13 +162,13 @@
   }
 
   .post-content img {
-    @apply -mx-5 my-5 mb-10 w-[calc(100%+40px)] max-w-none overflow-hidden rounded-2_5xl max-md:rounded-none;
+    @apply rounded-2_5xl -mx-5 my-5 mb-10 w-[calc(100%+40px)] max-w-none overflow-hidden max-md:rounded-none;
   }
 }
 
 /* Nav link underlines */
 nav a::before {
-  @apply absolute -bottom-px left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm bg-brand-red transition-transform duration-200 content-[''];
+  @apply bg-brand-red absolute -bottom-px left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
 }
 
 nav a:hover::before,
@@ -179,7 +179,7 @@ nav a:focus::before {
 /* Paragraph link underlines */
 p a::before,
 .section-list a::before {
-  @apply absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 bg-brand-red transition-transform duration-200 content-[''];
+  @apply bg-brand-red absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
 }
 
 p a:hover::before,
