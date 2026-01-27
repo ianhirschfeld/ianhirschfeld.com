@@ -91,7 +91,7 @@ function ProjectsPage() {
 
   return (
     <PageLayout isFullWidth>
-      <section className="section mx-auto max-w-[680px]">
+      <section className="section mx-auto max-w-2xl">
         <h1 className="section-heading1">Work &amp; Projects</h1>
         <div className="section-subheading">
           A sampling of some of my public work and personal projects

@@ -22,6 +22,8 @@
   --animate-custom-swing: custom-swing 1s ease;
 }
 
+@custom-variant max-h-short (@media only screen and (max-height: 630px));
+
 @keyframes custom-swing {
   20% {
     transform: rotate3d(0, 0, 1, 15deg);
@@ -41,47 +43,13 @@
 }
 
 @layer base {
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    font-family: var(--font-freight);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 10px;
-  }
-
-  body {
-    @apply bg-off-white text-off-black;
-  }
-
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-rift m-0 p-0 leading-[1.2];
-  }
-
-  h1 {
-    @apply text-[4rem];
-  }
-  h2 {
-    @apply text-[3.4rem];
-  }
-  h3 {
-    @apply text-[3rem];
-  }
-  h4,
-  h5,
-  h6 {
-    @apply text-[2.6rem];
-  }
-
-  p {
-    @apply my-5 p-0 text-[1.8rem] leading-[1.4];
+    @apply font-rift font-bold;
   }
 
   a {
@@ -90,13 +58,18 @@
 }
 
 @layer components {
-  .link-animated::before {
-    @apply bg-brand-red absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
-  }
+  .prose {
+    section {
+      @apply my-10;
+    }
 
-  .link-animated:hover::before,
-  .link-animated:focus::before {
-    @apply scale-x-100;
+    h2 {
+      @apply my-5 text-4xl;
+    }
+
+    p {
+      @apply my-5 text-lg;
+    }
   }
 
   .section {
@@ -187,21 +160,4 @@ p a:focus::before,
 .section-list a:hover::before,
 .section-list a:focus::before {
   @apply scale-x-100;
-}
-
-/* Custom breakpoint for short heights */
-@media only screen and (max-height: 630px) {
-  .max-h-auto\:h-auto {
-    height: auto !important;
-  }
-  .max-h-auto\:hidden {
-    display: none !important;
-  }
-  .max-h-auto\:size-\[240px\] {
-    width: 240px !important;
-    height: 240px !important;
-  }
-  .max-h-auto\:mb-5 {
-    margin-bottom: 20px !important;
-  }
 }

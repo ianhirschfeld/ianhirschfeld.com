@@ -7,7 +7,7 @@ interface NavProps {
 
 function Nav({ className }: NavProps) {
   return (
-    <nav className={clsx('font-rift text-[3rem] max-md:text-[2rem]', className)}>
+    <nav className={clsx('font-rift text-3xl font-semibold max-md:text-2xl', className)}>
       <Link to="/now" className="inline-block">
         Now
       </Link>

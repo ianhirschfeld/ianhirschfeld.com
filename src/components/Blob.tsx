@@ -110,7 +110,7 @@ function Blob({
     <div
       ref={containerRef}
       className={clsx(
-        'absolute size-full opacity-70 transition-transform duration-10000 ease-linear',
+        'absolute size-full opacity-80 transition-transform duration-10000 ease-linear',
         className
       )}
     >

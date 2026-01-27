@@ -23,11 +23,11 @@ function ExpandedHeader({ onScrollClick }: ExpandedHeaderProps) {
   };
 
   return (
-    <header className="border-brand-tan bg-dark-off-white max-h-auto:h-auto relative h-screen w-screen border-b">
+    <header className="border-brand-tan bg-dark-off-white max-h-short:h-auto relative h-screen w-screen border-b">
       {/* Banner with blobs and headshot */}
       <div className="relative">
         {/* Blobs */}
-        <div className="max-h-auto:size-[240px] relative z-1 mx-auto size-[360px] max-md:size-[300px]">
+        <div className="max-h-short:size-[240px] relative z-1 mx-auto size-[360px] max-md:size-[300px]">
           <div className="absolute -top-10 z-1 size-full">
             <Blob blobs={TAN_BLOBS} corner={CORNER.topRight} color="var(--color-brand-tan)" />
           </div>
@@ -47,24 +47,22 @@ function ExpandedHeader({ onScrollClick }: ExpandedHeaderProps) {
 
       {/* Content */}
       <div className="px-10 text-center">
-        <h1 className="font-rift mb-2.5 text-[6rem] leading-none max-md:text-[5rem]">
+        <h1 className="max-h-short:text-5xl mb-2.5 text-6xl leading-none max-md:text-5xl">
           Ian Hirschfeld
         </h1>
-        <p className="font-rift text-brand-red max-h-auto:mb-5 mb-10 text-[4rem] leading-none opacity-80 max-md:text-[3rem]">
+        <p className="font-rift text-brand-red max-h-short:mb-5 max-h-short:text-3xl mb-10 text-4xl leading-none font-semibold max-md:text-3xl">
           Code <span className="text-grey">&middot;</span> Movies{' '}
           <span className="text-grey">&middot;</span> TTRPGs
         </p>
-        <ul className="max-h-auto:mb-5 m-0 list-none p-0">
+        <div className="max-h-short:mb-5 flex justify-center gap-8">
           {Object.values(SOCIAL_LINKS).map((link) => (
-            <li key={link.id} className="mr-7.5 inline-block align-top last:mr-0 max-md:mr-5">
-              <SocialLink link={link} />
-            </li>
+            <SocialLink key={link.id} link={link} className="max-h-short:size-8" />
           ))}
-        </ul>
+        </div>
       </div>
 
       {/* Arrow button */}
-      <div className="max-h-auto:hidden absolute bottom-5 flex h-10 w-full justify-center">
+      <div className="max-h-short:hidden absolute bottom-5 flex h-10 w-full justify-center">
         <div
           ref={arrowButtonRef}
           className={`size-10 origin-bottom ${isSwinging ? 'animate-custom-swing' : ''}`}

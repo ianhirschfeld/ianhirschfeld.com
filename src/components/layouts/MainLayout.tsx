@@ -9,7 +9,7 @@ interface MainLayoutProps {
 }
 
 function MainLayout({ children }: MainLayoutProps) {
-  const contentRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const handleScrollClick = () => {
     contentRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -18,7 +18,7 @@ function MainLayout({ children }: MainLayoutProps) {
   return (
     <div>
       <ExpandedHeader onScrollClick={handleScrollClick} />
-      <article ref={contentRef} className="mx-auto max-w-[680px] px-5">
+      <div ref={contentRef} className="mx-auto max-w-2xl px-5">
         {/* Nav with decorative corners */}
         <div className="relative">
           {/* Left corner */}
@@ -33,7 +33,7 @@ function MainLayout({ children }: MainLayoutProps) {
           </div>
         </div>
         {children}
-      </article>
+      </div>
       <Footer />
     </div>
   );
