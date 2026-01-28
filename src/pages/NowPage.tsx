@@ -11,21 +11,17 @@ function NowPage() {
   return (
     <PageLayout>
       <section className="section">
-        <h1 className="section-heading1">What I'm Doing Right Now</h1>
-        <div className="section-subheading">Last Updated: December 31st, 2020</div>
+        <h1 className="text-4_5xl">What I'm Doing Right Now</h1>
+        <div className="text-grey">Last Updated: December 31st, 2020</div>
         <div className="banner">
           <img src={roleBannerImage} alt="Role Banner" className="w-full" />
         </div>
       </section>
 
-      <section className="section">
-        <h2 className="section-heading2">Role, Inc. and the Future of Online Play</h2>
+      <section className="prose">
+        <h2>Role, Inc. and the Future of Online Play</h2>
         <p>
-          Towards the beginning of 2020,{' '}
-          <a href="https://twitter.com/logandwight" target="_blank" rel="noopener noreferrer">
-            Logan Dwight
-          </a>{' '}
-          and I co-found{' '}
+          Towards the beginning of 2020, L. Dwight and I co-found{' '}
           <a href="https://www.playrole.com" target="_blank" rel="noopener noreferrer">
             Role, Inc.
           </a>{' '}
@@ -56,7 +52,7 @@ function NowPage() {
           connection online. It turns out we aren't the only ones with this belief! In September,
           a16z's Jonathan Lai and Andrew Chen published the article{' '}
           <a
-            href="https://a16z.com/2020/09/01/tabletop-games-go-digital/"
+            href="https://a16z.com/the-digital-future-of-tabletop-games/"
             target="_blank"
             rel="noopener noreferrer"
           >

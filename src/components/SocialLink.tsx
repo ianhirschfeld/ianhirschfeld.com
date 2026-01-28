@@ -45,7 +45,7 @@ function SocialLink({ link, className }: SocialLinkProps) {
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
-        className="pointer-events-none absolute top-1/2 left-1/2 z-1 size-[200%] -translate-1/2"
+        className="pointer-events-none absolute top-1/2 left-1/2 z-1 size-[200%] -translate-1/2 opacity-80"
       >
         <path
           d={blob}

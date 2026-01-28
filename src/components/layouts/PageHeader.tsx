@@ -47,16 +47,14 @@ function PageHeader() {
       </Link>
 
       {/* Content */}
-      <div className="ml-[150px] flex h-full items-center max-md:ml-[140px] max-md:block">
-        <Nav className="max-md:pt-2.5 max-md:pb-2.5 max-md:text-right [&_a]:mr-5 max-md:[&_a]:mr-2.5" />
-        <div className="flex-1 max-md:hidden" />
-        <ul className="m-0 list-none p-0 max-md:text-right">
+      <div className="ml-[150px] flex h-full items-center max-sm:ml-[140px] max-sm:block">
+        <Nav className="max-md:text-2xl max-sm:pt-1 max-sm:pb-2 max-sm:text-right [&_a]:mr-5 max-sm:[&_a]:mr-2.5" />
+        <div className="flex-1 max-sm:hidden" />
+        <div className="mr-8 flex justify-center gap-7 max-sm:mr-5 max-sm:justify-end max-sm:gap-5">
           {Object.values(SOCIAL_LINKS).map((link) => (
-            <li key={link.id} className="mr-7.5 inline-block align-top max-lg:mr-5">
-              <SocialLink link={link} />
-            </li>
+            <SocialLink key={link.id} link={link} className="max-sm:size-6" />
           ))}
-        </ul>
+        </div>
       </div>
     </header>
   );

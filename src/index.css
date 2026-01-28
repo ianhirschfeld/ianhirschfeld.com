@@ -12,6 +12,8 @@
   --font-freight: 'freight-sans-pro', Helvetica, Arial, sans-serif;
   --font-rift: 'rift-soft', Helvetica, Arial, sans-serif;
 
+  --text-4_5xl: 2.5rem;
+
   --border-width-5: 5px;
 
   --radius-2_5xl: 20px;
@@ -49,6 +51,10 @@
   h4,
   h5,
   h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
     @apply font-rift font-bold;
   }
 
@@ -64,11 +70,15 @@
     }
 
     h2 {
-      @apply my-5 text-4xl;
+      @apply mt-5 mb-4 text-3xl;
     }
 
     p {
       @apply my-5 text-lg;
+    }
+
+    h2 + p {
+      @apply mt-0;
     }
   }
 
