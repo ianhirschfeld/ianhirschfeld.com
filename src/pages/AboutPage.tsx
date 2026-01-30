@@ -11,12 +11,12 @@ function AboutPage() {
 
   return (
     <PageLayout>
-      <section className="section">
-        <h1 className="section-heading1">About Me</h1>
+      <section>
+        <h1>About Me</h1>
       </section>
 
-      <section className="section">
-        <h2 className="section-heading2">Background</h2>
+      <section>
+        <h2>Background</h2>
         <p>
           I'm a Fullstack Software Engineer with a degree in Computer Science and Digital Art. These
           days my primary languages and frameworks consists of: React, Redux, Ruby on Rails, and
@@ -26,11 +26,11 @@ function AboutPage() {
         </p>
       </section>
 
-      <section className="section">
-        <h2 className="section-heading2">Companies I've Worked At</h2>
+      <section>
+        <h2>Companies I've Worked At</h2>
         <p>I've had the pleasure of working at some great companies over the years:</p>
 
-        <ul className="section-list">
+        <ul>
           <li>
             <a href="https://unity.com" target="_blank" rel="noopener noreferrer">
               Unity Technologies
@@ -73,8 +73,8 @@ function AboutPage() {
         </p>
       </section>
 
-      <section className="section">
-        <h2 className="section-heading2">Brands I've Worked With</h2>
+      <section>
+        <h2>Brands I've Worked With</h2>
         <p>
           Both personally, and through my former agency{' '}
           <a href="https://www.thesoapcollective.com" target="_blank" rel="noopener noreferrer">
@@ -83,7 +83,7 @@ function AboutPage() {
           , I've been able to work along side some amazing brands. Together, we've built and
           delivered a variety of digital and in-person (pre-covid) experiences for their customers.
         </p>
-        <div className="my-10">
+        <div className="my-10 md:-mx-10">
           <img src={brandsImage} alt="Brand Logos" className="w-full" />
         </div>
       </section>

@@ -10,15 +10,15 @@ function NowPage() {
 
   return (
     <PageLayout>
-      <section className="section">
-        <h1 className="text-4_5xl">What I'm Doing Right Now</h1>
+      <section>
+        <h1>What I'm Doing Right Now</h1>
         <div className="text-grey">Last Updated: December 31st, 2020</div>
         <div className="banner">
           <img src={roleBannerImage} alt="Role Banner" className="w-full" />
         </div>
       </section>
 
-      <section className="prose">
+      <section>
         <h2>Role, Inc. and the Future of Online Play</h2>
         <p>
           Towards the beginning of 2020, L. Dwight and I co-found{' '}

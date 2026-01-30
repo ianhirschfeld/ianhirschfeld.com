@@ -15,48 +15,34 @@ interface ProjectItemProps {
 function ProjectItem({ item }: ProjectItemProps) {
   const { image, title, description, url, path } = item;
 
-  const linkContent = (
-    <img
-      src={image}
-      alt={title}
-      className="absolute inset-0 size-full object-cover transition-transform duration-200 group-hover:scale-110"
-    />
-  );
-
-  const titleContent = <h3 className="mt-2.5 mb-0">{title}</h3>;
-
   return (
-    <li className="block w-[400px] max-lg:w-[320px] max-md:w-full">
-      {path ? (
-        <Link
-          to={path}
-          className="group rounded-2_5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
-        >
-          {linkContent}
-        </Link>
-      ) : (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group rounded-2_5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
-        >
-          {linkContent}
-        </a>
-      )}
+    <div>
+      <Link
+        to={path || url || ''}
+        target={url ? '_blank' : undefined}
+        rel={url ? 'noopener noreferrer' : undefined}
+        className="group rounded-2.5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
+      >
+        <img
+          src={image}
+          alt={title}
+          className="absolute inset-0 size-full object-cover transition-transform duration-200 group-hover:scale-110"
+        />
+      </Link>
       <div className="px-5">
-        {path ? (
-          <Link to={path} className="text-off-black">
-            {titleContent}
+        <h3 className="font-rift mt-2.5 mb-1.5 text-3xl">
+          <Link
+            to={path || url || ''}
+            target={url ? '_blank' : undefined}
+            rel={url ? 'noopener noreferrer' : undefined}
+            className="text-off-black animated-underline"
+          >
+            {title}
           </Link>
-        ) : (
-          <a href={url} target="_blank" rel="noopener noreferrer" className="text-off-black">
-            {titleContent}
-          </a>
-        )}
-        <p className="mt-1.5 mb-0 text-[1.6rem]">{description}</p>
+        </h3>
+        <p className="my-0 text-sm">{description}</p>
       </div>
-    </li>
+    </div>
   );
 }
 
@@ -66,11 +52,11 @@ interface ProjectListProps {
 
 function ProjectList({ items }: ProjectListProps) {
   return (
-    <ul className="m-0 grid list-none [grid-template-columns:repeat(auto-fill,400px)] justify-center gap-x-5 gap-y-10 p-0 max-lg:[grid-template-columns:repeat(auto-fill,320px)] max-md:-mx-5 max-md:[grid-template-columns:100%]">
+    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
       {items.map((item, i) => (
         <ProjectItem key={i} item={item} />
       ))}
-    </ul>
+    </div>
   );
 }
 

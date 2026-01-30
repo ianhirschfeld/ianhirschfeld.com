@@ -91,14 +91,12 @@ function ProjectsPage() {
 
   return (
     <PageLayout isFullWidth>
-      <section className="section mx-auto max-w-2xl">
-        <h1 className="section-heading1">Work &amp; Projects</h1>
-        <div className="section-subheading">
-          A sampling of some of my public work and personal projects
-        </div>
+      <section className="mx-auto max-w-2xl px-5">
+        <h1>Work &amp; Projects</h1>
+        <div className="text-grey">A sampling of some of my public work and personal projects</div>
       </section>
 
-      <section className="section">
+      <section>
         <ProjectList items={projects} />
       </section>
     </PageLayout>

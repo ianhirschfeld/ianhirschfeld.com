@@ -64,9 +64,41 @@
 }
 
 @layer components {
+  .animated-underline::before,
+  nav a::before,
+  p a::before,
+  ul a::before {
+    @apply bg-brand-red absolute left-0 block w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
+  }
+
+  .animated-underline::before,
+  nav a::before {
+    @apply -bottom-px h-0.5 rounded-sm;
+  }
+
+  p a::before,
+  ul a::before {
+    @apply bottom-0 h-px;
+  }
+
+  .animated-underline:hover::before,
+  .animated-underline:focus::before,
+  nav a:hover::before,
+  nav a:focus::before,
+  p a:hover::before,
+  p a:focus::before,
+  ul a:hover::before,
+  ul a:focus::before {
+    @apply scale-x-100;
+  }
+
   .prose {
     section {
       @apply my-10;
+    }
+
+    h1 {
+      @apply text-4.5xl;
     }
 
     h2 {
@@ -79,6 +111,14 @@
 
     h2 + p {
       @apply mt-0;
+    }
+
+    ul {
+      @apply my-5 px-10;
+    }
+
+    li {
+      @apply list-disc text-lg;
     }
   }
 
@@ -145,29 +185,6 @@
   }
 
   .post-content img {
-    @apply rounded-2_5xl -mx-5 my-5 mb-10 w-[calc(100%+40px)] max-w-none overflow-hidden max-md:rounded-none;
+    @apply rounded-2.5xl -mx-5 my-5 mb-10 w-[calc(100%+40px)] max-w-none overflow-hidden max-md:rounded-none;
   }
-}
-
-/* Nav link underlines */
-nav a::before {
-  @apply bg-brand-red absolute -bottom-px left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
-}
-
-nav a:hover::before,
-nav a:focus::before {
-  @apply scale-x-100;
-}
-
-/* Paragraph link underlines */
-p a::before,
-.section-list a::before {
-  @apply bg-brand-red absolute bottom-0 left-0 block h-px w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
-}
-
-p a:hover::before,
-p a:focus::before,
-.section-list a:hover::before,
-.section-list a:focus::before {
-  @apply scale-x-100;
 }
