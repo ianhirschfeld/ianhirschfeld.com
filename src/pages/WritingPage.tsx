@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
-import remarkGfm from 'remark-gfm';
 
 import PageLayout from '~/components/layouts/PageLayout';
-import { calculateReadingTime, formatDate, getAllPosts } from '~/lib/posts';
+import { formatDate, getAllPosts } from '~/lib/posts';
 
 function WritingPage() {
   const posts = getAllPosts();
@@ -14,27 +12,40 @@ function WritingPage() {
   }, []);
 
   return (
-    <PageLayout>
-      <section className="section">
-        <h1 className="section-heading1">Writing</h1>
+    <PageLayout className="max-w-5xl">
+      <section>
+        <h1>Writing</h1>
       </section>
 
-      {posts.map((post) => {
-        const readingTime = calculateReadingTime(post.content);
-        return (
-          <section key={post.slug} className="section">
-            <Link to={`/posts/${post.slug}`} className="post-title">
-              <h2>{post.frontmatter.title}</h2>
+      <section>
+        {posts.map((post) => {
+          return (
+            <Link
+              key={post.slug}
+              to={`/posts/${post.slug}`}
+              className="group text-off-black relative my-2 flex items-center justify-between gap-5 no-underline!"
+            >
+              <span className="flex items-center gap-4">
+                {post.frontmatter.featuredImage ? (
+                  <img
+                    src={post.frontmatter.featuredImage}
+                    alt={post.frontmatter.title}
+                    className="size-8 rounded-lg object-cover"
+                  />
+                ) : (
+                  <span className="size-8 opacity-0" />
+                )}
+                <span className="font-rift decoration-brand-red/0 group-hover:decoration-brand-red text-xl leading-5 font-semibold underline decoration-1 underline-offset-2 transition-colors">
+                  {post.frontmatter.title}
+                </span>
+              </span>
+              <span className="text-grey text-right text-sm">
+                {formatDate(post.frontmatter.date)}
+              </span>
             </Link>
-            <div className="post-meta">
-              {formatDate(post.frontmatter.date)} &middot; {readingTime} min read
-            </div>
-            <div className="post-content">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
-            </div>
-          </section>
-        );
-      })}
+          );
+        })}
+      </section>
     </PageLayout>
   );
 }

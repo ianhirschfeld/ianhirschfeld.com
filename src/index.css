@@ -65,30 +65,14 @@
 
 @layer components {
   .animated-underline::before,
-  nav a::before,
-  p a::before,
-  ul a::before {
-    @apply bg-brand-red absolute left-0 block w-full origin-left scale-x-0 transition-transform duration-200 content-[''];
-  }
-
-  .animated-underline::before,
   nav a::before {
-    @apply -bottom-px h-0.5 rounded-sm;
-  }
-
-  p a::before,
-  ul a::before {
-    @apply bottom-0 h-px;
+    @apply bg-brand-red absolute -bottom-px left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
   }
 
   .animated-underline:hover::before,
   .animated-underline:focus::before,
   nav a:hover::before,
-  nav a:focus::before,
-  p a:hover::before,
-  p a:focus::before,
-  ul a:hover::before,
-  ul a:focus::before {
+  nav a:focus::before {
     @apply scale-x-100;
   }
 
@@ -103,6 +87,10 @@
 
     h2 {
       @apply mt-5 mb-4 text-3xl;
+    }
+
+    a {
+      @apply decoration-brand-red/0 hover:decoration-brand-red underline decoration-1 underline-offset-4 transition-colors;
     }
 
     p {

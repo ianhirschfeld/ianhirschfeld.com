@@ -1,6 +1,7 @@
 export interface PostFrontmatter {
   title: string;
   date: string;
+  featuredImage?: string;
 }
 
 export interface Post {
@@ -52,10 +53,21 @@ function parseFrontmatter(raw: string): { data: PostFrontmatter; content: string
     }
   });
 
+  // Transform featuredImage path if present
+  let featuredImage: string | undefined;
+  if (data.featuredImage) {
+    const match = data.featuredImage.match(/\.\.\/images\/posts\/(.+)/);
+    if (match) {
+      const filename = match[1];
+      featuredImage = imageMap[filename];
+    }
+  }
+
   return {
     data: {
       title: data.title || '',
       date: data.date || '',
+      featuredImage,
     },
     content,
   };

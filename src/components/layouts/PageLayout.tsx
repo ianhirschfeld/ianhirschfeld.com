@@ -5,14 +5,15 @@ import PageHeader from './PageHeader';
 
 interface PageLayoutProps {
   children: React.ReactNode;
+  className?: string;
   isFullWidth?: boolean;
 }
 
-function PageLayout({ children, isFullWidth = false }: PageLayoutProps) {
+function PageLayout({ children, className, isFullWidth = false }: PageLayoutProps) {
   return (
     <div>
       <PageHeader />
-      <article className={clsx('prose mx-auto px-5', !isFullWidth && 'max-w-2xl')}>
+      <article className={clsx('prose mx-auto px-5', !isFullWidth && 'max-w-2xl', className)}>
         {children}
       </article>
       <Footer />
