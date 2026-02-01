@@ -60,7 +60,7 @@ const projects: Project[] = [
     title: 'Profile',
     description: 'Digital Look Book packaged in an iOS app.',
     image: profileImage,
-    path: '/case-studies/profile',
+    path: '/projects/profile',
   },
   {
     title: 'CED Innovators',

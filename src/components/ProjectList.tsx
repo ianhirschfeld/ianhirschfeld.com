@@ -21,7 +21,7 @@ function ProjectItem({ item }: ProjectItemProps) {
         to={path || url || ''}
         target={url ? '_blank' : undefined}
         rel={url ? 'noopener noreferrer' : undefined}
-        className="group rounded-2.5xl relative block w-full overflow-hidden pt-[56.25%] max-md:rounded-none"
+        className="group rounded-2.5xl relative block w-full overflow-hidden pt-[56.25%]"
       >
         <img
           src={image}
