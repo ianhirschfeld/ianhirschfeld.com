@@ -4,8 +4,6 @@ date: 2021-07-27
 featuredImage: ../images/posts/DisneylandCovid.jpg
 ---
 
-![Disneyland with COVID floating around it](../images/posts/DisneylandCovid.jpg)
-
 I recently had the wonderful opportunity to spend a day at Disneyland with my best friend after we had been apart & quarantining for a majority of the pandemic. When we finally felt we were comfortable getting together and going out somewhere, we met up armed with masks on our faces and the vaccine coursing through our bodies. While these measures certainly made me feel safe enough to venture to such a public place as Disneyland, I was shocked at how COVID unsafe the magic kingdom was. Disneyland is, without a doubt, a COVID super spreader hotspot!
 
 ## Limited capacity? Nope, the more the merrier!

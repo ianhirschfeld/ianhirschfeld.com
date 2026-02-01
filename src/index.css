@@ -82,7 +82,7 @@
     }
 
     h1 {
-      @apply text-4.5xl;
+      @apply text-4.5xl leading-tight;
     }
 
     h2 {
@@ -110,6 +110,10 @@
     }
   }
 
+  .banner {
+    @apply rounded-2.5xl -mx-5 my-5 mb-10 overflow-hidden max-md:rounded-none;
+  }
+
   .section {
     @apply my-10;
   }
@@ -128,10 +132,6 @@
 
   .section-list {
     @apply my-5 px-10 text-[1.8rem] leading-[1.4];
-  }
-
-  .banner {
-    @apply rounded-2_5xl -mx-5 my-5 mb-10 overflow-hidden max-md:rounded-none;
   }
 
   .post-title {

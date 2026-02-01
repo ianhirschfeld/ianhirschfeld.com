@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Navigate, useParams } from 'react-router-dom';
+import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
 import PageLayout from '~/components/layouts/PageLayout';
@@ -9,6 +10,7 @@ import { calculateReadingTime, formatDate, getPostBySlug } from '~/lib/posts';
 function PostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+  const contentRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (post) {
@@ -16,22 +18,54 @@ function PostPage() {
     }
   }, [post]);
 
+  useEffect(() => {
+    if (!contentRef.current) return;
+    if (!contentRef.current.querySelector('.twitter-tweet')) return;
+
+    if ((window as any).twttr?.widgets) {
+      (window as any).twttr.widgets.load(contentRef.current);
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, [post]);
+
   if (!post) {
-    return <Navigate to="/404" replace />;
+    return <Navigate to="/404" replace={false} />;
   }
 
   const readingTime = calculateReadingTime(post.content);
 
   return (
     <PageLayout>
-      <section className="section">
-        <h1 className="section-heading1 post-title">{post.frontmatter.title}</h1>
-        <div className="post-meta">
+      <section>
+        <h1>{post.frontmatter.title}</h1>
+        <div className="text-grey">
           {formatDate(post.frontmatter.date)} &middot; {readingTime} min read
         </div>
-        <div className="post-content">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
-        </div>
+        {post.frontmatter.featuredImage && (
+          <div className="banner">
+            <img
+              src={post.frontmatter.featuredImage}
+              alt={post.frontmatter.title}
+              className="w-full"
+            />
+          </div>
+        )}
+      </section>
+
+      <section ref={contentRef}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            script: () => null,
+          }}
+        >
+          {post.content}
+        </ReactMarkdown>
       </section>
     </PageLayout>
   );

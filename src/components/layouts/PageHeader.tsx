@@ -48,7 +48,7 @@ function PageHeader() {
 
       {/* Content */}
       <div className="ml-[150px] flex h-full items-center max-sm:ml-[140px] max-sm:block">
-        <Nav className="max-md:text-2xl max-sm:pt-1 max-sm:pb-2 max-sm:text-right [&_a]:mr-5 max-sm:[&_a]:mr-2.5" />
+        <Nav className="max-md:text-2xl max-sm:pt-1 max-sm:pb-2 max-sm:text-right max-sm:text-xl [&_a]:mr-5 max-sm:[&_a]:mr-2.5" />
         <div className="flex-1 max-sm:hidden" />
         <div className="mr-8 flex justify-center gap-7 max-sm:mr-5 max-sm:justify-end max-sm:gap-5">
           {Object.values(SOCIAL_LINKS).map((link) => (

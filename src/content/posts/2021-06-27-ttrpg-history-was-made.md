@@ -4,11 +4,11 @@ date: 2021-06-27
 featuredImage: ../images/posts/TTRPGHistoryWasMade.jpg
 ---
 
-![DND Steampunk Twitch Screenshot](../images/posts/TTRPGHistoryWasMade.jpg)
-
 Something really cool happened on Friday: Team Liquid, one of the premier esports organizations, hosted a massive PrideFest stream that was a Dungeons & Dragons one-shot. That’s right, the org with teams for every major esports game and dozens of championships, empowered Game Master [Gabe Hicks](https://twitter.com/GabeJamesGames) to take over their stream for a roleplaying session. This is amazing in multiple ways and I believe a historic moment for tabletop roleplaying games!
 
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">The D&amp;D Heist with <a href="https://twitter.com/GabeJamesGames?ref_src=twsrc%5Etfw">@GabeJamesGames</a> is 🔴LIVE!<br><br>📺 <a href="https://t.co/Du6vcB7e88">https://t.co/Du6vcB7e88</a> <a href="https://t.co/p3F3CuGtFK">pic.twitter.com/p3F3CuGtFK</a></p>&mdash; Team Liquid (@TeamLiquid) <a href="https://twitter.com/TeamLiquid/status/1408627585614024706?ref_src=twsrc%5Etfw">June 26, 2021</a></blockquote>
+<div className="flex justify-center">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The D&amp;D Heist with @GabeJamesGames is 🔴LIVE!<br><br>📺 <a href="https://t.co/Du6vcB7e88">https://t.co/Du6vcB7e88</a> <a href="https://t.co/p3F3CuGtFK">pic.twitter.com/p3F3CuGtFK</a></p>&mdash; Team Liquid (@TeamLiquid) <a href="https://twitter.com/TeamLiquid/status/1408627585614024706?ref_src=twsrc%5Etfw">June 26, 2021</a></blockquote>
+</div>
 
 First off, having this stream being run under the banner of PrideFest meant it was explicitly in support of the LGBTQIA+ community. The panel of players were diverse across ethnicity, gender identity, and sexual orientation. The chat was loving it and enjoyed the cast members that had full on costumes and makeup. It was quite the sight to see! It felt like an important stream for these types of games and this community of people.
 
