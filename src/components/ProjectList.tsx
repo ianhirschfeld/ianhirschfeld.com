@@ -35,7 +35,7 @@ function ProjectItem({ item }: ProjectItemProps) {
             to={path || url || ''}
             target={url ? '_blank' : undefined}
             rel={url ? 'noopener noreferrer' : undefined}
-            className="text-off-black animated-underline"
+            className="text-off-black animated-underline no-underline!"
           >
             {title}
           </Link>
