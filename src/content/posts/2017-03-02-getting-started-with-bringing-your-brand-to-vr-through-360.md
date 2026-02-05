@@ -8,7 +8,7 @@ At [The Soap Collective](http://www.thesoapcollective.com), we help brands strat
 
 You don’t always need to target high-end headsets such as the HTC Vive or Oculus Rift. With just a person’s smart phone, or with the addition of an inexpensive Google Cardboard, a user can experience VR for the first time through your brand.
 
-### What is a 360 video mobile app?
+## What is a 360 video mobile app?
 
 A 360 video is the most accessible form of virtual reality currently on the market. It is a video where a user can look in any direction they want and there is something to see. Unlike a traditional video where the footage is constrained to a rectangle, a 360 video fills an entire sphere. For an example, check out this promo we created for artist Marina Berlin:
 
@@ -24,7 +24,7 @@ By supporting Google Cardboard through your VR app, you have additional opportun
 
 ![Branded Google Cardboard and VR mobile app for Cameron Grey.](../../assets/posts/getting-started-with-bringing-your-brand-to-vr-through-360/image-04.jpeg)
 
-### Are consumers aware of VR?
+## Are consumers aware of VR?
 
 The short answer: Yes!
 
@@ -38,7 +38,7 @@ Moreover, 2016’s holiday season showed VR mobile apps rising in the charts. To
 
 ![https://virtualrealitypop.com/vr-was-a-huge-gift-for-christmas-just-check-the-app-store-da685a2fad9f](../../assets/posts/getting-started-with-bringing-your-brand-to-vr-through-360/image-06.gif)
 
-### How are audiences responding to 360 video?
+## How are audiences responding to 360 video?
 
 A [study conducted last year](http://www.magnifyre.com/360-degree-video-case-study/) by Magnifyre compared the effectiveness of a 360 video vs a traditional video on Facebook. They found that the average cost per 1,000 impressions of a 360 video campaign was not only significantly less expensive ($1.74 for 360 vs $4.20 for traditional), it also had a higher click-through rate. The CTR of a 360 video was 4.51% compared to 0.56% for a traditional video, and double the amount of viewers watched the 360 video all the way to the end.
 
@@ -48,7 +48,7 @@ A more [recent campaign](https://www.thinkwithgoogle.com/articles/360-video-adve
 -   Because 360 video is inherently interactive, engagement was higher. In their campaign the 360 video drove 41% more engagement.
 -   Viewers shared the 360 video 46% more than the traditional video.
 
-### How should I start thinking about my brand’s VR content?
+## How should I start thinking about my brand’s VR content?
 
 We are big believers in storytelling as the best way to engage customers. VR affords a level of agency and empathy that no other medium can offer. We’ve found that some of the most compelling brand experiences are story driven. When thinking about VR content that remains more true than ever. Here are some questions to think about while considering a branded VR mobile app:
 

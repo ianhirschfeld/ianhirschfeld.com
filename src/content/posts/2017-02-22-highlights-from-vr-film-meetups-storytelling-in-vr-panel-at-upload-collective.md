@@ -6,7 +6,7 @@ featuredImage: ../../assets/posts/highlights-from-vr-film-meetups-storytelling-i
 
 Last Thursday, an amazing panel of storytellers discussed their latest projects, and shared the lessons they’ve learned in creating narrative driven VR experiences. The panel was comprised of [Maureen Fan](https://twitter.com/baobabstudios), [Colum Slevin](https://twitter.com/colum), [Cassidy Curtis](https://twitter.com/googleatap), [Scott Hutchins](https://twitter.com/stanfordcw), [Ben Peck](https://twitter.com/bvpeck), and was moderated by [Rodes Fishburne](https://twitter.com/rodesfishburne). There was a ton of great knowledge shared by everyone, and as someone who is also working on [story driven VR](http://www.enteratlas.com), I did my best to write it all down! Below is just a handful of some of my favorite bits of wisdom discussed.
 
-#### On structure:
+### On structure:
 
 -   Storyboarding for VR is different than film. In VR, the user can look around and absorb the story at their own pace. This often requires stories that have more downtime between story beats. One team found that their six minute storyboard turned out to be a twenty minute VR experience.
 
@@ -14,7 +14,7 @@ Last Thursday, an amazing panel of storytellers discussed their latest projects,
 
 -   Your story doesn’t need to be a fixed length. It should adapt to a viewer’s attention. If they look away, or go somewhere else, allow your story to wait for them to come back.
 
-#### On user experience:
+### On user experience:
 
 -   A passive VR story is still valuable and exciting. Not all experiences need to be “active” or have complex interactions. Sometimes just being immersed is enough to be compelling.
 
@@ -24,7 +24,7 @@ Last Thursday, an amazing panel of storytellers discussed their latest projects,
 
 ![Photo courtesy of Steve Han Studio](../../assets/posts/highlights-from-vr-film-meetups-storytelling-in-vr-panel-at-upload-collective/image-02.jpeg)
 
-#### On storytelling:
+### On storytelling:
 
 -   Film allows the viewer to feel empathy, but VR allows the viewer to _act_ on their empathy.
 
@@ -37,7 +37,7 @@ Last Thursday, an amazing panel of storytellers discussed their latest projects,
 
 > — Maureen Fan
 
-#### Food for thought:
+### Food for thought:
 
 -   Many of the best stories are about conflict followed by change and growth. How can storytellers best utilize VR to empower users to experience conflict, and be the agents of change and growth within the narrative?
 -   For VR to expand to mass market consumers there needs to be more content, and there needs to be thought into how that content is delivered. Nearly everyone on the panel agreed that episodic content distributed similarly to TV was a good path forward. So, as VR storytellers, how can we best create compelling episodic narratives?

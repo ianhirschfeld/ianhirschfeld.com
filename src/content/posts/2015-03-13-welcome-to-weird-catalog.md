@@ -14,7 +14,7 @@ Here is a sample of some weird media that may have slipped under your radar:
 
 ![Film by Joe Cornish, released July 7, 2011](../../assets/posts/welcome-to-weird-catalog/image-02.jpeg)
 
-#### [Attack The Block](http://www.weirdcatalog.com/ci/attack-the-block)
+### [Attack The Block](http://www.weirdcatalog.com/ci/attack-the-block)
 
 A gang of hood kids save their neighborhood from an invasion of furry alien gorillas with glowing teeth.
 
@@ -22,7 +22,7 @@ A gang of hood kids save their neighborhood from an invasion of furry alien gori
 
 ![Cartoon Network show by Rebecca Sugar, released November 11, 2013](../../assets/posts/welcome-to-weird-catalog/image-03.jpeg)
 
-#### [Steven Universe](http://www.weirdcatalog.com/ci/steven-universe)
+### [Steven Universe](http://www.weirdcatalog.com/ci/steven-universe)
 
 Boy with a pink stone in his belly button lives with a magic-girl-super-team in a quiet beach town.
 
@@ -30,13 +30,13 @@ Boy with a pink stone in his belly button lives with a magic-girl-super-team in 
 
 ![Dontnod Entertainment game by Jean-Max Moris, released June 6, 2013](../../assets/posts/welcome-to-weird-catalog/image-04.jpeg)
 
-#### [Remember Me](http://www.weirdcatalog.com/ci/remember-me)
+### [Remember Me](http://www.weirdcatalog.com/ci/remember-me)
 
 French assassin uses hologram glove to remix people’s memories in cyberpunk Paris.
 
 [Get it here](http://amzn.com/B008XMSR6G?tag=weircata-20)
 
-#### Get inspired. Get weird.
+### Get inspired. Get weird.
 
 [http://www.weirdcatalog.com](http://www.weirdcatalog.com)
 

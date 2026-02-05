@@ -6,11 +6,11 @@ featuredImage: ../../assets/posts/devicetype-a-swift-helper/image-01.png
 
 A series of helpers and extensions for identifying what device is interacting with your app.
 
-### The Problem
+## The Problem
 
 It’s not straight forward to identify exactly what device is running your app. I’m working on an update for [Role](http://roleapp.com), and I need to be able to split some code depending on whether the device running it is an iPod Touch, an iPhone 4s, or an iPhone 5 or later.
 
-### The Solution
+## The Solution
 
 I’ve created a helper class called **DeviceType**, along with two extensions: **UIDevice+DeviceType** and **UIViewController+DeviceType**. You can find them and a sample project at the GitHub repo below.
 
@@ -31,6 +31,6 @@ if self.isIPhone5sSize {  // Some iPhone 5s specific view logic...}
 
 These methods and extensions have already helped me separate out logic and special cases within my own projects, and I hope they can do the same for others. Feel free to let me know your thoughts here, tweet me [@ianhirschfeld](https://twitter.com/ianhirschfeld), or even contribute to the repo!
 
-### [Download the Source Code](https://github.com/ianhirschfeld/Swift-DeviceType)
+## [Download the Source Code](https://github.com/ianhirschfeld/Swift-DeviceType)
 
 _DeviceType was based off code from Dennis Weissmann and his_ [_git repo_](https://github.com/dennisweissmann/Basics)_. Along with some insight gained from_ [_this_](http://stackoverflow.com/questions/25377878/how-to-import-sys-utsname-h-in-swift) _and_ [_this_](http://stackoverflow.com/questions/14411075/uidevice-currentdevice-model-possible-values) _StackOverflow threads._

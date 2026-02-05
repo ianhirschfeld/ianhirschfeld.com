@@ -6,13 +6,13 @@ featuredImage: ../../assets/posts/easy-caching-with-rails-4-heroku-redis/image-0
 
 Add caching or your Rails app in just a few minutes!
 
-#### 1\. Add the Redis gem to your Gemfile.
+### 1\. Add the Redis gem to your Gemfile.
 
 ```
 gem 'redis-rails'
 ```
 
-#### 2\. Update your production.rb environment.
+### 2\. Update your production.rb environment.
 
 I recommend using your `REDIS_URL` environment variable as a switch to decide whether or not to use `:redis_store`.
 
@@ -20,7 +20,7 @@ I recommend using your `REDIS_URL` environment variable as a switch to decide wh
 config.cache_store = :redis_store if ENV['REDIS_URL']
 ```
 
-#### 3\. (Optional) Update your development.rb environment.
+### 3\. (Optional) Update your development.rb environment.
 
 This will give you a quick and easy way to test caching locally. If your local environment variables contain `REDIS_URL` caching will be turned on, otherwise it will be disabled (which is the default for `development.rb`).
 
@@ -28,7 +28,7 @@ This will give you a quick and easy way to test caching locally. If your local e
 if ENV['REDIS_URL']  config.action_controller.perform_caching = true  config.cache_store = :redis_storeelse  config.action_controller.perform_caching = falseend
 ```
 
-#### 4\. Cache some views!
+### 4\. Cache some views!
 
 This example is using a jbuilder view:
 
@@ -40,7 +40,7 @@ Line 1 of the above tells jbuilder that we want to create a cache key with value
 
 Line 2 of the above is the code to have jbuilder actually render our view. We are telling jbuilder to output json with the key “posts”, and for it to be an array based on the posts we are passing into it.
 
-#### 5\. Add the [Heroku Redis](https://elements.heroku.com/addons/heroku-redis) addon to your app.
+### 5\. Add the [Heroku Redis](https://elements.heroku.com/addons/heroku-redis) addon to your app.
 
 If you like to use your console instead:
 
@@ -48,6 +48,6 @@ If you like to use your console instead:
 heroku addons:create heroku-redis:hobby-dev
 ```
 
-#### 6\. Deploy your app and bask in the glory of your improved render times!
+### 6\. Deploy your app and bask in the glory of your improved render times!
 
 ![image](../../assets/posts/easy-caching-with-rails-4-heroku-redis/image-02.png)

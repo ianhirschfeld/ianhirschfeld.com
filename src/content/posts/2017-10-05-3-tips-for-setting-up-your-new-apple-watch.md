@@ -6,11 +6,11 @@ featuredImage: ../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/ima
 
 ![A watch face for every occasion + space.](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-02.png)
 
-### 1\. Customize your watch faces
+## 1\. Customize your watch faces
 
 By default your watch will come with a bunch of watch faces ready to go. Most likely you won’t ever use a majority of them. The easiest way to customize your faces is through the [Watch app](https://itunes.apple.com/us/app/watch/id1069511734?mt=8) on your phone. I recommend you look through the Face Gallery to find the faces that best suit your needs and personality. For me, my main watch face is Numerals because I like the minimal look of it. It’s followed by a Modular watch face which allows for more of my most used complications. I then have an Activity Digital face for exercise, and an Astronomy face because I like space 🚀.
 
-### 2\. Organize your apps
+## 2\. Organize your apps
 
 When you first setup your Apple Watch, you will be asked if you want to download all your current watch enabled apps. I recommend NOT doing this. You will find that many of your [iPhone](https://hackernoon.com/tagged/iphone) apps have watch apps you won’t ever use. Instead, setup your watch with only the default apps installed, and use the Watch app on your phone to add others.
 
@@ -20,7 +20,7 @@ Once you have your apps installed, you can move them around¹ by going to the Ap
 
 ![Organize your apps from the center time app out. Green is the most accessible, yellow fairly accessible, red you will need to scroll to access.](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-04.png)
 
-### 3\. Setup your watch for health tracking
+## 3\. Setup your watch for health tracking
 
 One of the larger benefits of having a smart watch is the ability to track your health and fitness. The first thing you’ll want to do is make sure you have your Health app setup and filled out. You’ll want to input your birthday, weight, and height. Once added, you’ll enable basic tracking. This includes exercise activity, how often you stand during the day, steps you take throughout the day, and heart rate.
 
@@ -32,7 +32,7 @@ Another app you’ll need is [Sleep Tracker](https://itunes.apple.com/us/app/sle
 
 ![Left: Pedometer, Right: Sleep Tracker (it was renamed from SleepMatic)](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-06.png)
 
-### Do you have tips from setting up your Apple Watch? Let me know in the responses below or send me a tweet to [@ianhirschfeld](https://twitter.com/ianhirschfeld)!
+## Do you have tips from setting up your Apple Watch? Let me know in the responses below or send me a tweet to [@ianhirschfeld](https://twitter.com/ianhirschfeld)!
 
 ¹ You can also move your apps on your Apple Watch the same way you would move apps on your iPhone. Long tap an icon until it starts to wiggle, and then drag it into the position you want.
 
