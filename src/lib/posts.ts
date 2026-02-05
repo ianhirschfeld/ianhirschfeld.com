@@ -18,16 +18,19 @@ const postModules = import.meta.glob('/src/content/posts/*.md', {
 });
 
 // Import all post images so we can map them
-const postImages = import.meta.glob('/src/assets/posts/*', {
+const postImages = import.meta.glob('/src/assets/posts/**/*', {
   eager: true,
   import: 'default',
 }) as Record<string, string>;
 
-// Create a map of image filenames to their imported URLs
+// Create a map of image paths to their imported URLs
 const imageMap: Record<string, string> = {};
 for (const [path, url] of Object.entries(postImages)) {
   const filename = path.split('/').pop()!;
   imageMap[filename] = url;
+  // Also map by relative path from /src/ (e.g., "assets/posts/slug/image-01.jpeg")
+  const relativePath = path.replace(/^\/src\//, '');
+  imageMap[relativePath] = url;
 }
 
 // Simple frontmatter parser (browser-compatible alternative to gray-matter)
@@ -56,10 +59,12 @@ function parseFrontmatter(raw: string): { data: PostFrontmatter; content: string
   // Transform featuredImage path if present
   let featuredImage: string | undefined;
   if (data.featuredImage) {
-    const match = data.featuredImage.match(/\.\.\/images\/posts\/(.+)/);
-    if (match) {
-      const filename = match[1];
-      featuredImage = imageMap[filename];
+    const oldMatch = data.featuredImage.match(/\.\.\/images\/posts\/(.+)/);
+    const newMatch = data.featuredImage.match(/\.\.\/\.\.\/assets\/posts\/(.+)/);
+    if (oldMatch) {
+      featuredImage = imageMap[oldMatch[1]];
+    } else if (newMatch) {
+      featuredImage = imageMap[`assets/posts/${newMatch[1]}`];
     }
   }
 
@@ -76,14 +81,22 @@ function parseFrontmatter(raw: string): { data: PostFrontmatter; content: string
 // Transform image paths in markdown content
 function transformImagePaths(content: string): string {
   // Replace ../images/posts/filename with the actual imported URL
-  return content.replace(/!\[([^\]]*)\]\(\.\.\/images\/posts\/([^)]+)\)/g, (_, alt, filename) => {
+  let result = content.replace(/!\[([^\]]*)\]\(\.\.\/images\/posts\/([^)]+)\)/g, (_, alt, filename) => {
     const imageUrl = imageMap[filename];
     if (imageUrl) {
       return `![${alt}](${imageUrl})`;
     }
-    // If image not found, return original
     return `![${alt}](${filename})`;
   });
+  // Replace ../../assets/posts/slug/filename with the actual imported URL
+  result = result.replace(/!\[([^\]]*)\]\(\.\.\/\.\.\/assets\/posts\/([^)]+)\)/g, (_, alt, relativePath) => {
+    const imageUrl = imageMap[`assets/posts/${relativePath}`];
+    if (imageUrl) {
+      return `![${alt}](${imageUrl})`;
+    }
+    return `![${alt}](${relativePath})`;
+  });
+  return result;
 }
 
 export function getAllPosts(): Post[] {
