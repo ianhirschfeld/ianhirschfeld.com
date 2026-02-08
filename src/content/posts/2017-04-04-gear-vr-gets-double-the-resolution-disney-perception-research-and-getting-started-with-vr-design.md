@@ -2,6 +2,7 @@
 title: Gear VR gets double the resolution, Disney perception research, and getting started with VR design
 date: 2017-04-04
 featuredImage: ../../assets/posts/gear-vr-gets-double-the-resolution-disney-perception-research-and-getting-started-with-vr-design/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/gear-vr-gets-double-the-resolution-disney-perception-research-and-getting-started-with-vr-design-409b235d55f9
 ---
 
 ### [New John Carmack Software Doubles Oculus Home Resolution on Gear VR](https://uploadvr.com/new-john-carmack-software-doubles-oculus-home-resolution-gear-vr/)

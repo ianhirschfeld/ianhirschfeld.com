@@ -89,6 +89,14 @@
       @apply mt-5 mb-4 text-3xl;
     }
 
+    h3 {
+      @apply mt-4 mb-3 text-2xl;
+    }
+
+    h2 + h3 {
+      @apply mt-0;
+    }
+
     a {
       @apply decoration-brand-red/0 hover:decoration-brand-red underline decoration-1 underline-offset-4 transition-colors;
     }
@@ -97,7 +105,8 @@
       @apply my-5 text-lg;
     }
 
-    h2 + p {
+    h2 + p,
+    h3 + p {
       @apply mt-0;
     }
 
@@ -111,6 +120,43 @@
 
     li {
       @apply text-lg;
+    }
+
+    img {
+      @apply rounded-lg;
+    }
+
+    pre {
+      @apply text-off-white my-6 overflow-x-auto rounded-xl bg-zinc-800 p-5 font-mono text-base;
+    }
+
+    code {
+      @apply text-brand-blue rounded bg-zinc-700 px-1 py-0.5 font-mono text-sm;
+    }
+
+    pre code {
+      @apply text-off-white bg-transparent p-0 text-base font-normal;
+    }
+
+    p > code,
+    li > code {
+      @apply wrap-break-word;
+    }
+
+    blockquote {
+      @apply border-brand-blue my-5 border-l-4 pl-5 italic;
+    }
+
+    blockquote p {
+      @apply my-0;
+    }
+
+    p:has(> img:nth-of-type(2)) {
+      @apply flex flex-col items-stretch gap-3 md:-mx-8 md:flex-row;
+    }
+
+    p:has(> img:nth-of-type(2)) > img {
+      @apply min-w-0 object-cover md:flex-1;
     }
   }
 

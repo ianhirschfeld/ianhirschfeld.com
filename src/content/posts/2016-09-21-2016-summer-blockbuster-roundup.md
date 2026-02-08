@@ -2,6 +2,7 @@
 title: 2016 Summer Blockbuster Roundup!
 date: 2016-09-21
 featuredImage: ../../assets/posts/2016-summer-blockbuster-roundup/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/2016-summer-blockbuster-roundup-7f35efbd2842
 ---
 
 Now that fall is approaching, I took a look back at all the movies I’ve watched since May. Ranked from the best film to the worst, check out my (super) brief reviews below:

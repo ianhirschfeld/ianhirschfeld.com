@@ -2,6 +2,7 @@
 title: Welcome to Weird Catalog
 date: 2015-03-13
 featuredImage: ../../assets/posts/welcome-to-weird-catalog/image-01.png
+canonicalUrl: https://medium.com/@ianhirschfeld/welcome-to-weird-catalog-ec4a961c96d6
 ---
 
 A curated collection of high-quality games, movies, TV, music, books, comics, and internet stuff. Celebrate the colorful, creative, and strange.

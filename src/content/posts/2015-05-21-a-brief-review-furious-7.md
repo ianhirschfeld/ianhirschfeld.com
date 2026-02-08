@@ -2,6 +2,7 @@
 title: A Brief Review: Furious 7
 date: 2015-05-21
 featuredImage: ../../assets/posts/a-brief-review-furious-7/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/a-brief-review-furious-7-e4008d62c0ba
 ---
 
 ## What I Wanted
@@ -37,7 +38,6 @@ It would be a disservice to the evolution of the film series to not make note of
 ### 4\. A Tasteful Goodbye
 
 ![image](../../assets/posts/a-brief-review-furious-7/image-04.png)
-
 ![image](../../assets/posts/a-brief-review-furious-7/image-05.jpeg)
 
 Going into the movie I was wondering how the film would handle the death of Paul Walker. Would his character be written off mid movie? Or would they keep him throughout the film and have an inevitable happy ending without really referencing his death? They managed to do a little of both. Paul Walker’s character, Brian, is in the whole movie by having his brothers stand in as actors. The ending scene also fairly seamlessly transitions into a tribute to Paul Walker. It was an emotional and an appropriate goodbye as Brian drives off into the distance on his own path.

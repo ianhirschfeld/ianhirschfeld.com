@@ -2,6 +2,7 @@
 title: Compiling Unreal Engine From Source
 date: 2015-06-26
 featuredImage: ../../assets/posts/compiling-unreal-engine-from-source/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/compiling-unreal-engine-from-source-ed59d2399cfb
 ---
 
 UEv4.8 freshly booted up after being compiled from source.

@@ -2,6 +2,7 @@
 title: Getting Started with Bringing Your Brand to VR Through 360
 date: 2017-03-02
 featuredImage: ../../assets/posts/getting-started-with-bringing-your-brand-to-vr-through-360/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/getting-started-with-bringing-your-brand-to-vr-through-360-b7d0b36354f9
 ---
 
 At [The Soap Collective](http://www.thesoapcollective.com), we help brands strategize how they can best use virtual reality to better connect with their customers. Throughout 2016, we found one of the best ways a company can get started in VR, _and_ reach customers, is through a 360 video mobile app.
@@ -44,17 +45,17 @@ A [study conducted last year](http://www.magnifyre.com/360-degree-video-case-stu
 
 A more [recent campaign](https://www.thinkwithgoogle.com/articles/360-video-advertising.html) put out by Google and Columbia Sportswear also had promising results for a 360 video vs a traditional video. Here were there findings:
 
--   The 360 video had a higher click-through rate.
--   Because 360 video is inherently interactive, engagement was higher. In their campaign the 360 video drove 41% more engagement.
--   Viewers shared the 360 video 46% more than the traditional video.
+- The 360 video had a higher click-through rate.
+- Because 360 video is inherently interactive, engagement was higher. In their campaign the 360 video drove 41% more engagement.
+- Viewers shared the 360 video 46% more than the traditional video.
 
 ## How should I start thinking about my brand’s VR content?
 
 We are big believers in storytelling as the best way to engage customers. VR affords a level of agency and empathy that no other medium can offer. We’ve found that some of the most compelling brand experiences are story driven. When thinking about VR content that remains more true than ever. Here are some questions to think about while considering a branded VR mobile app:
 
--   Why VR? What kinds of stories enable customers to _interact_ with my brand in ways no other medium allows?
--   How can I bring customers _into_ my brand through VR?
--   How does this VR app fit into my brand’s larger marketing campaign?
+- Why VR? What kinds of stories enable customers to _interact_ with my brand in ways no other medium allows?
+- How can I bring customers _into_ my brand through VR?
+- How does this VR app fit into my brand’s larger marketing campaign?
 
 If want learn more about how you can use VR to strengthen your brand, and engage with your customers in new ways, sign up for our _Brands and VR Newsletter_ below to receive all of our latest VR marketing tips.
 

@@ -2,6 +2,7 @@
 title: 3 tips for setting up your new Apple Watch
 date: 2017-10-05
 featuredImage: ../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/3-tips-for-setting-up-your-new-apple-watch-e418733d3c46
 ---
 
 ![A watch face for every occasion + space.](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-02.png)
@@ -17,7 +18,6 @@ When you first setup your Apple Watch, you will be asked if you want to download
 Once you have your apps installed, you can move them around¹ by going to the App Layout section of the Watch app on your phone. The key thing to remember is that your watch’s time app is always center. This means that when organizing your apps, you want to put your most used apps closest to the time app. Below you can see highlighted concentric hexagons of apps in relation to the time app.
 
 ![image](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-03.png)
-
 ![Organize your apps from the center time app out. Green is the most accessible, yellow fairly accessible, red you will need to scroll to access.](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-04.png)
 
 ## 3\. Setup your watch for health tracking
@@ -29,7 +29,6 @@ There are a couple of things to do, and apps to get, to round out the health tra
 Another app you’ll need is [Sleep Tracker](https://itunes.apple.com/us/app/sleep-tracker-auto-sleep-tracking-watch-monitor/id1179236591?mt=8). If you owned a Fitbit² before getting your Apple Watch, you most likely wore it to bed to track the quality of your sleep. Out of the box, your new watch won’t do this. With Sleep Tracker, you more or less get feature parity with the Fitbit. Although it won’t attempt to track REM sleep, it does track being in bed awake, light sleep, and deep sleep.
 
 ![image](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-05.png)
-
 ![Left: Pedometer, Right: Sleep Tracker (it was renamed from SleepMatic)](../../assets/posts/3-tips-for-setting-up-your-new-apple-watch/image-06.png)
 
 ## Do you have tips from setting up your Apple Watch? Let me know in the responses below or send me a tweet to [@ianhirschfeld](https://twitter.com/ianhirschfeld)!
@@ -38,4 +37,4 @@ Another app you’ll need is [Sleep Tracker](https://itunes.apple.com/us/app/sle
 
 ² Unfortunately, Fitbit **does not** sync with the Health app by default. Which means all that data you’ve been collecting will be thrown out if you don’t add it to Health. To do that you will need the help of a third party app called [Sync Solver](https://itunes.apple.com/us/app/sync-solver-for-fitbit/id935306292?mt=8). As of this post it costs $2.99, which isn’t too bad if you have months or years of data that you don’t want to lose.
 
-_Ian Hirschfeld is an iOS/Virtual Reality Consultant and Developer. He runs office hours every week for anyone interested in_ [_learning_](https://hackernoon.com/tagged/learning) _more or wanting to chat about VR, AR, and the other Rs. Schedule a video chat at_ [_https://calendly.com/ianhirschfeld_](https://calendly.com/ianhirschfeld)_._
+_Ian Hirschfeld is an iOS/Virtual Reality Consultant and Developer. He runs office hours every week for anyone interested in [learning](https://hackernoon.com/tagged/learning) more or wanting to chat about VR, AR, and the other Rs. Schedule a video chat at https://calendly.com/ianhirschfeld._

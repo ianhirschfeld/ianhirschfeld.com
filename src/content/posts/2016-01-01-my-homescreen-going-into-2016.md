@@ -2,6 +2,7 @@
 title: My Homescreen Going into 2016
 date: 2016-01-01
 featuredImage: ../../assets/posts/my-homescreen-going-into-2016/image-01.png
+canonicalUrl: https://medium.com/@ianhirschfeld/my-homescreen-going-into-2016-c784a6f049af
 ---
 
 Here are the apps I value most and give space to on my homescreen and tray. Although to be honest, I use my homescreen lightly in favor of a mega-loaded tray. This allows me to keep more apps accessible from lower on my screen and allows me to always be able to view my background art almost completely uncovered.

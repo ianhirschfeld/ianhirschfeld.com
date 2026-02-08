@@ -2,6 +2,7 @@
 title: Experience space like astronauts, immersive learning for doctors, and big things coming this year…
 date: 2017-04-19
 featuredImage: ../../assets/posts/experience-space-like-astronauts-immersive-learning-for-doctors-and-big-things-coming-this-year/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/experience-space-like-astronauts-immersive-learning-for-doctors-and-big-things-coming-this-year-f93180498ea2
 ---
 
 ### [SpaceX is taking SpaceVR’s cameras into orbit to deliver the astronaut experience to everyone through VR](http://mashable.com/2017/04/15/spacevr-spacex/#HWdyf_UzEgq4)

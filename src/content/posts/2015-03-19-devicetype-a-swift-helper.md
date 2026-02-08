@@ -2,6 +2,7 @@
 title: DeviceType — A Swift Helper
 date: 2015-03-19
 featuredImage: ../../assets/posts/devicetype-a-swift-helper/image-01.png
+canonicalUrl: https://medium.com/@ianhirschfeld/devicetype-a-swift-helper-301b71675a05
 ---
 
 A series of helpers and extensions for identifying what device is interacting with your app.
@@ -12,10 +13,7 @@ It’s not straight forward to identify exactly what device is running your app.
 
 ## The Solution
 
-I’ve created a helper class called **DeviceType**, along with two extensions: **UIDevice+DeviceType** and **UIViewController+DeviceType**. You can find them and a sample project at the GitHub repo below.
-
-[**ianhirschfeld/Swift-DeviceType**  
-_Swift-DeviceType - A series of helpers and extensions for identifying what device is interacting with your app._github.com](https://github.com/ianhirschfeld/Swift-DeviceType "https://github.com/ianhirschfeld/Swift-DeviceType")[](https://github.com/ianhirschfeld/Swift-DeviceType)
+I’ve created a helper class called **DeviceType**, along with two extensions: **UIDevice+DeviceType** and **UIViewController+DeviceType**. You can find them and a sample project on GitHub: https://github.com/ianhirschfeld/Swift-DeviceType
 
 The main usage is the ability to make a call similar to the following:
 

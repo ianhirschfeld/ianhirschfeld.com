@@ -4,6 +4,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
+import GistEmbed from '~/components/GistEmbed';
 import PageLayout from '~/components/layouts/PageLayout';
 import { calculateReadingTime, formatDate, getPostBySlug } from '~/lib/posts';
 
@@ -16,6 +17,19 @@ function PostPage() {
     if (post) {
       document.title = `${post.frontmatter.title} | Ian Hirschfeld`;
     }
+  }, [post]);
+
+  useEffect(() => {
+    if (!post?.frontmatter.canonicalUrl) return;
+
+    const link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = post.frontmatter.canonicalUrl;
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
   }, [post]);
 
   useEffect(() => {
@@ -61,7 +75,12 @@ function PostPage() {
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
           components={{
-            script: () => null,
+            script: ({ src }) => {
+              if (typeof src === 'string' && src.includes('gist.github.com')) {
+                return <GistEmbed gistUrl={src} />;
+              }
+              return null;
+            },
           }}
         >
           {post.content}

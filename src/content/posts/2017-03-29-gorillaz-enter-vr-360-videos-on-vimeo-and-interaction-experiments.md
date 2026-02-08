@@ -2,6 +2,7 @@
 title: Gorillaz enter VR, 360 videos on Vimeo, and interaction experiments
 date: 2017-03-29
 featuredImage: ../../assets/posts/gorillaz-enter-vr-360-videos-on-vimeo-and-interaction-experiments/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/week-3-27-gorillaz-enter-vr-360-videos-on-vimeo-and-interaction-experiments-fed593949cd8
 ---
 
 ### [Experiment: Accurate Modelling in VR](https://virtualrealitypop.com/experiment-accurate-modelling-in-vr-b16cb0395e2b#.bzr07m8tz)

@@ -2,6 +2,7 @@
 title: Swift Enums and UITableView Sections
 date: 2017-07-23
 featuredImage: ../../assets/posts/swift-enums-and-uitableview-sections/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/swift-enums-and-uitableview-sections-1806b74b8138
 ---
 
 ## The Problem
@@ -14,17 +15,17 @@ Sectioned data in a `UITableView` is annoying to deal with. It can get quite cum
 
 Creating a enum is fairly straightforward. There are a couple important things to note when using an enum specifically for `UITableView` sections:
 
--   Set the enum type to `Int`.
--   While the order of each enum case (aka our sections) does not matter, reserve the last case for a helper called `total`.
--   Set the first case to start at 0 which will correspond to the section at index 0.
+- Set the enum type to `Int`.
+- While the order of each enum case (aka our sections) does not matter, reserve the last case for a helper called `total`.
+- Set the first case to start at 0 which will correspond to the section at index 0.
 
-[View Gist](https://gist.github.com/ianhirschfeld/f8c286d6e62a8f152dab303a817330d9)
+<script src="https://gist.github.com/ianhirschfeld/f8c286d6e62a8f152dab303a817330d9.js"></script>
 
 ### 2\. Add some data and a helper method for sorting it
 
 For the sake of simplicity the data in this tutorial will be an array of `Dictionary` of type `[String: String]`. You could in theory (and probably do) have a more complicated data object, but the basic principles remain the same. At the bottom of the code below you can see a straightforward example of taking the raw data and sorting it using the `TableSection` enum into our data variable from above:
 
-[View Gist](https://gist.github.com/ianhirschfeld/fea31b8bbfbd59172a6a967e1392c86d)
+<script src="https://gist.github.com/ianhirschfeld/fea31b8bbfbd59172a6a967e1392c86d.js"></script>
 
 ### 3\. Setting up UITableViewDataSource and UITableViewDelegate with our TableSection enum
 
@@ -42,7 +43,7 @@ let movieData = data[tableSection]
 
 Below is the code for setting up the barebones of a `UITableView` with multiple sections and rows:
 
-[View Gist](https://gist.github.com/ianhirschfeld/1b342e4b9a5143666e46c43e149d3826)
+<script src="https://gist.github.com/ianhirschfeld/1b342e4b9a5143666e46c43e149d3826.js"></script>
 
 And that’s it! The only other thing you need with the above code is the storyboard that attaches the `UITableView` to this `ViewController`.
 

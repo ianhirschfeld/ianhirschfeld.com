@@ -2,6 +2,7 @@
 title: How to Create an Angle Gradient Border in Swift
 date: 2014-10-23
 featuredImage: ../../assets/posts/how-to-create-an-angle-gradient-border-in-swift/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/how-to-create-an-angle-gradient-border-in-swift-f4856dde4c90
 ---
 
 Adding a border to a UIView is straight forward enough, but adding a gradient border (let alone an angle gradient border) not so much.
@@ -27,26 +28,26 @@ It is a fork of [this awesome repo](https://github.com/paiv/AngleGradientLayer) 
 
 This will require making a bridging header because AngleGradientLayer is written in Objective-C.
 
--   Create a file named **\[YourProject\]-Bridging-Header.h**
--   Go to your project’s **Build Settings**. And add your bridging header file under the **Swift Compiler — Code Generation** section:
+- Create a file named **\[YourProject\]-Bridging-Header.h**
+- Go to your project’s **Build Settings**. And add your bridging header file under the **Swift Compiler — Code Generation** section:
 
 ![If you don’t see this section make sure to select “All” instead of “Basic” at the top of the settings page.](../../assets/posts/how-to-create-an-angle-gradient-border-in-swift/image-03.png)
 
--   Once you have your bridging file setup. Add **AngleGradientLayer.h** to it:
+- Once you have your bridging file setup. Add **AngleGradientLayer.h** to it:
 
-[View Gist](https://gist.github.com/ianhirschfeld/a0a3a6fdb48b186cc631)
+<script src="https://gist.github.com/ianhirschfeld/a0a3a6fdb48b186cc631.js"></script>
 
 ### 3\. Subclassing AngleGradientLayer with AngleGradientBorderLayer
 
 Now that we can create angle gradients in Swift, we need to subclass AngleGradientLayer with something that lets us use the gradient layer as a border. Thus, we create **AngleGradientBorderLayer.swift**:
 
-[View Gist](https://gist.github.com/ianhirschfeld/6bb89d3ebc3fbdf79c99)
+<script src="https://gist.github.com/ianhirschfeld/6bb89d3ebc3fbdf79c99.js"></script>
 
 ### 4\. Creating AngleGradientBorderView
 
 With AngleGradientBorderLayer all set up we are now ready to create a view that uses it, **AngleGradientBorderView.swift**:
 
-[View Gist](https://gist.github.com/ianhirschfeld/106abafc9542797eceec)
+<script src="https://gist.github.com/ianhirschfeld/106abafc9542797eceec.js"></script>
 
 I’d like to re-iterate the importance of one part of this file:
 

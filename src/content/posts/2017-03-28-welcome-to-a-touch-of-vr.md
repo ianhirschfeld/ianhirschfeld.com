@@ -2,6 +2,7 @@
 title: Welcome to “A Touch of VR”!
 date: 2017-03-28
 featuredImage: ../../assets/posts/welcome-to-a-touch-of-vr/image-01.png
+canonicalUrl: https://medium.com/@ianhirschfeld/welcome-to-a-touch-of-vr-7ddfa4df7726
 ---
 
 The virtual reality industry is growing rapidly. As the CEO & Technical Director of [The Soap Collective](http://www.thesoapcollective.com/), I spend a lot of time in and around VR. Everyday, I’m either helping [create fantastic worlds](http://www.EnterAtlas.com) for people to explore, [attending VR panels](https://blog.thesoapcollective.com/highlights-from-vr-film-meetups-storytelling-in-vr-panel-at-upload-collective-52e2358b4382), or playing many of the rapidly growing library of experiences from other developers.

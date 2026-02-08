@@ -1,6 +1,7 @@
 ---
 title: A few notes on why I think Virtual Reality just might work this time around.
 date: 2015-07-09
+canonicalUrl: https://medium.com/@ianhirschfeld/a-few-notes-on-why-i-think-virtual-reality-just-might-work-this-time-around-53c34d629771
 ---
 
 There was a slight uproar recently when renowned game designer, [Warren Spector](https://twitter.com/warren_spector), reiterated his cautious outlook on Virtual Reality (VR) in a [recent interview](http://www.gamesindustry.biz/articles/2015-06-23-warren-spector-on-e3-vr-is-a-fad). His comments included, “VR is a fad” and “everyone looks stupid in a VR headset”. He even published a [blog post](https://warrenspector.wordpress.com/2015/06/26/so-lets-talk-about-vr/) on the subject. I believe it’s important to take note when someone respected in your field (or related field) takes a strong stance against something new. A few months ago my company, [The Soap Collective](http://www.thesoapcollective.com), made the leap to become a full-stop agency for creating virtual reality experiences. In doing so, I’ve been attending as many VR meetups and events as I can. I soon discovered that there are actually quite a number of people that share Mr. Spector’s skepticism, and so I wanted to take a moment and explain why I’m such a believer.

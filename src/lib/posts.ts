@@ -2,6 +2,7 @@ export interface PostFrontmatter {
   title: string;
   date: string;
   featuredImage?: string;
+  canonicalUrl?: string;
 }
 
 export interface Post {
@@ -73,6 +74,7 @@ function parseFrontmatter(raw: string): { data: PostFrontmatter; content: string
       title: data.title || '',
       date: data.date || '',
       featuredImage,
+      canonicalUrl: data.canonicalUrl,
     },
     content,
   };
@@ -81,21 +83,27 @@ function parseFrontmatter(raw: string): { data: PostFrontmatter; content: string
 // Transform image paths in markdown content
 function transformImagePaths(content: string): string {
   // Replace ../images/posts/filename with the actual imported URL
-  let result = content.replace(/!\[([^\]]*)\]\(\.\.\/images\/posts\/([^)]+)\)/g, (_, alt, filename) => {
-    const imageUrl = imageMap[filename];
-    if (imageUrl) {
-      return `![${alt}](${imageUrl})`;
+  let result = content.replace(
+    /!\[([^\]]*)\]\(\.\.\/images\/posts\/([^)]+)\)/g,
+    (_, alt, filename) => {
+      const imageUrl = imageMap[filename];
+      if (imageUrl) {
+        return `![${alt}](${imageUrl})`;
+      }
+      return `![${alt}](${filename})`;
     }
-    return `![${alt}](${filename})`;
-  });
+  );
   // Replace ../../assets/posts/slug/filename with the actual imported URL
-  result = result.replace(/!\[([^\]]*)\]\(\.\.\/\.\.\/assets\/posts\/([^)]+)\)/g, (_, alt, relativePath) => {
-    const imageUrl = imageMap[`assets/posts/${relativePath}`];
-    if (imageUrl) {
-      return `![${alt}](${imageUrl})`;
+  result = result.replace(
+    /!\[([^\]]*)\]\(\.\.\/\.\.\/assets\/posts\/([^)]+)\)/g,
+    (_, alt, relativePath) => {
+      const imageUrl = imageMap[`assets/posts/${relativePath}`];
+      if (imageUrl) {
+        return `![${alt}](${imageUrl})`;
+      }
+      return `![${alt}](${relativePath})`;
     }
-    return `![${alt}](${relativePath})`;
-  });
+  );
   return result;
 }
 

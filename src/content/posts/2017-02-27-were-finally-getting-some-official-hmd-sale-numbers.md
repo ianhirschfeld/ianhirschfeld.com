@@ -2,17 +2,18 @@
 title: We’re Finally Getting Some Official HMD Sale Numbers!
 date: 2017-02-27
 featuredImage: ../../assets/posts/were-finally-getting-some-official-hmd-sale-numbers/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/were-finally-getting-some-official-hmd-sale-numbers-f993e2549352
 ---
 
 There has been a lot of chatter so far this year that the virtual reality industry was “humbled”, and that VR didn’t take off the way the industry expected. However, as hardware makers and researchers continue to release numbers on engagement, investment, and HMD sales, I believe we are getting a picture of a successful first consumer year of VR. Here’s what we have so far:
 
 ## Official Numbers
 
-### [PlayStation VR (915,000](https://mobile.nytimes.com/2017/02/26/business/sony-playstation-vr-sales.html))
+### [PlayStation VR (915,000)](https://mobile.nytimes.com/2017/02/26/business/sony-playstation-vr-sales.html)
 
 Andrew House of Sony Interactive Entertainment revealed that as of February 19th, PSVR has sold nearly one million units of their HMD.
 
-### [Samsung Gear VR (5,000,000](http://venturebeat.com/2017/01/04/samsung-confirms-it-sold-5-million-gear-vr-mobile-headsets/))
+### [Samsung Gear VR (5,000,000)](http://venturebeat.com/2017/01/04/samsung-confirms-it-sold-5-million-gear-vr-mobile-headsets/)
 
 With highest sales, the Gear VR is the most widely owned HMD on the market (apart from Google Cardboard). Mobile VR, having the most affordable headsets, offers the industry the best chance at early market penetration.
 
@@ -20,9 +21,9 @@ With highest sales, the Gear VR is the most widely owned HMD on the market (apar
 
 For the other big players in the space, all we have to go on is market research and estimations. From [Unity’s 2016 Market Report](https://blogs.unity3d.com/2017/02/01/cant-stop-wont-stop-the-2016-mobile-games-market-report/) and SuperData Research:
 
--   HTC Vive (420,000)
--   Oculus Rift (240,000)
--   Google Daydream (260,000)
+- HTC Vive (420,000)
+- Oculus Rift (240,000)
+- Google Daydream (260,000)
 
 ## What can we expect for 2017?
 

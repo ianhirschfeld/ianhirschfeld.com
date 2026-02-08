@@ -2,11 +2,10 @@
 title: A Brief Review: Interstellar
 date: 2015-03-17
 featuredImage: ../../assets/posts/a-brief-review-interstellar/image-01.jpeg
+canonicalUrl: https://medium.com/@ianhirschfeld/a-brief-review-interstellar-6d3865ad036a
 ---
 
-# Interstellar
-
-### Epic space cinematography, a beautiful score, theoretical physics, and emotions, so many emotions.
+_Epic space cinematography, a beautiful score, theoretical physics, and emotions, so many emotions._
 
 ## What I Wanted
 

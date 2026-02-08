@@ -1,6 +1,7 @@
 ---
 title: Email sign in, with no password!
 date: 2015-07-01
+canonicalUrl: https://medium.com/@ianhirschfeld/email-sign-in-with-no-password-cf6f3a36941f
 ---
 
 Medium has launched a passwordless sign in option that relies solely on you having access to your email account. This simultaneously feels like a brilliant and innovative idea to authentication, but also a little uneasy. This got me thinking about the current state of authentication common within websites and apps.

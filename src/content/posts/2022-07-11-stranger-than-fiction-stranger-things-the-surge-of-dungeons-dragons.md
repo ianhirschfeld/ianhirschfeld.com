@@ -2,6 +2,7 @@
 title: Stranger Than Fiction: Stranger Things & the Surge of Dungeons & Dragons
 date: 2022-07-11
 featuredImage: ../../assets/posts/stranger-than-fiction-stranger-things-the-surge-of-dungeons-dragons/image-01.jpeg
+canonicalUrl: https://blog.playrole.com/2022/07/11/stranger-than-fiction-stranger-things-the-surge-of-dungeons-dragons/
 ---
 
 It’s no secret that **_Dungeons & Dragons_ (D&D)** has had a significant presence in since Season 1. Its showrunners, The Duffer Brothers, have spoken extensively about how roleplaying, specifically D&D, has influenced their initial pitch for season one and the following seasons. There are even theories that _Stranger Things_ could just be one giant D&D adventure. With the show’s massive growth in popularity, it is now paying back that influence by encouraging a new wave of people interested in playing D&D for the first time.
