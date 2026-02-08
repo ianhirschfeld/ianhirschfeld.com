@@ -1,0 +1,228 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-red: #d90011;
+  --color-brand-blue: #7ac7ff;
+  --color-brand-tan: #e6c29c;
+  --color-off-white: #efece2;
+  --color-off-black: #202020;
+  --color-dark-off-white: #efe9d5;
+  --color-grey: #707070;
+
+  --font-freight: 'freight-sans-pro', Helvetica, Arial, sans-serif;
+  --font-rift: 'rift-soft', Helvetica, Arial, sans-serif;
+
+  --text-4_5xl: 2.5rem;
+
+  --border-width-5: 5px;
+
+  --radius-2_5xl: 20px;
+  --radius-inherit: inherit;
+
+  --spacing-7_5: 30px;
+
+  --animate-custom-swing: custom-swing 1s ease;
+}
+
+@custom-variant max-h-short (@media only screen and (max-height: 630px));
+
+@keyframes custom-swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply font-rift font-bold;
+  }
+
+  a {
+    @apply text-brand-red relative inline-block no-underline;
+  }
+}
+
+@layer components {
+  .animated-underline::before,
+  nav a::before {
+    @apply bg-brand-red absolute -bottom-px left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
+  }
+
+  .animated-underline:hover::before,
+  .animated-underline:focus::before,
+  nav a:hover::before,
+  nav a:focus::before {
+    @apply scale-x-100;
+  }
+
+  .prose {
+    section {
+      @apply my-10;
+    }
+
+    h1 {
+      @apply text-4.5xl leading-tight;
+    }
+
+    h2 {
+      @apply mt-5 mb-4 text-3xl;
+    }
+
+    h3 {
+      @apply mt-4 mb-3 text-2xl;
+    }
+
+    h2 + h3 {
+      @apply mt-0;
+    }
+
+    a {
+      @apply decoration-brand-red/0 hover:decoration-brand-red underline decoration-1 underline-offset-4 transition-colors;
+    }
+
+    p {
+      @apply my-5 text-lg;
+    }
+
+    h2 + p,
+    h3 + p {
+      @apply mt-0;
+    }
+
+    ul {
+      @apply my-5 list-disc px-10;
+    }
+
+    ol {
+      @apply my-5 list-decimal px-10;
+    }
+
+    li {
+      @apply text-lg;
+    }
+
+    img {
+      @apply rounded-lg;
+    }
+
+    pre {
+      @apply text-off-white my-6 overflow-x-auto rounded-xl bg-zinc-800 p-5 font-mono text-base;
+    }
+
+    code {
+      @apply text-brand-blue rounded bg-zinc-700 px-1 py-0.5 font-mono text-sm;
+    }
+
+    pre code {
+      @apply text-off-white bg-transparent p-0 text-base font-normal;
+    }
+
+    p > code,
+    li > code {
+      @apply wrap-break-word;
+    }
+
+    blockquote {
+      @apply border-brand-blue my-5 border-l-4 pl-5 italic;
+    }
+
+    blockquote p {
+      @apply my-0;
+    }
+
+    p:has(> img:nth-of-type(2)) {
+      @apply flex flex-col items-stretch gap-3 md:-mx-8 md:flex-row;
+    }
+
+    p:has(> img:nth-of-type(2)) > img {
+      @apply min-w-0 object-cover md:flex-1;
+    }
+  }
+
+  .banner {
+    @apply rounded-2.5xl -mx-5 my-5 mb-10 overflow-hidden max-md:rounded-none;
+  }
+
+  .section {
+    @apply my-10;
+  }
+
+  .section-heading1 {
+    @apply my-5;
+  }
+
+  .section-heading2 {
+    @apply font-freight my-5 text-[3rem] font-semibold;
+  }
+
+  .section-subheading {
+    @apply text-grey -mt-5 mb-5 text-[1.6rem];
+  }
+
+  .section-list {
+    @apply my-5 px-10 text-[1.8rem] leading-[1.4];
+  }
+
+  .post-title {
+    @apply text-off-black relative mb-0;
+  }
+
+  .post-title h2 {
+    @apply text-[4rem];
+  }
+
+  .post-title::before {
+    @apply bg-brand-red absolute bottom-0 left-0 block h-0.5 w-full origin-left scale-x-0 rounded-sm transition-transform duration-200 content-[''];
+  }
+
+  .post-title:hover::before,
+  .post-title:focus::before {
+    @apply scale-x-100;
+  }
+
+  .post-meta {
+    @apply text-grey mb-5 text-[1.6rem];
+  }
+
+  .post-content h1 {
+    @apply my-5;
+  }
+
+  .post-content h2 {
+    @apply font-freight my-5 text-[3rem] font-semibold;
+  }
+
+  .post-content h3 {
+    @apply font-freight my-5 text-[2.8rem] font-normal;
+  }
+
+  .post-content ul,
+  .post-content ol {
+    @apply my-5 px-10 text-[1.8rem] leading-[1.4];
+  }
+
+  .post-content img {
+    @apply rounded-2.5xl -mx-5 my-5 mb-10 w-[calc(100%+40px)] max-w-none overflow-hidden max-md:rounded-none;
+  }
+}
